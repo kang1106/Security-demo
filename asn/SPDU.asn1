@@ -1,0 +1,151 @@
+SPDU DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+
+SecuredMessage ::= SEQUENCE {
+  version        Uint8,
+  payload        Payload
+}
+
+Payload ::= CHOICE {
+  unSecuredData        Opaque,   
+  signedData           SignedData
+}
+
+SignedData ::= SEQUENCE {
+  signer    SignerInfo,
+  tbs       TBSData,
+  sign      Signature
+}
+
+SignerInfo ::= CHOICE {
+  self                NULL,
+  certificate         SequenceOfCertificate,
+  certificateDigest   CertificateDigest
+}
+
+SequenceOfCertificate ::= SEQUENCE OF Certificate
+Certificate ::= SEQUENCE {
+  version     Uint8,
+  issuerID    IssuerID,
+  tbs         TBSCert,
+  signature   Signature
+}
+
+IssuerID ::= CHOICE {
+  self    NULL,
+  certificateDigest    CertificateDigest
+}
+
+CertificateDigest ::= SEQUENCE {
+  algroithm    HashAlgorithm,
+  digest    HashedId8
+}
+
+HashAlgorithm ::= ENUMERATED {
+  sgdsm3,
+  sha256
+}
+
+TBSCert ::= SEQUENCE {
+  subjectInfo         SubjectInfo,
+  subjectAttributes   SubjectAttributes
+}
+
+SubjectInfo ::= SEQUENCE {
+  subjectType    SubjectType,
+  subjectName    OCTET STRING(SIZE(0..32))
+}
+
+SubjectType ::= ENUMERATED {
+  enrolmentCredential,
+  authorizationTicket,
+  authorizationAuthority,
+  enrolmentAuthority,
+  rootCa,
+  crlSigner
+}
+
+SubjectAttributes ::= SEQUENCE {
+  verificationKey    PublicVerifyKey
+}
+
+PublicVerifyKey ::= SEQUENCE {
+  curve   EccCurve,
+  key     EccPoint
+}
+
+EccCurve ::= ENUMERATED {
+  sgdsm2,
+  nistP256,
+  brainpoolP256rl
+}
+
+EccPoint ::= CHOICE {
+  x-only            OCTET STRING(SIZE (32)),
+  fill              NULL,
+  compressed-y-0    OCTET STRING(SIZE(32)),
+  compressed-y-1    OCTET STRING(SIZE(32)),
+  uncompressed      SEQUENCE {
+                      x OCTET STRING(SIZE(32)),
+                      y OCTET STRING(SIZE(32))
+                    }
+}
+
+Signature ::= SEQUENCE {
+  curve   EccCurve,
+  r       EccPoint,
+  s       OCTET STRING(SIZE(32))
+}
+
+TBSData ::= SEQUENCE {
+  headerInfo    HeaderInfo,
+  data          OCTET STRING(SIZE(32)) OPTIONAL,
+  extHash       OCTET STRING(SIZE(32)) OPTIONAL
+}
+
+HeaderInfo ::= SEQUENCE {
+  itsAid      INTEGER,
+  hashAlg     HashAlgorithm OPTIONAL,
+  genTime     Time64 OPTIONAL,
+  expiryTime  Time64 OPTIONAL,
+  location    ThreeDLocation OPTIONAL,
+  digest      HashedId3 OPTIONAL
+}
+
+ThreeDLocation ::= SEQUENCE {
+	latitude		Latitude,
+	longitude		Longitude,
+	elevation		Elevation
+}
+
+Latitude ::= NinetyDegreeInt
+NinetyDegreeInt ::= INTEGER {
+  min(-900000000),
+  max(900000000),
+  unKnown(900000001)
+}(-900000000..900000001)
+KnownLatitude ::= NinetyDegreeInt(min..max)
+UnKnownLatitude ::= NinetyDegreeInt(unKnown)
+
+Longitude ::= OneEightyDegreeInt
+OneEightyDegreeInt ::= INTEGER {
+  min(-1799999999),
+  max(1800000000),
+  unKnown(1800000001)
+}(1799999999..1800000001)
+KnownLongitude ::= NinetyDegreeInt(min..max)
+UnKnownLongitude ::= NinetyDegreeInt(unKnown)
+
+Elevation ::= Uint16
+
+Uint3 ::= INTEGER(0..7)
+Uint8 ::= INTEGER(0..225)
+Uint16 ::= INTEGER(0..65535)
+Uint32 ::= INTEGER(0..4294967295)
+Uint64 ::= INTEGER(0..4294967295) -- 0..18446744073709551615  to long?? need change
+HashedId3 ::= OCTET STRING(SIZE(3))
+HashedId8 ::= OCTET STRING(SIZE(8))
+Opaque ::= OCTET STRING
+Time32 ::= Uint32
+Time64 ::= Uint64
+
+END

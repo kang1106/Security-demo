@@ -1,0 +1,113 @@
+ASN_MODULE_SOURCES=	\
+	SecuredMessage.c	\
+	Payload.c	\
+	SignedData.c	\
+	SignerInfo.c	\
+	SequenceOfCertificate.c	\
+	Certificate.c	\
+	IssuerID.c	\
+	CertificateDigest.c	\
+	HashAlgorithm.c	\
+	TBSCert.c	\
+	SubjectInfo.c	\
+	SubjectType.c	\
+	SubjectAttributes.c	\
+	PublicVerifyKey.c	\
+	EccCurve.c	\
+	EccPoint.c	\
+	Signature.c	\
+	TBSData.c	\
+	HeaderInfo.c	\
+	ThreeDLocation.c	\
+	Latitude.c	\
+	NinetyDegreeInt.c	\
+	KnownLatitude.c	\
+	UnKnownLatitude.c	\
+	Longitude.c	\
+	OneEightyDegreeInt.c	\
+	KnownLongitude.c	\
+	UnKnownLongitude.c	\
+	Elevation.c	\
+	Uint3.c	\
+	Uint8.c	\
+	Uint16.c	\
+	Uint32.c	\
+	Uint64.c	\
+	HashedId3.c	\
+	HashedId8.c	\
+	Opaque.c	\
+	Time32.c	\
+	Time64.c
+
+ASN_MODULE_HEADERS=	\
+	SecuredMessage.h	\
+	Payload.h	\
+	SignedData.h	\
+	SignerInfo.h	\
+	SequenceOfCertificate.h	\
+	Certificate.h	\
+	IssuerID.h	\
+	CertificateDigest.h	\
+	HashAlgorithm.h	\
+	TBSCert.h	\
+	SubjectInfo.h	\
+	SubjectType.h	\
+	SubjectAttributes.h	\
+	PublicVerifyKey.h	\
+	EccCurve.h	\
+	EccPoint.h	\
+	Signature.h	\
+	TBSData.h	\
+	HeaderInfo.h	\
+	ThreeDLocation.h	\
+	Latitude.h	\
+	NinetyDegreeInt.h	\
+	KnownLatitude.h	\
+	UnKnownLatitude.h	\
+	Longitude.h	\
+	OneEightyDegreeInt.h	\
+	KnownLongitude.h	\
+	UnKnownLongitude.h	\
+	Elevation.h	\
+	Uint3.h	\
+	Uint8.h	\
+	Uint16.h	\
+	Uint32.h	\
+	Uint64.h	\
+	HashedId3.h	\
+	HashedId8.h	\
+	Opaque.h	\
+	Time32.h	\
+	Time64.h
+
+
+
+lib_LTLIBRARIES=libsomething.la
+libsomething_la_SOURCES=$(ASN_MODULE_SOURCES) $(ASN_MODULE_HEADERS)
+
+# This file may be used as an input for make(3)
+# Remove the lines below to convert it into a pure .am file
+TARGET = progname
+CFLAGS += -I.
+OBJS=${ASN_MODULE_SOURCES:.c=.o} ${ASN_CONVERTER_SOURCES:.c=.o}
+
+all: $(TARGET)
+
+$(TARGET): ${OBJS}
+	$(CC) $(CFLAGS) -o $(TARGET) ${OBJS} $(LDFLAGS) $(LIBS)
+
+.SUFFIXES:
+.SUFFIXES: .c .o
+
+.c.o:
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+clean:
+	rm -f $(TARGET)
+	rm -f $(OBJS)
+
+regen: regenerate-from-asn1-source
+
+regenerate-from-asn1-source:
+	/home/yuk6szh/DATA/ASN.1/asn1c-0.9.28/asn1c/asn1c -gen-PER SPDU.asn1
+
