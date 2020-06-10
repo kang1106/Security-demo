@@ -107,7 +107,8 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
-am_main_OBJECTS = src/main-main.$(OBJEXT)
+am_main_OBJECTS = src/main-main.$(OBJEXT) src/apps/main-log.$(OBJEXT) \
+	src/api/main-sec_codec.$(OBJEXT)
 main_OBJECTS = $(am_main_OBJECTS)
 main_LDADD = $(LDADD)
 main_DEPENDENCIES = ./asn/.libs/libsomething.a
@@ -369,11 +370,14 @@ SRC_ROOT = ./src
 SUBDIRS = asn
 ACLOCAL_AMFLAGS = -I m4
 AM_CFLAGS = -I$(ASN_ROOT) -I$(SRC_ROOT)
-AM_CXXFLAGS = -I$(ASN_ROOT) -I$(SRC_ROOT)
+AM_CXXFLAGS = -I$(ASN_ROOT) -I$(SRC_ROOT) -std=c++11
 LDADD = ./asn/.libs/libsomething.a
 main_CFLAGS = $(AM_CFLAGS)
 main_CXXFLAGS = $(AM_CXXFLAGS)
-main_SOURCES = src/main.cpp
+main_SOURCES = src/main.cpp \
+               src/apps/log.cpp \
+               src/api/sec_codec.cpp
+
 all: all-recursive
 
 .SUFFIXES:
@@ -468,6 +472,22 @@ src/$(DEPDIR)/$(am__dirstamp):
 	@: > src/$(DEPDIR)/$(am__dirstamp)
 src/main-main.$(OBJEXT): src/$(am__dirstamp) \
 	src/$(DEPDIR)/$(am__dirstamp)
+src/apps/$(am__dirstamp):
+	@$(MKDIR_P) src/apps
+	@: > src/apps/$(am__dirstamp)
+src/apps/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) src/apps/$(DEPDIR)
+	@: > src/apps/$(DEPDIR)/$(am__dirstamp)
+src/apps/main-log.$(OBJEXT): src/apps/$(am__dirstamp) \
+	src/apps/$(DEPDIR)/$(am__dirstamp)
+src/api/$(am__dirstamp):
+	@$(MKDIR_P) src/api
+	@: > src/api/$(am__dirstamp)
+src/api/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) src/api/$(DEPDIR)
+	@: > src/api/$(DEPDIR)/$(am__dirstamp)
+src/api/main-sec_codec.$(OBJEXT): src/api/$(am__dirstamp) \
+	src/api/$(DEPDIR)/$(am__dirstamp)
 
 main$(EXEEXT): $(main_OBJECTS) $(main_DEPENDENCIES) $(EXTRA_main_DEPENDENCIES) 
 	@rm -f main$(EXEEXT)
@@ -476,11 +496,15 @@ main$(EXEEXT): $(main_OBJECTS) $(main_DEPENDENCIES) $(EXTRA_main_DEPENDENCIES)
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
 	-rm -f src/*.$(OBJEXT)
+	-rm -f src/api/*.$(OBJEXT)
+	-rm -f src/apps/*.$(OBJEXT)
 
 distclean-compile:
 	-rm -f *.tab.c
 
 include src/$(DEPDIR)/main-main.Po
+include src/api/$(DEPDIR)/main-sec_codec.Po
+include src/apps/$(DEPDIR)/main-log.Po
 
 .cpp.o:
 	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -519,6 +543,34 @@ src/main-main.obj: src/main.cpp
 #	$(AM_V_CXX)source='src/main.cpp' object='src/main-main.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -c -o src/main-main.obj `if test -f 'src/main.cpp'; then $(CYGPATH_W) 'src/main.cpp'; else $(CYGPATH_W) '$(srcdir)/src/main.cpp'; fi`
+
+src/apps/main-log.o: src/apps/log.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -MT src/apps/main-log.o -MD -MP -MF src/apps/$(DEPDIR)/main-log.Tpo -c -o src/apps/main-log.o `test -f 'src/apps/log.cpp' || echo '$(srcdir)/'`src/apps/log.cpp
+	$(AM_V_at)$(am__mv) src/apps/$(DEPDIR)/main-log.Tpo src/apps/$(DEPDIR)/main-log.Po
+#	$(AM_V_CXX)source='src/apps/log.cpp' object='src/apps/main-log.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -c -o src/apps/main-log.o `test -f 'src/apps/log.cpp' || echo '$(srcdir)/'`src/apps/log.cpp
+
+src/apps/main-log.obj: src/apps/log.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -MT src/apps/main-log.obj -MD -MP -MF src/apps/$(DEPDIR)/main-log.Tpo -c -o src/apps/main-log.obj `if test -f 'src/apps/log.cpp'; then $(CYGPATH_W) 'src/apps/log.cpp'; else $(CYGPATH_W) '$(srcdir)/src/apps/log.cpp'; fi`
+	$(AM_V_at)$(am__mv) src/apps/$(DEPDIR)/main-log.Tpo src/apps/$(DEPDIR)/main-log.Po
+#	$(AM_V_CXX)source='src/apps/log.cpp' object='src/apps/main-log.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -c -o src/apps/main-log.obj `if test -f 'src/apps/log.cpp'; then $(CYGPATH_W) 'src/apps/log.cpp'; else $(CYGPATH_W) '$(srcdir)/src/apps/log.cpp'; fi`
+
+src/api/main-sec_codec.o: src/api/sec_codec.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -MT src/api/main-sec_codec.o -MD -MP -MF src/api/$(DEPDIR)/main-sec_codec.Tpo -c -o src/api/main-sec_codec.o `test -f 'src/api/sec_codec.cpp' || echo '$(srcdir)/'`src/api/sec_codec.cpp
+	$(AM_V_at)$(am__mv) src/api/$(DEPDIR)/main-sec_codec.Tpo src/api/$(DEPDIR)/main-sec_codec.Po
+#	$(AM_V_CXX)source='src/api/sec_codec.cpp' object='src/api/main-sec_codec.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -c -o src/api/main-sec_codec.o `test -f 'src/api/sec_codec.cpp' || echo '$(srcdir)/'`src/api/sec_codec.cpp
+
+src/api/main-sec_codec.obj: src/api/sec_codec.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -MT src/api/main-sec_codec.obj -MD -MP -MF src/api/$(DEPDIR)/main-sec_codec.Tpo -c -o src/api/main-sec_codec.obj `if test -f 'src/api/sec_codec.cpp'; then $(CYGPATH_W) 'src/api/sec_codec.cpp'; else $(CYGPATH_W) '$(srcdir)/src/api/sec_codec.cpp'; fi`
+	$(AM_V_at)$(am__mv) src/api/$(DEPDIR)/main-sec_codec.Tpo src/api/$(DEPDIR)/main-sec_codec.Po
+#	$(AM_V_CXX)source='src/api/sec_codec.cpp' object='src/api/main-sec_codec.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -c -o src/api/main-sec_codec.obj `if test -f 'src/api/sec_codec.cpp'; then $(CYGPATH_W) 'src/api/sec_codec.cpp'; else $(CYGPATH_W) '$(srcdir)/src/api/sec_codec.cpp'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -859,6 +911,10 @@ distclean-generic:
 	-test . = "$(srcdir)" || test -z "$(CONFIG_CLEAN_VPATH_FILES)" || rm -f $(CONFIG_CLEAN_VPATH_FILES)
 	-rm -f src/$(DEPDIR)/$(am__dirstamp)
 	-rm -f src/$(am__dirstamp)
+	-rm -f src/api/$(DEPDIR)/$(am__dirstamp)
+	-rm -f src/api/$(am__dirstamp)
+	-rm -f src/apps/$(DEPDIR)/$(am__dirstamp)
+	-rm -f src/apps/$(am__dirstamp)
 
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
@@ -869,7 +925,7 @@ clean-am: clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
 
 distclean: distclean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
-	-rm -rf src/$(DEPDIR)
+	-rm -rf src/$(DEPDIR) src/api/$(DEPDIR) src/apps/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-libtool distclean-tags
@@ -917,7 +973,7 @@ installcheck-am:
 maintainer-clean: maintainer-clean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
-	-rm -rf src/$(DEPDIR)
+	-rm -rf src/$(DEPDIR) src/api/$(DEPDIR) src/apps/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

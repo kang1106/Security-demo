@@ -594,7 +594,7 @@ PACKAGE_STRING='main 1.0'
 PACKAGE_BUGREPORT='xx@xx.com'
 PACKAGE_URL=''
 
-ac_unique_file="src/main.cpp"
+ac_unique_file="src/context.hpp"
 # Factoring default headers for most tests.
 ac_includes_default="\
 #include <stdio.h>
@@ -2543,7 +2543,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 
 
 
-#AC_CONFIG_HEADERS([config.h])
+# AC_CONFIG_HEADERS([config.h])
 am__api_version='1.15'
 
 ac_aux_dir=
@@ -4619,7 +4619,6 @@ else
   am__fastdepCC_TRUE='#'
   am__fastdepCC_FALSE=
 fi
-
 
 
 ac_ext=c
