@@ -11,4 +11,4 @@ class seclog {
     void warning(const std::string str);
 };
 
-#endif
+#endif /* LOG_HPP_ */

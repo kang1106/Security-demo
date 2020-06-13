@@ -16,4 +16,5 @@ sec_v2xd_CFLAGS = $(AM_CFLAGS)
 sec_v2xd_CXXFLAGS = $(AM_CXXFLAGS)
 sec_v2xd_SOURCES = src/main.cpp \
                    src/apps/log.cpp \
-                   src/api/sec_codec.cpp
+                   src/api/sec_codec.cpp \
+                   src/api/gmssl.cpp

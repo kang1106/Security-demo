@@ -8,4 +8,4 @@ typedef struct {
     char       payload[100];
 } spud_t;
 
-#endif
+#endif /* SEC_TYPR_HPP_ */

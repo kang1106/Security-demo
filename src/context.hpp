@@ -11,4 +11,4 @@ class context {
     std::shared_ptr<seclog> log_;
 };
 
-#endif
+#endif /* CONTEXT_HPP_ */

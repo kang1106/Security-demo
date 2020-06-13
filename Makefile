@@ -109,7 +109,8 @@ PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
 am_sec_v2xd_OBJECTS = src/sec_v2xd-main.$(OBJEXT) \
 	src/apps/sec_v2xd-log.$(OBJEXT) \
-	src/api/sec_v2xd-sec_codec.$(OBJEXT)
+	src/api/sec_v2xd-sec_codec.$(OBJEXT) \
+	src/api/sec_v2xd-gmssl.$(OBJEXT)
 sec_v2xd_OBJECTS = $(am_sec_v2xd_OBJECTS)
 sec_v2xd_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
@@ -381,7 +382,8 @@ sec_v2xd_CFLAGS = $(AM_CFLAGS)
 sec_v2xd_CXXFLAGS = $(AM_CXXFLAGS)
 sec_v2xd_SOURCES = src/main.cpp \
                    src/apps/log.cpp \
-                   src/api/sec_codec.cpp
+                   src/api/sec_codec.cpp \
+                   src/api/gmssl.cpp
 
 all: all-recursive
 
@@ -493,6 +495,8 @@ src/api/$(DEPDIR)/$(am__dirstamp):
 	@: > src/api/$(DEPDIR)/$(am__dirstamp)
 src/api/sec_v2xd-sec_codec.$(OBJEXT): src/api/$(am__dirstamp) \
 	src/api/$(DEPDIR)/$(am__dirstamp)
+src/api/sec_v2xd-gmssl.$(OBJEXT): src/api/$(am__dirstamp) \
+	src/api/$(DEPDIR)/$(am__dirstamp)
 
 sec_v2xd$(EXEEXT): $(sec_v2xd_OBJECTS) $(sec_v2xd_DEPENDENCIES) $(EXTRA_sec_v2xd_DEPENDENCIES) 
 	@rm -f sec_v2xd$(EXEEXT)
@@ -508,6 +512,7 @@ distclean-compile:
 	-rm -f *.tab.c
 
 include src/$(DEPDIR)/sec_v2xd-main.Po
+include src/api/$(DEPDIR)/sec_v2xd-gmssl.Po
 include src/api/$(DEPDIR)/sec_v2xd-sec_codec.Po
 include src/apps/$(DEPDIR)/sec_v2xd-log.Po
 
@@ -576,6 +581,20 @@ src/api/sec_v2xd-sec_codec.obj: src/api/sec_codec.cpp
 #	$(AM_V_CXX)source='src/api/sec_codec.cpp' object='src/api/sec_v2xd-sec_codec.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -c -o src/api/sec_v2xd-sec_codec.obj `if test -f 'src/api/sec_codec.cpp'; then $(CYGPATH_W) 'src/api/sec_codec.cpp'; else $(CYGPATH_W) '$(srcdir)/src/api/sec_codec.cpp'; fi`
+
+src/api/sec_v2xd-gmssl.o: src/api/gmssl.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -MT src/api/sec_v2xd-gmssl.o -MD -MP -MF src/api/$(DEPDIR)/sec_v2xd-gmssl.Tpo -c -o src/api/sec_v2xd-gmssl.o `test -f 'src/api/gmssl.cpp' || echo '$(srcdir)/'`src/api/gmssl.cpp
+	$(AM_V_at)$(am__mv) src/api/$(DEPDIR)/sec_v2xd-gmssl.Tpo src/api/$(DEPDIR)/sec_v2xd-gmssl.Po
+#	$(AM_V_CXX)source='src/api/gmssl.cpp' object='src/api/sec_v2xd-gmssl.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -c -o src/api/sec_v2xd-gmssl.o `test -f 'src/api/gmssl.cpp' || echo '$(srcdir)/'`src/api/gmssl.cpp
+
+src/api/sec_v2xd-gmssl.obj: src/api/gmssl.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -MT src/api/sec_v2xd-gmssl.obj -MD -MP -MF src/api/$(DEPDIR)/sec_v2xd-gmssl.Tpo -c -o src/api/sec_v2xd-gmssl.obj `if test -f 'src/api/gmssl.cpp'; then $(CYGPATH_W) 'src/api/gmssl.cpp'; else $(CYGPATH_W) '$(srcdir)/src/api/gmssl.cpp'; fi`
+	$(AM_V_at)$(am__mv) src/api/$(DEPDIR)/sec_v2xd-gmssl.Tpo src/api/$(DEPDIR)/sec_v2xd-gmssl.Po
+#	$(AM_V_CXX)source='src/api/gmssl.cpp' object='src/api/sec_v2xd-gmssl.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -c -o src/api/sec_v2xd-gmssl.obj `if test -f 'src/api/gmssl.cpp'; then $(CYGPATH_W) 'src/api/gmssl.cpp'; else $(CYGPATH_W) '$(srcdir)/src/api/gmssl.cpp'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo

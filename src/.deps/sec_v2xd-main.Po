@@ -142,15 +142,16 @@ src/sec_v2xd-main.o: src/main.cpp /usr/include/stdc-predef.h \
  asn/ThreeDLocation.h asn/Latitude.h asn/NinetyDegreeInt.h \
  asn/Longitude.h asn/OneEightyDegreeInt.h asn/Elevation.h asn/Uint16.h \
  src/context.hpp src/apps/log.hpp src/api/sec_codec.hpp \
- src/api/sec_type.hpp include/openssl/conf.h include/openssl/bio.h \
- include/openssl/e_os2.h include/openssl/opensslconf.h \
+ src/api/sec_type.hpp src/api/gmssl.hpp include/openssl/evp.h \
+ include/openssl/opensslconf.h include/openssl/ossl_typ.h \
+ include/openssl/e_os2.h include/openssl/symhacks.h include/openssl/bio.h \
  include/openssl/crypto.h include/openssl/stack.h \
  include/openssl/safestack.h include/openssl/opensslv.h \
- include/openssl/ossl_typ.h include/openssl/symhacks.h \
- include/openssl/lhash.h include/openssl/evp.h include/openssl/objects.h \
- include/openssl/obj_mac.h include/openssl/asn1.h include/openssl/bn.h \
- include/openssl/err.h include/openssl/ec.h include/openssl/dsa.h \
- include/openssl/dh.h include/openssl/rsa.h
+ include/openssl/objects.h include/openssl/obj_mac.h \
+ include/openssl/asn1.h include/openssl/bn.h include/openssl/conf.h \
+ include/openssl/lhash.h include/openssl/err.h include/openssl/ec.h \
+ include/openssl/dsa.h include/openssl/dh.h include/openssl/rsa.h \
+ src/context.hpp
 
 /usr/include/stdc-predef.h:
 
@@ -610,13 +611,19 @@ src/api/sec_codec.hpp:
 
 src/api/sec_type.hpp:
 
-include/openssl/conf.h:
+src/api/gmssl.hpp:
 
-include/openssl/bio.h:
+include/openssl/evp.h:
+
+include/openssl/opensslconf.h:
+
+include/openssl/ossl_typ.h:
 
 include/openssl/e_os2.h:
 
-include/openssl/opensslconf.h:
+include/openssl/symhacks.h:
+
+include/openssl/bio.h:
 
 include/openssl/crypto.h:
 
@@ -626,14 +633,6 @@ include/openssl/safestack.h:
 
 include/openssl/opensslv.h:
 
-include/openssl/ossl_typ.h:
-
-include/openssl/symhacks.h:
-
-include/openssl/lhash.h:
-
-include/openssl/evp.h:
-
 include/openssl/objects.h:
 
 include/openssl/obj_mac.h:
@@ -641,6 +640,10 @@ include/openssl/obj_mac.h:
 include/openssl/asn1.h:
 
 include/openssl/bn.h:
+
+include/openssl/conf.h:
+
+include/openssl/lhash.h:
 
 include/openssl/err.h:
 
@@ -651,3 +654,5 @@ include/openssl/dsa.h:
 include/openssl/dh.h:
 
 include/openssl/rsa.h:
+
+src/context.hpp:
