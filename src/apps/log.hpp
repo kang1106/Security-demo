@@ -8,7 +8,7 @@ class seclog {
     void info(const std::string str);
     void info(const std::string str, const int i);
     void debug(const std::string str);
-    void warn(const std::string str);
+    void warning(const std::string str);
 };
 
 #endif

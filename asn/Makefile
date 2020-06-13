@@ -70,10 +70,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/main
-pkgincludedir = $(includedir)/main
-pkglibdir = $(libdir)/main
-pkglibexecdir = $(libexecdir)/main
+pkgdatadir = $(datadir)/sec_v2xd
+pkgincludedir = $(includedir)/sec_v2xd
+pkglibdir = $(libdir)/sec_v2xd
+pkglibexecdir = $(libexecdir)/sec_v2xd
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -265,7 +265,7 @@ CXXCPP = g++ -E
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"main\" -DPACKAGE_TARNAME=\"main\" -DPACKAGE_VERSION=\"1.0\" -DPACKAGE_STRING=\"main\ 1.0\" -DPACKAGE_BUGREPORT=\"xx@xx.com\" -DPACKAGE_URL=\"\" -DPACKAGE=\"main\" -DVERSION=\"1.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_ALLOCA_H=1 -DHAVE_ALLOCA=1 -DHAVE_FLOAT_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_LIMITS_H=1 -DHAVE_MALLOC_H=1 -DHAVE_NETINET_IN_H=1 -DHAVE_STDDEF_H=1 -DHAVE_STDINT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_UNISTD_H=1 -DHAVE_PTRDIFF_T=1 -DHAVE_MEMCHR=1 -DHAVE_MEMMOVE=1 -DHAVE_MEMSET=1 -DHAVE_STRERROR=1
+DEFS = -DPACKAGE_NAME=\"sec_v2xd\" -DPACKAGE_TARNAME=\"sec_v2xd\" -DPACKAGE_VERSION=\"1.1.0\" -DPACKAGE_STRING=\"sec_v2xd\ 1.1.0\" -DPACKAGE_BUGREPORT=\"xx@xx.com\" -DPACKAGE_URL=\"\" -DPACKAGE=\"sec_v2xd\" -DVERSION=\"1.1.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBCRYPTO=1 -DHAVE_LIBDL=1 -DHAVE_LIBPTHREAD=1 -DHAVE_LIBSSL=1 -DHAVE_ALLOCA_H=1 -DHAVE_ALLOCA=1 -DHAVE_FLOAT_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_LIMITS_H=1 -DHAVE_MALLOC_H=1 -DHAVE_NETINET_IN_H=1 -DHAVE_STDDEF_H=1 -DHAVE_STDINT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_UNISTD_H=1 -DHAVE_PTRDIFF_T=1 -DHAVE_MEMCHR=1 -DHAVE_MEMMOVE=1 -DHAVE_MEMSET=1 -DHAVE_STRERROR=1
 DEPDIR = .deps
 DLLTOOL = false
 DSYMUTIL = 
@@ -285,7 +285,7 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
 LIBOBJS = 
-LIBS = 
+LIBS = -lssl -lpthread -ldl -lcrypto 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
@@ -300,13 +300,13 @@ OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = main
+PACKAGE = sec_v2xd
 PACKAGE_BUGREPORT = xx@xx.com
-PACKAGE_NAME = main
-PACKAGE_STRING = main 1.0
-PACKAGE_TARNAME = main
+PACKAGE_NAME = sec_v2xd
+PACKAGE_STRING = sec_v2xd 1.1.0
+PACKAGE_TARNAME = sec_v2xd
 PACKAGE_URL = 
-PACKAGE_VERSION = 1.0
+PACKAGE_VERSION = 1.1.0
 PATH_SEPARATOR = :
 POW_LIB = 
 RANLIB = ranlib
@@ -314,7 +314,7 @@ SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-VERSION = 1.0
+VERSION = 1.1.0
 abs_builddir = /home/yuk6szh/DATA/GIT_V2X/V2X-Security-Stack/asn
 abs_srcdir = /home/yuk6szh/DATA/GIT_V2X/V2X-Security-Stack/asn
 abs_top_builddir = /home/yuk6szh/DATA/GIT_V2X/V2X-Security-Stack

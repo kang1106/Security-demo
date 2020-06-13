@@ -4,7 +4,7 @@ m4trace:aclocal.m4:1155: -1- m4_include([m4/ltsugar.m4])
 m4trace:aclocal.m4:1156: -1- m4_include([m4/ltversion.m4])
 m4trace:aclocal.m4:1157: -1- m4_include([m4/lt~obsolete.m4])
 m4trace:configure.ac:4: -1- AC_PREREQ([2.69])
-m4trace:configure.ac:5: -1- AC_INIT([main], [1.0], [xx@xx.com])
+m4trace:configure.ac:5: -1- AC_INIT([sec_v2xd], [1.1.0], [xx@xx.com])
 m4trace:configure.ac:5: -1- m4_pattern_forbid([^_?A[CHUM]_])
 m4trace:configure.ac:5: -1- m4_pattern_forbid([_AC_])
 m4trace:configure.ac:5: -1- m4_pattern_forbid([^LIBOBJS$], [do not use LIBOBJS directly, use AC_LIBOBJ (see section `AC_LIBOBJ vs LIBOBJS'])
@@ -561,183 +561,217 @@ m4trace:configure.ac:20: -1- m4_pattern_allow([^LD$])
 m4trace:configure.ac:20: -1- AC_SUBST([LT_SYS_LIBRARY_PATH])
 m4trace:configure.ac:20: -1- AC_SUBST_TRACE([LT_SYS_LIBRARY_PATH])
 m4trace:configure.ac:20: -1- m4_pattern_allow([^LT_SYS_LIBRARY_PATH$])
-m4trace:configure.ac:25: -1- AC_FUNC_ALLOCA
-m4trace:configure.ac:25: -1- AC_TYPE_SIZE_T
-m4trace:configure.ac:25: -1- AC_DEFINE_TRACE_LITERAL([size_t])
-m4trace:configure.ac:25: -1- m4_pattern_allow([^size_t$])
-m4trace:configure.ac:25: -1- AH_OUTPUT([size_t], [/* Define to `unsigned int\' if <sys/types.h> does not define. */
+m4trace:configure.ac:24: -1- AH_OUTPUT([HAVE_LIBCRYPTO], [/* Define to 1 if you have the `crypto\' library (-lcrypto). */
+@%:@undef HAVE_LIBCRYPTO])
+m4trace:configure.ac:24: -1- AC_DEFINE_TRACE_LITERAL([HAVE_LIBCRYPTO])
+m4trace:configure.ac:24: -1- m4_pattern_allow([^HAVE_LIBCRYPTO$])
+m4trace:configure.ac:26: -1- AH_OUTPUT([HAVE_LIBDL], [/* Define to 1 if you have the `dl\' library (-ldl). */
+@%:@undef HAVE_LIBDL])
+m4trace:configure.ac:26: -1- AC_DEFINE_TRACE_LITERAL([HAVE_LIBDL])
+m4trace:configure.ac:26: -1- m4_pattern_allow([^HAVE_LIBDL$])
+m4trace:configure.ac:28: -1- AH_OUTPUT([HAVE_LIBPTHREAD], [/* Define to 1 if you have the `pthread\' library (-lpthread). */
+@%:@undef HAVE_LIBPTHREAD])
+m4trace:configure.ac:28: -1- AC_DEFINE_TRACE_LITERAL([HAVE_LIBPTHREAD])
+m4trace:configure.ac:28: -1- m4_pattern_allow([^HAVE_LIBPTHREAD$])
+m4trace:configure.ac:30: -1- AH_OUTPUT([HAVE_LIBSSL], [/* Define to 1 if you have the `ssl\' library (-lssl). */
+@%:@undef HAVE_LIBSSL])
+m4trace:configure.ac:30: -1- AC_DEFINE_TRACE_LITERAL([HAVE_LIBSSL])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^HAVE_LIBSSL$])
+m4trace:configure.ac:33: -1- AC_FUNC_ALLOCA
+m4trace:configure.ac:33: -1- AC_TYPE_SIZE_T
+m4trace:configure.ac:33: -1- AC_DEFINE_TRACE_LITERAL([size_t])
+m4trace:configure.ac:33: -1- m4_pattern_allow([^size_t$])
+m4trace:configure.ac:33: -1- AH_OUTPUT([size_t], [/* Define to `unsigned int\' if <sys/types.h> does not define. */
 @%:@undef size_t])
-m4trace:configure.ac:25: -1- AC_DEFINE_TRACE_LITERAL([HAVE_ALLOCA_H])
-m4trace:configure.ac:25: -1- m4_pattern_allow([^HAVE_ALLOCA_H$])
-m4trace:configure.ac:25: -1- AH_OUTPUT([HAVE_ALLOCA_H], [/* Define to 1 if you have <alloca.h> and it should be used (not on Ultrix).
+m4trace:configure.ac:33: -1- AC_DEFINE_TRACE_LITERAL([HAVE_ALLOCA_H])
+m4trace:configure.ac:33: -1- m4_pattern_allow([^HAVE_ALLOCA_H$])
+m4trace:configure.ac:33: -1- AH_OUTPUT([HAVE_ALLOCA_H], [/* Define to 1 if you have <alloca.h> and it should be used (not on Ultrix).
    */
 @%:@undef HAVE_ALLOCA_H])
-m4trace:configure.ac:25: -1- AC_DEFINE_TRACE_LITERAL([HAVE_ALLOCA])
-m4trace:configure.ac:25: -1- m4_pattern_allow([^HAVE_ALLOCA$])
-m4trace:configure.ac:25: -1- AH_OUTPUT([HAVE_ALLOCA], [/* Define to 1 if you have `alloca\', as a function or macro. */
+m4trace:configure.ac:33: -1- AC_DEFINE_TRACE_LITERAL([HAVE_ALLOCA])
+m4trace:configure.ac:33: -1- m4_pattern_allow([^HAVE_ALLOCA$])
+m4trace:configure.ac:33: -1- AH_OUTPUT([HAVE_ALLOCA], [/* Define to 1 if you have `alloca\', as a function or macro. */
 @%:@undef HAVE_ALLOCA])
-m4trace:configure.ac:25: -1- AC_LIBSOURCE([alloca.c])
-m4trace:configure.ac:25: -1- AC_SUBST([ALLOCA], [\${LIBOBJDIR}alloca.$ac_objext])
-m4trace:configure.ac:25: -1- AC_SUBST_TRACE([ALLOCA])
-m4trace:configure.ac:25: -1- m4_pattern_allow([^ALLOCA$])
-m4trace:configure.ac:25: -1- AC_DEFINE_TRACE_LITERAL([C_ALLOCA])
-m4trace:configure.ac:25: -1- m4_pattern_allow([^C_ALLOCA$])
-m4trace:configure.ac:25: -1- AH_OUTPUT([C_ALLOCA], [/* Define to 1 if using `alloca.c\'. */
+m4trace:configure.ac:33: -1- AC_LIBSOURCE([alloca.c])
+m4trace:configure.ac:33: -1- AC_SUBST([ALLOCA], [\${LIBOBJDIR}alloca.$ac_objext])
+m4trace:configure.ac:33: -1- AC_SUBST_TRACE([ALLOCA])
+m4trace:configure.ac:33: -1- m4_pattern_allow([^ALLOCA$])
+m4trace:configure.ac:33: -1- AC_DEFINE_TRACE_LITERAL([C_ALLOCA])
+m4trace:configure.ac:33: -1- m4_pattern_allow([^C_ALLOCA$])
+m4trace:configure.ac:33: -1- AH_OUTPUT([C_ALLOCA], [/* Define to 1 if using `alloca.c\'. */
 @%:@undef C_ALLOCA])
-m4trace:configure.ac:25: -1- AC_DEFINE_TRACE_LITERAL([CRAY_STACKSEG_END])
-m4trace:configure.ac:25: -1- m4_pattern_allow([^CRAY_STACKSEG_END$])
-m4trace:configure.ac:25: -1- AH_OUTPUT([CRAY_STACKSEG_END], [/* Define to one of `_getb67\', `GETB67\', `getb67\' for Cray-2 and Cray-YMP
+m4trace:configure.ac:33: -1- AC_DEFINE_TRACE_LITERAL([CRAY_STACKSEG_END])
+m4trace:configure.ac:33: -1- m4_pattern_allow([^CRAY_STACKSEG_END$])
+m4trace:configure.ac:33: -1- AH_OUTPUT([CRAY_STACKSEG_END], [/* Define to one of `_getb67\', `GETB67\', `getb67\' for Cray-2 and Cray-YMP
    systems. This function is required for `alloca.c\' support on those systems.
    */
 @%:@undef CRAY_STACKSEG_END])
-m4trace:configure.ac:25: -1- AH_OUTPUT([STACK_DIRECTION], [/* If using the C implementation of alloca, define if you know the
+m4trace:configure.ac:33: -1- AH_OUTPUT([STACK_DIRECTION], [/* If using the C implementation of alloca, define if you know the
    direction of stack growth for your system; otherwise it will be
    automatically deduced at runtime.
 	STACK_DIRECTION > 0 => grows toward higher addresses
 	STACK_DIRECTION < 0 => grows toward lower addresses
 	STACK_DIRECTION = 0 => direction of growth unknown */
 @%:@undef STACK_DIRECTION])
-m4trace:configure.ac:25: -1- AC_DEFINE_TRACE_LITERAL([STACK_DIRECTION])
-m4trace:configure.ac:25: -1- m4_pattern_allow([^STACK_DIRECTION$])
-m4trace:configure.ac:26: -1- AC_CHECK_HEADERS([float.h inttypes.h limits.h malloc.h netinet/in.h stddef.h stdint.h stdlib.h string.h unistd.h])
-m4trace:configure.ac:26: -1- AH_OUTPUT([HAVE_FLOAT_H], [/* Define to 1 if you have the <float.h> header file. */
+m4trace:configure.ac:33: -1- AC_DEFINE_TRACE_LITERAL([STACK_DIRECTION])
+m4trace:configure.ac:33: -1- m4_pattern_allow([^STACK_DIRECTION$])
+m4trace:configure.ac:34: -1- AC_CHECK_HEADERS([float.h inttypes.h limits.h malloc.h netinet/in.h stddef.h stdint.h stdlib.h string.h unistd.h])
+m4trace:configure.ac:34: -1- AH_OUTPUT([HAVE_FLOAT_H], [/* Define to 1 if you have the <float.h> header file. */
 @%:@undef HAVE_FLOAT_H])
-m4trace:configure.ac:26: -1- AH_OUTPUT([HAVE_INTTYPES_H], [/* Define to 1 if you have the <inttypes.h> header file. */
+m4trace:configure.ac:34: -1- AH_OUTPUT([HAVE_INTTYPES_H], [/* Define to 1 if you have the <inttypes.h> header file. */
 @%:@undef HAVE_INTTYPES_H])
-m4trace:configure.ac:26: -1- AH_OUTPUT([HAVE_LIMITS_H], [/* Define to 1 if you have the <limits.h> header file. */
+m4trace:configure.ac:34: -1- AH_OUTPUT([HAVE_LIMITS_H], [/* Define to 1 if you have the <limits.h> header file. */
 @%:@undef HAVE_LIMITS_H])
-m4trace:configure.ac:26: -1- AH_OUTPUT([HAVE_MALLOC_H], [/* Define to 1 if you have the <malloc.h> header file. */
+m4trace:configure.ac:34: -1- AH_OUTPUT([HAVE_MALLOC_H], [/* Define to 1 if you have the <malloc.h> header file. */
 @%:@undef HAVE_MALLOC_H])
-m4trace:configure.ac:26: -1- AH_OUTPUT([HAVE_NETINET_IN_H], [/* Define to 1 if you have the <netinet/in.h> header file. */
+m4trace:configure.ac:34: -1- AH_OUTPUT([HAVE_NETINET_IN_H], [/* Define to 1 if you have the <netinet/in.h> header file. */
 @%:@undef HAVE_NETINET_IN_H])
-m4trace:configure.ac:26: -1- AH_OUTPUT([HAVE_STDDEF_H], [/* Define to 1 if you have the <stddef.h> header file. */
+m4trace:configure.ac:34: -1- AH_OUTPUT([HAVE_STDDEF_H], [/* Define to 1 if you have the <stddef.h> header file. */
 @%:@undef HAVE_STDDEF_H])
-m4trace:configure.ac:26: -1- AH_OUTPUT([HAVE_STDINT_H], [/* Define to 1 if you have the <stdint.h> header file. */
+m4trace:configure.ac:34: -1- AH_OUTPUT([HAVE_STDINT_H], [/* Define to 1 if you have the <stdint.h> header file. */
 @%:@undef HAVE_STDINT_H])
-m4trace:configure.ac:26: -1- AH_OUTPUT([HAVE_STDLIB_H], [/* Define to 1 if you have the <stdlib.h> header file. */
+m4trace:configure.ac:34: -1- AH_OUTPUT([HAVE_STDLIB_H], [/* Define to 1 if you have the <stdlib.h> header file. */
 @%:@undef HAVE_STDLIB_H])
-m4trace:configure.ac:26: -1- AH_OUTPUT([HAVE_STRING_H], [/* Define to 1 if you have the <string.h> header file. */
+m4trace:configure.ac:34: -1- AH_OUTPUT([HAVE_STRING_H], [/* Define to 1 if you have the <string.h> header file. */
 @%:@undef HAVE_STRING_H])
-m4trace:configure.ac:26: -1- AH_OUTPUT([HAVE_UNISTD_H], [/* Define to 1 if you have the <unistd.h> header file. */
+m4trace:configure.ac:34: -1- AH_OUTPUT([HAVE_UNISTD_H], [/* Define to 1 if you have the <unistd.h> header file. */
 @%:@undef HAVE_UNISTD_H])
-m4trace:configure.ac:29: -1- AC_C_INLINE
-m4trace:configure.ac:29: -1- AH_OUTPUT([inline], [/* Define to `__inline__\' or `__inline\' if that\'s what the C compiler
+m4trace:configure.ac:37: -1- AC_C_INLINE
+m4trace:configure.ac:37: -1- AH_OUTPUT([inline], [/* Define to `__inline__\' or `__inline\' if that\'s what the C compiler
    calls it, or to nothing if \'inline\' is not supported under any name.  */
 #ifndef __cplusplus
 #undef inline
 #endif])
-m4trace:configure.ac:30: -1- AC_TYPE_INT16_T
-m4trace:configure.ac:30: -1- AC_DEFINE_TRACE_LITERAL([int16_t])
-m4trace:configure.ac:30: -1- m4_pattern_allow([^int16_t$])
-m4trace:configure.ac:30: -1- AH_OUTPUT([int16_t], [/* Define to the type of a signed integer type of width exactly 16 bits if
+m4trace:configure.ac:38: -1- AC_TYPE_INT16_T
+m4trace:configure.ac:38: -1- AC_DEFINE_TRACE_LITERAL([int16_t])
+m4trace:configure.ac:38: -1- m4_pattern_allow([^int16_t$])
+m4trace:configure.ac:38: -1- AH_OUTPUT([int16_t], [/* Define to the type of a signed integer type of width exactly 16 bits if
    such a type exists and the standard includes do not define it. */
 @%:@undef int16_t])
-m4trace:configure.ac:31: -1- AC_TYPE_INT32_T
-m4trace:configure.ac:31: -1- AC_DEFINE_TRACE_LITERAL([int32_t])
-m4trace:configure.ac:31: -1- m4_pattern_allow([^int32_t$])
-m4trace:configure.ac:31: -1- AH_OUTPUT([int32_t], [/* Define to the type of a signed integer type of width exactly 32 bits if
+m4trace:configure.ac:39: -1- AC_TYPE_INT32_T
+m4trace:configure.ac:39: -1- AC_DEFINE_TRACE_LITERAL([int32_t])
+m4trace:configure.ac:39: -1- m4_pattern_allow([^int32_t$])
+m4trace:configure.ac:39: -1- AH_OUTPUT([int32_t], [/* Define to the type of a signed integer type of width exactly 32 bits if
    such a type exists and the standard includes do not define it. */
 @%:@undef int32_t])
-m4trace:configure.ac:32: -1- AC_TYPE_INT8_T
-m4trace:configure.ac:32: -1- AC_DEFINE_TRACE_LITERAL([int8_t])
-m4trace:configure.ac:32: -1- m4_pattern_allow([^int8_t$])
-m4trace:configure.ac:32: -1- AH_OUTPUT([int8_t], [/* Define to the type of a signed integer type of width exactly 8 bits if such
+m4trace:configure.ac:40: -1- AC_TYPE_INT64_T
+m4trace:configure.ac:40: -1- AC_DEFINE_TRACE_LITERAL([int64_t])
+m4trace:configure.ac:40: -1- m4_pattern_allow([^int64_t$])
+m4trace:configure.ac:40: -1- AH_OUTPUT([int64_t], [/* Define to the type of a signed integer type of width exactly 64 bits if
+   such a type exists and the standard includes do not define it. */
+@%:@undef int64_t])
+m4trace:configure.ac:41: -1- AC_TYPE_INT8_T
+m4trace:configure.ac:41: -1- AC_DEFINE_TRACE_LITERAL([int8_t])
+m4trace:configure.ac:41: -1- m4_pattern_allow([^int8_t$])
+m4trace:configure.ac:41: -1- AH_OUTPUT([int8_t], [/* Define to the type of a signed integer type of width exactly 8 bits if such
    a type exists and the standard includes do not define it. */
 @%:@undef int8_t])
-m4trace:configure.ac:33: -1- AC_TYPE_OFF_T
-m4trace:configure.ac:33: -1- AC_DEFINE_TRACE_LITERAL([off_t])
-m4trace:configure.ac:33: -1- m4_pattern_allow([^off_t$])
-m4trace:configure.ac:33: -1- AH_OUTPUT([off_t], [/* Define to `long int\' if <sys/types.h> does not define. */
+m4trace:configure.ac:42: -1- AC_TYPE_OFF_T
+m4trace:configure.ac:42: -1- AC_DEFINE_TRACE_LITERAL([off_t])
+m4trace:configure.ac:42: -1- m4_pattern_allow([^off_t$])
+m4trace:configure.ac:42: -1- AH_OUTPUT([off_t], [/* Define to `long int\' if <sys/types.h> does not define. */
 @%:@undef off_t])
-m4trace:configure.ac:34: -1- AC_TYPE_SIZE_T
-m4trace:configure.ac:34: -1- AC_DEFINE_TRACE_LITERAL([size_t])
-m4trace:configure.ac:34: -1- m4_pattern_allow([^size_t$])
-m4trace:configure.ac:34: -1- AH_OUTPUT([size_t], [/* Define to `unsigned int\' if <sys/types.h> does not define. */
+m4trace:configure.ac:43: -1- AC_TYPE_SIZE_T
+m4trace:configure.ac:43: -1- AC_DEFINE_TRACE_LITERAL([size_t])
+m4trace:configure.ac:43: -1- m4_pattern_allow([^size_t$])
+m4trace:configure.ac:43: -1- AH_OUTPUT([size_t], [/* Define to `unsigned int\' if <sys/types.h> does not define. */
 @%:@undef size_t])
-m4trace:configure.ac:35: -1- AC_TYPE_SSIZE_T
-m4trace:configure.ac:35: -1- AC_DEFINE_TRACE_LITERAL([ssize_t])
-m4trace:configure.ac:35: -1- m4_pattern_allow([^ssize_t$])
-m4trace:configure.ac:35: -1- AH_OUTPUT([ssize_t], [/* Define to `int\' if <sys/types.h> does not define. */
+m4trace:configure.ac:44: -1- AC_TYPE_SSIZE_T
+m4trace:configure.ac:44: -1- AC_DEFINE_TRACE_LITERAL([ssize_t])
+m4trace:configure.ac:44: -1- m4_pattern_allow([^ssize_t$])
+m4trace:configure.ac:44: -1- AH_OUTPUT([ssize_t], [/* Define to `int\' if <sys/types.h> does not define. */
 @%:@undef ssize_t])
-m4trace:configure.ac:36: -1- AC_TYPE_UINT16_T
-m4trace:configure.ac:36: -1- AC_DEFINE_TRACE_LITERAL([uint16_t])
-m4trace:configure.ac:36: -1- m4_pattern_allow([^uint16_t$])
-m4trace:configure.ac:36: -1- AH_OUTPUT([uint16_t], [/* Define to the type of an unsigned integer type of width exactly 16 bits if
+m4trace:configure.ac:45: -1- AC_TYPE_UINT16_T
+m4trace:configure.ac:45: -1- AC_DEFINE_TRACE_LITERAL([uint16_t])
+m4trace:configure.ac:45: -1- m4_pattern_allow([^uint16_t$])
+m4trace:configure.ac:45: -1- AH_OUTPUT([uint16_t], [/* Define to the type of an unsigned integer type of width exactly 16 bits if
    such a type exists and the standard includes do not define it. */
 @%:@undef uint16_t])
-m4trace:configure.ac:37: -1- AC_TYPE_UINT32_T
-m4trace:configure.ac:37: -1- AC_DEFINE_TRACE_LITERAL([_UINT32_T])
-m4trace:configure.ac:37: -1- m4_pattern_allow([^_UINT32_T$])
-m4trace:configure.ac:37: -1- AH_OUTPUT([_UINT32_T], [/* Define for Solaris 2.5.1 so the uint32_t typedef from <sys/synch.h>,
+m4trace:configure.ac:46: -1- AC_TYPE_UINT32_T
+m4trace:configure.ac:46: -1- AC_DEFINE_TRACE_LITERAL([_UINT32_T])
+m4trace:configure.ac:46: -1- m4_pattern_allow([^_UINT32_T$])
+m4trace:configure.ac:46: -1- AH_OUTPUT([_UINT32_T], [/* Define for Solaris 2.5.1 so the uint32_t typedef from <sys/synch.h>,
    <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
    @%:@define below would cause a syntax error. */
 @%:@undef _UINT32_T])
-m4trace:configure.ac:37: -1- AC_DEFINE_TRACE_LITERAL([uint32_t])
-m4trace:configure.ac:37: -1- m4_pattern_allow([^uint32_t$])
-m4trace:configure.ac:37: -1- AH_OUTPUT([uint32_t], [/* Define to the type of an unsigned integer type of width exactly 32 bits if
+m4trace:configure.ac:46: -1- AC_DEFINE_TRACE_LITERAL([uint32_t])
+m4trace:configure.ac:46: -1- m4_pattern_allow([^uint32_t$])
+m4trace:configure.ac:46: -1- AH_OUTPUT([uint32_t], [/* Define to the type of an unsigned integer type of width exactly 32 bits if
    such a type exists and the standard includes do not define it. */
 @%:@undef uint32_t])
-m4trace:configure.ac:38: -1- AC_TYPE_UINT8_T
-m4trace:configure.ac:38: -1- AC_DEFINE_TRACE_LITERAL([_UINT8_T])
-m4trace:configure.ac:38: -1- m4_pattern_allow([^_UINT8_T$])
-m4trace:configure.ac:38: -1- AH_OUTPUT([_UINT8_T], [/* Define for Solaris 2.5.1 so the uint8_t typedef from <sys/synch.h>,
+m4trace:configure.ac:47: -1- AC_TYPE_UINT64_T
+m4trace:configure.ac:47: -1- AC_DEFINE_TRACE_LITERAL([_UINT64_T])
+m4trace:configure.ac:47: -1- m4_pattern_allow([^_UINT64_T$])
+m4trace:configure.ac:47: -1- AH_OUTPUT([_UINT64_T], [/* Define for Solaris 2.5.1 so the uint64_t typedef from <sys/synch.h>,
+   <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
+   @%:@define below would cause a syntax error. */
+@%:@undef _UINT64_T])
+m4trace:configure.ac:47: -1- AC_DEFINE_TRACE_LITERAL([uint64_t])
+m4trace:configure.ac:47: -1- m4_pattern_allow([^uint64_t$])
+m4trace:configure.ac:47: -1- AH_OUTPUT([uint64_t], [/* Define to the type of an unsigned integer type of width exactly 64 bits if
+   such a type exists and the standard includes do not define it. */
+@%:@undef uint64_t])
+m4trace:configure.ac:48: -1- AC_TYPE_UINT8_T
+m4trace:configure.ac:48: -1- AC_DEFINE_TRACE_LITERAL([_UINT8_T])
+m4trace:configure.ac:48: -1- m4_pattern_allow([^_UINT8_T$])
+m4trace:configure.ac:48: -1- AH_OUTPUT([_UINT8_T], [/* Define for Solaris 2.5.1 so the uint8_t typedef from <sys/synch.h>,
    <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
    @%:@define below would cause a syntax error. */
 @%:@undef _UINT8_T])
-m4trace:configure.ac:38: -1- AC_DEFINE_TRACE_LITERAL([uint8_t])
-m4trace:configure.ac:38: -1- m4_pattern_allow([^uint8_t$])
-m4trace:configure.ac:38: -1- AH_OUTPUT([uint8_t], [/* Define to the type of an unsigned integer type of width exactly 8 bits if
+m4trace:configure.ac:48: -1- AC_DEFINE_TRACE_LITERAL([uint8_t])
+m4trace:configure.ac:48: -1- m4_pattern_allow([^uint8_t$])
+m4trace:configure.ac:48: -1- AH_OUTPUT([uint8_t], [/* Define to the type of an unsigned integer type of width exactly 8 bits if
    such a type exists and the standard includes do not define it. */
 @%:@undef uint8_t])
-m4trace:configure.ac:39: -1- AC_CHECK_TYPES([ptrdiff_t])
-m4trace:configure.ac:39: -1- AC_DEFINE_TRACE_LITERAL([HAVE_PTRDIFF_T])
-m4trace:configure.ac:39: -1- m4_pattern_allow([^HAVE_PTRDIFF_T$])
-m4trace:configure.ac:39: -1- AH_OUTPUT([HAVE_PTRDIFF_T], [/* Define to 1 if the system has the type `ptrdiff_t\'. */
+m4trace:configure.ac:49: -1- AC_CHECK_TYPES([ptrdiff_t])
+m4trace:configure.ac:49: -1- AC_DEFINE_TRACE_LITERAL([HAVE_PTRDIFF_T])
+m4trace:configure.ac:49: -1- m4_pattern_allow([^HAVE_PTRDIFF_T$])
+m4trace:configure.ac:49: -1- AH_OUTPUT([HAVE_PTRDIFF_T], [/* Define to 1 if the system has the type `ptrdiff_t\'. */
 @%:@undef HAVE_PTRDIFF_T])
-m4trace:configure.ac:42: -1- AC_FUNC_STRTOD
-m4trace:configure.ac:42: -1- AC_SUBST([POW_LIB])
-m4trace:configure.ac:42: -1- AC_SUBST_TRACE([POW_LIB])
-m4trace:configure.ac:42: -1- m4_pattern_allow([^POW_LIB$])
-m4trace:configure.ac:42: -1- AC_SUBST([LIB@&t@OBJS], ["$LIB@&t@OBJS strtod.$ac_objext"])
-m4trace:configure.ac:42: -1- AC_SUBST_TRACE([LIB@&t@OBJS])
-m4trace:configure.ac:42: -1- m4_pattern_allow([^LIB@&t@OBJS$])
-m4trace:configure.ac:42: -1- AC_LIBSOURCE([strtod.c])
-m4trace:configure.ac:43: -1- AC_CHECK_FUNCS([memchr memmove memset strerror])
-m4trace:configure.ac:43: -1- AH_OUTPUT([HAVE_MEMCHR], [/* Define to 1 if you have the `memchr\' function. */
+m4trace:configure.ac:52: -1- AC_FUNC_STRTOD
+m4trace:configure.ac:52: -1- AC_SUBST([POW_LIB])
+m4trace:configure.ac:52: -1- AC_SUBST_TRACE([POW_LIB])
+m4trace:configure.ac:52: -1- m4_pattern_allow([^POW_LIB$])
+m4trace:configure.ac:52: -1- AC_SUBST([LIB@&t@OBJS], ["$LIB@&t@OBJS strtod.$ac_objext"])
+m4trace:configure.ac:52: -1- AC_SUBST_TRACE([LIB@&t@OBJS])
+m4trace:configure.ac:52: -1- m4_pattern_allow([^LIB@&t@OBJS$])
+m4trace:configure.ac:52: -1- AC_LIBSOURCE([strtod.c])
+m4trace:configure.ac:53: -1- AC_CHECK_FUNCS([memchr memmove memset strerror])
+m4trace:configure.ac:53: -1- AH_OUTPUT([HAVE_MEMCHR], [/* Define to 1 if you have the `memchr\' function. */
 @%:@undef HAVE_MEMCHR])
-m4trace:configure.ac:43: -1- AH_OUTPUT([HAVE_MEMMOVE], [/* Define to 1 if you have the `memmove\' function. */
+m4trace:configure.ac:53: -1- AH_OUTPUT([HAVE_MEMMOVE], [/* Define to 1 if you have the `memmove\' function. */
 @%:@undef HAVE_MEMMOVE])
-m4trace:configure.ac:43: -1- AH_OUTPUT([HAVE_MEMSET], [/* Define to 1 if you have the `memset\' function. */
+m4trace:configure.ac:53: -1- AH_OUTPUT([HAVE_MEMSET], [/* Define to 1 if you have the `memset\' function. */
 @%:@undef HAVE_MEMSET])
-m4trace:configure.ac:43: -1- AH_OUTPUT([HAVE_STRERROR], [/* Define to 1 if you have the `strerror\' function. */
+m4trace:configure.ac:53: -1- AH_OUTPUT([HAVE_STRERROR], [/* Define to 1 if you have the `strerror\' function. */
 @%:@undef HAVE_STRERROR])
-m4trace:configure.ac:45: -1- AC_CONFIG_FILES([Makefile
+m4trace:configure.ac:55: -1- AC_CONFIG_FILES([Makefile
                  asn/Makefile])
-m4trace:configure.ac:47: -1- AC_SUBST([LIB@&t@OBJS], [$ac_libobjs])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([LIB@&t@OBJS])
-m4trace:configure.ac:47: -1- m4_pattern_allow([^LIB@&t@OBJS$])
-m4trace:configure.ac:47: -1- AC_SUBST([LTLIBOBJS], [$ac_ltlibobjs])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([LTLIBOBJS])
-m4trace:configure.ac:47: -1- m4_pattern_allow([^LTLIBOBJS$])
-m4trace:configure.ac:47: -1- AM_CONDITIONAL([am__EXEEXT], [test -n "$EXEEXT"])
-m4trace:configure.ac:47: -1- AC_PREREQ([2.52])
-m4trace:configure.ac:47: -1- AC_SUBST([am__EXEEXT_TRUE])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([am__EXEEXT_TRUE])
-m4trace:configure.ac:47: -1- m4_pattern_allow([^am__EXEEXT_TRUE$])
-m4trace:configure.ac:47: -1- AC_SUBST([am__EXEEXT_FALSE])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([am__EXEEXT_FALSE])
-m4trace:configure.ac:47: -1- m4_pattern_allow([^am__EXEEXT_FALSE$])
-m4trace:configure.ac:47: -1- _AM_SUBST_NOTMAKE([am__EXEEXT_TRUE])
-m4trace:configure.ac:47: -1- _AM_SUBST_NOTMAKE([am__EXEEXT_FALSE])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([top_builddir])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([top_build_prefix])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([srcdir])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([abs_srcdir])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([top_srcdir])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([abs_top_srcdir])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([builddir])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([abs_builddir])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([abs_top_builddir])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([INSTALL])
-m4trace:configure.ac:47: -1- AC_SUBST_TRACE([MKDIR_P])
-m4trace:configure.ac:47: -1- AC_REQUIRE_AUX_FILE([ltmain.sh])
+m4trace:configure.ac:57: -1- AC_SUBST([LIB@&t@OBJS], [$ac_libobjs])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([LIB@&t@OBJS])
+m4trace:configure.ac:57: -1- m4_pattern_allow([^LIB@&t@OBJS$])
+m4trace:configure.ac:57: -1- AC_SUBST([LTLIBOBJS], [$ac_ltlibobjs])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([LTLIBOBJS])
+m4trace:configure.ac:57: -1- m4_pattern_allow([^LTLIBOBJS$])
+m4trace:configure.ac:57: -1- AM_CONDITIONAL([am__EXEEXT], [test -n "$EXEEXT"])
+m4trace:configure.ac:57: -1- AC_PREREQ([2.52])
+m4trace:configure.ac:57: -1- AC_SUBST([am__EXEEXT_TRUE])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([am__EXEEXT_TRUE])
+m4trace:configure.ac:57: -1- m4_pattern_allow([^am__EXEEXT_TRUE$])
+m4trace:configure.ac:57: -1- AC_SUBST([am__EXEEXT_FALSE])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([am__EXEEXT_FALSE])
+m4trace:configure.ac:57: -1- m4_pattern_allow([^am__EXEEXT_FALSE$])
+m4trace:configure.ac:57: -1- _AM_SUBST_NOTMAKE([am__EXEEXT_TRUE])
+m4trace:configure.ac:57: -1- _AM_SUBST_NOTMAKE([am__EXEEXT_FALSE])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([top_builddir])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([top_build_prefix])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([srcdir])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([abs_srcdir])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([top_srcdir])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([abs_top_srcdir])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([builddir])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([abs_builddir])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([abs_top_builddir])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([INSTALL])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([MKDIR_P])
+m4trace:configure.ac:57: -1- AC_REQUIRE_AUX_FILE([ltmain.sh])

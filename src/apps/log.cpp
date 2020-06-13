@@ -13,6 +13,6 @@ void seclog::debug(const std::string str) {
     std::cout << str << std::endl;
 }
 
-void seclog::warn(const std::string str) {
+void seclog::warning(const std::string str) {
     std::cout << str << std::endl;
 }

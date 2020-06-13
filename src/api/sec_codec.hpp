@@ -7,5 +7,4 @@
 char* sec_encode(char* raw);
 int sec_decode(spud_t* spdu, char* raw, size_t raw_length);
 
-
 #endif

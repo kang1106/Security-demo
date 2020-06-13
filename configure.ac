@@ -2,9 +2,9 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT(main, 1.0, xx@xx.com)
+AC_INIT(sec_v2xd, 1.1.0, xx@xx.com)
 AC_CONFIG_SRCDIR([src/context.hpp])
-# AC_CONFIG_HEADERS([config.h])
+#AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([subdir-objects])
 AC_CONFIG_MACRO_DIR([m4])
 
@@ -20,6 +20,14 @@ AC_PROG_MAKE_SET
 LT_INIT
 
 # Checks for libraries.
+# FIXME: Replace `main' with a function in `-lcrypto':
+AC_CHECK_LIB([crypto], [main])
+# FIXME: Replace `main' with a function in `-ldl':
+AC_CHECK_LIB([dl], [main])
+# FIXME: Replace `main' with a function in `-lpthread':
+AC_CHECK_LIB([pthread], [main])
+# FIXME: Replace `main' with a function in `-lssl':
+AC_CHECK_LIB([ssl], [main])
 
 # Checks for header files.
 AC_FUNC_ALLOCA
@@ -29,12 +37,14 @@ AC_CHECK_HEADERS([float.h inttypes.h limits.h malloc.h netinet/in.h stddef.h std
 AC_C_INLINE
 AC_TYPE_INT16_T
 AC_TYPE_INT32_T
+AC_TYPE_INT64_T
 AC_TYPE_INT8_T
 AC_TYPE_OFF_T
 AC_TYPE_SIZE_T
 AC_TYPE_SSIZE_T
 AC_TYPE_UINT16_T
 AC_TYPE_UINT32_T
+AC_TYPE_UINT64_T
 AC_TYPE_UINT8_T
 AC_CHECK_TYPES([ptrdiff_t])
 

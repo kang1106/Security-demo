@@ -70,10 +70,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/main
-pkgincludedir = $(includedir)/main
-pkglibdir = $(libdir)/main
-pkglibexecdir = $(libexecdir)/main
+pkgdatadir = $(datadir)/sec_v2xd
+pkgincludedir = $(includedir)/sec_v2xd
+pkglibdir = $(libdir)/sec_v2xd
+pkglibexecdir = $(libexecdir)/sec_v2xd
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -88,7 +88,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
-bin_PROGRAMS = main$(EXEEXT)
+bin_PROGRAMS = sec_v2xd$(EXEEXT)
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
@@ -107,17 +107,20 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
-am_main_OBJECTS = src/main-main.$(OBJEXT) src/apps/main-log.$(OBJEXT) \
-	src/api/main-sec_codec.$(OBJEXT)
-main_OBJECTS = $(am_main_OBJECTS)
-main_LDADD = $(LDADD)
-main_DEPENDENCIES = ./asn/.libs/libsomething.a
+am_sec_v2xd_OBJECTS = src/sec_v2xd-main.$(OBJEXT) \
+	src/apps/sec_v2xd-log.$(OBJEXT) \
+	src/api/sec_v2xd-sec_codec.$(OBJEXT)
+sec_v2xd_OBJECTS = $(am_sec_v2xd_OBJECTS)
+sec_v2xd_LDADD = $(LDADD)
+am__DEPENDENCIES_1 =
+sec_v2xd_DEPENDENCIES = ./asn/.libs/libsomething.a \
+	$(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-main_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(main_CXXFLAGS) \
+sec_v2xd_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(sec_v2xd_CXXFLAGS) \
 	$(CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
@@ -153,8 +156,8 @@ AM_V_CXXLD = $(am__v_CXXLD_$(V))
 am__v_CXXLD_ = $(am__v_CXXLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(main_SOURCES)
-DIST_SOURCES = $(main_SOURCES)
+SOURCES = $(sec_v2xd_SOURCES)
+DIST_SOURCES = $(sec_v2xd_SOURCES)
 RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	ctags-recursive dvi-recursive html-recursive info-recursive \
 	install-data-recursive install-dvi-recursive \
@@ -261,7 +264,7 @@ CXXCPP = g++ -E
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"main\" -DPACKAGE_TARNAME=\"main\" -DPACKAGE_VERSION=\"1.0\" -DPACKAGE_STRING=\"main\ 1.0\" -DPACKAGE_BUGREPORT=\"xx@xx.com\" -DPACKAGE_URL=\"\" -DPACKAGE=\"main\" -DVERSION=\"1.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_ALLOCA_H=1 -DHAVE_ALLOCA=1 -DHAVE_FLOAT_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_LIMITS_H=1 -DHAVE_MALLOC_H=1 -DHAVE_NETINET_IN_H=1 -DHAVE_STDDEF_H=1 -DHAVE_STDINT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_UNISTD_H=1 -DHAVE_PTRDIFF_T=1 -DHAVE_MEMCHR=1 -DHAVE_MEMMOVE=1 -DHAVE_MEMSET=1 -DHAVE_STRERROR=1
+DEFS = -DPACKAGE_NAME=\"sec_v2xd\" -DPACKAGE_TARNAME=\"sec_v2xd\" -DPACKAGE_VERSION=\"1.1.0\" -DPACKAGE_STRING=\"sec_v2xd\ 1.1.0\" -DPACKAGE_BUGREPORT=\"xx@xx.com\" -DPACKAGE_URL=\"\" -DPACKAGE=\"sec_v2xd\" -DVERSION=\"1.1.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBCRYPTO=1 -DHAVE_LIBDL=1 -DHAVE_LIBPTHREAD=1 -DHAVE_LIBSSL=1 -DHAVE_ALLOCA_H=1 -DHAVE_ALLOCA=1 -DHAVE_FLOAT_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_LIMITS_H=1 -DHAVE_MALLOC_H=1 -DHAVE_NETINET_IN_H=1 -DHAVE_STDDEF_H=1 -DHAVE_STDINT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_UNISTD_H=1 -DHAVE_PTRDIFF_T=1 -DHAVE_MEMCHR=1 -DHAVE_MEMMOVE=1 -DHAVE_MEMSET=1 -DHAVE_STRERROR=1
 DEPDIR = .deps
 DLLTOOL = false
 DSYMUTIL = 
@@ -281,7 +284,7 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
 LIBOBJS = 
-LIBS = 
+LIBS = -lssl -lpthread -ldl -lcrypto 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
@@ -296,13 +299,13 @@ OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = main
+PACKAGE = sec_v2xd
 PACKAGE_BUGREPORT = xx@xx.com
-PACKAGE_NAME = main
-PACKAGE_STRING = main 1.0
-PACKAGE_TARNAME = main
+PACKAGE_NAME = sec_v2xd
+PACKAGE_STRING = sec_v2xd 1.1.0
+PACKAGE_TARNAME = sec_v2xd
 PACKAGE_URL = 
-PACKAGE_VERSION = 1.0
+PACKAGE_VERSION = 1.1.0
 PATH_SEPARATOR = :
 POW_LIB = 
 RANLIB = ranlib
@@ -310,7 +313,7 @@ SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-VERSION = 1.0
+VERSION = 1.1.0
 abs_builddir = /home/yuk6szh/DATA/GIT_V2X/V2X-Security-Stack
 abs_srcdir = /home/yuk6szh/DATA/GIT_V2X/V2X-Security-Stack
 abs_top_builddir = /home/yuk6szh/DATA/GIT_V2X/V2X-Security-Stack
@@ -365,16 +368,19 @@ target_alias =
 top_build_prefix = 
 top_builddir = .
 top_srcdir = .
+ROOT = ./
 ASN_ROOT = ./asn
 SRC_ROOT = ./src
+INCLUDE_ROOT = ./include
+GMSSL_LIB = -L./lib -lssl -lcrypto
 SUBDIRS = asn
 ACLOCAL_AMFLAGS = -I m4
-AM_CFLAGS = -I$(ASN_ROOT) -I$(SRC_ROOT)
-AM_CXXFLAGS = -I$(ASN_ROOT) -I$(SRC_ROOT) -std=c++11
-LDADD = ./asn/.libs/libsomething.a
-main_CFLAGS = $(AM_CFLAGS)
-main_CXXFLAGS = $(AM_CXXFLAGS)
-main_SOURCES = src/main.cpp \
+AM_CFLAGS = -I$(ASN_ROOT) -I$(SRC_ROOT) -I$(INCLUDE_ROOT) -I$(ROOT)
+AM_CXXFLAGS = -I$(ASN_ROOT) -I$(SRC_ROOT) -I$(INCLUDE_ROOT) -I$(ROOT) -std=c++11 -Wl,--no-as-needed -ldl
+LDADD = ./asn/.libs/libsomething.a $(GMSSL_LIB) -lpthread
+sec_v2xd_CFLAGS = $(AM_CFLAGS)
+sec_v2xd_CXXFLAGS = $(AM_CXXFLAGS)
+sec_v2xd_SOURCES = src/main.cpp \
                src/apps/log.cpp \
                src/api/sec_codec.cpp
 
@@ -470,7 +476,7 @@ src/$(am__dirstamp):
 src/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) src/$(DEPDIR)
 	@: > src/$(DEPDIR)/$(am__dirstamp)
-src/main-main.$(OBJEXT): src/$(am__dirstamp) \
+src/sec_v2xd-main.$(OBJEXT): src/$(am__dirstamp) \
 	src/$(DEPDIR)/$(am__dirstamp)
 src/apps/$(am__dirstamp):
 	@$(MKDIR_P) src/apps
@@ -478,7 +484,7 @@ src/apps/$(am__dirstamp):
 src/apps/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) src/apps/$(DEPDIR)
 	@: > src/apps/$(DEPDIR)/$(am__dirstamp)
-src/apps/main-log.$(OBJEXT): src/apps/$(am__dirstamp) \
+src/apps/sec_v2xd-log.$(OBJEXT): src/apps/$(am__dirstamp) \
 	src/apps/$(DEPDIR)/$(am__dirstamp)
 src/api/$(am__dirstamp):
 	@$(MKDIR_P) src/api
@@ -486,12 +492,12 @@ src/api/$(am__dirstamp):
 src/api/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) src/api/$(DEPDIR)
 	@: > src/api/$(DEPDIR)/$(am__dirstamp)
-src/api/main-sec_codec.$(OBJEXT): src/api/$(am__dirstamp) \
+src/api/sec_v2xd-sec_codec.$(OBJEXT): src/api/$(am__dirstamp) \
 	src/api/$(DEPDIR)/$(am__dirstamp)
 
-main$(EXEEXT): $(main_OBJECTS) $(main_DEPENDENCIES) $(EXTRA_main_DEPENDENCIES) 
-	@rm -f main$(EXEEXT)
-	$(AM_V_CXXLD)$(main_LINK) $(main_OBJECTS) $(main_LDADD) $(LIBS)
+sec_v2xd$(EXEEXT): $(sec_v2xd_OBJECTS) $(sec_v2xd_DEPENDENCIES) $(EXTRA_sec_v2xd_DEPENDENCIES) 
+	@rm -f sec_v2xd$(EXEEXT)
+	$(AM_V_CXXLD)$(sec_v2xd_LINK) $(sec_v2xd_OBJECTS) $(sec_v2xd_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -502,9 +508,9 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include src/$(DEPDIR)/main-main.Po
-include src/api/$(DEPDIR)/main-sec_codec.Po
-include src/apps/$(DEPDIR)/main-log.Po
+include src/$(DEPDIR)/sec_v2xd-main.Po
+include src/api/$(DEPDIR)/sec_v2xd-sec_codec.Po
+include src/apps/$(DEPDIR)/sec_v2xd-log.Po
 
 .cpp.o:
 	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -530,47 +536,47 @@ include src/apps/$(DEPDIR)/main-log.Po
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(LTCXXCOMPILE) -c -o $@ $<
 
-src/main-main.o: src/main.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -MT src/main-main.o -MD -MP -MF src/$(DEPDIR)/main-main.Tpo -c -o src/main-main.o `test -f 'src/main.cpp' || echo '$(srcdir)/'`src/main.cpp
-	$(AM_V_at)$(am__mv) src/$(DEPDIR)/main-main.Tpo src/$(DEPDIR)/main-main.Po
-#	$(AM_V_CXX)source='src/main.cpp' object='src/main-main.o' libtool=no \
+src/sec_v2xd-main.o: src/main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -MT src/sec_v2xd-main.o -MD -MP -MF src/$(DEPDIR)/sec_v2xd-main.Tpo -c -o src/sec_v2xd-main.o `test -f 'src/main.cpp' || echo '$(srcdir)/'`src/main.cpp
+	$(AM_V_at)$(am__mv) src/$(DEPDIR)/sec_v2xd-main.Tpo src/$(DEPDIR)/sec_v2xd-main.Po
+#	$(AM_V_CXX)source='src/main.cpp' object='src/sec_v2xd-main.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -c -o src/main-main.o `test -f 'src/main.cpp' || echo '$(srcdir)/'`src/main.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -c -o src/sec_v2xd-main.o `test -f 'src/main.cpp' || echo '$(srcdir)/'`src/main.cpp
 
-src/main-main.obj: src/main.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -MT src/main-main.obj -MD -MP -MF src/$(DEPDIR)/main-main.Tpo -c -o src/main-main.obj `if test -f 'src/main.cpp'; then $(CYGPATH_W) 'src/main.cpp'; else $(CYGPATH_W) '$(srcdir)/src/main.cpp'; fi`
-	$(AM_V_at)$(am__mv) src/$(DEPDIR)/main-main.Tpo src/$(DEPDIR)/main-main.Po
-#	$(AM_V_CXX)source='src/main.cpp' object='src/main-main.obj' libtool=no \
+src/sec_v2xd-main.obj: src/main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -MT src/sec_v2xd-main.obj -MD -MP -MF src/$(DEPDIR)/sec_v2xd-main.Tpo -c -o src/sec_v2xd-main.obj `if test -f 'src/main.cpp'; then $(CYGPATH_W) 'src/main.cpp'; else $(CYGPATH_W) '$(srcdir)/src/main.cpp'; fi`
+	$(AM_V_at)$(am__mv) src/$(DEPDIR)/sec_v2xd-main.Tpo src/$(DEPDIR)/sec_v2xd-main.Po
+#	$(AM_V_CXX)source='src/main.cpp' object='src/sec_v2xd-main.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -c -o src/main-main.obj `if test -f 'src/main.cpp'; then $(CYGPATH_W) 'src/main.cpp'; else $(CYGPATH_W) '$(srcdir)/src/main.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -c -o src/sec_v2xd-main.obj `if test -f 'src/main.cpp'; then $(CYGPATH_W) 'src/main.cpp'; else $(CYGPATH_W) '$(srcdir)/src/main.cpp'; fi`
 
-src/apps/main-log.o: src/apps/log.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -MT src/apps/main-log.o -MD -MP -MF src/apps/$(DEPDIR)/main-log.Tpo -c -o src/apps/main-log.o `test -f 'src/apps/log.cpp' || echo '$(srcdir)/'`src/apps/log.cpp
-	$(AM_V_at)$(am__mv) src/apps/$(DEPDIR)/main-log.Tpo src/apps/$(DEPDIR)/main-log.Po
-#	$(AM_V_CXX)source='src/apps/log.cpp' object='src/apps/main-log.o' libtool=no \
+src/apps/sec_v2xd-log.o: src/apps/log.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -MT src/apps/sec_v2xd-log.o -MD -MP -MF src/apps/$(DEPDIR)/sec_v2xd-log.Tpo -c -o src/apps/sec_v2xd-log.o `test -f 'src/apps/log.cpp' || echo '$(srcdir)/'`src/apps/log.cpp
+	$(AM_V_at)$(am__mv) src/apps/$(DEPDIR)/sec_v2xd-log.Tpo src/apps/$(DEPDIR)/sec_v2xd-log.Po
+#	$(AM_V_CXX)source='src/apps/log.cpp' object='src/apps/sec_v2xd-log.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -c -o src/apps/main-log.o `test -f 'src/apps/log.cpp' || echo '$(srcdir)/'`src/apps/log.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -c -o src/apps/sec_v2xd-log.o `test -f 'src/apps/log.cpp' || echo '$(srcdir)/'`src/apps/log.cpp
 
-src/apps/main-log.obj: src/apps/log.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -MT src/apps/main-log.obj -MD -MP -MF src/apps/$(DEPDIR)/main-log.Tpo -c -o src/apps/main-log.obj `if test -f 'src/apps/log.cpp'; then $(CYGPATH_W) 'src/apps/log.cpp'; else $(CYGPATH_W) '$(srcdir)/src/apps/log.cpp'; fi`
-	$(AM_V_at)$(am__mv) src/apps/$(DEPDIR)/main-log.Tpo src/apps/$(DEPDIR)/main-log.Po
-#	$(AM_V_CXX)source='src/apps/log.cpp' object='src/apps/main-log.obj' libtool=no \
+src/apps/sec_v2xd-log.obj: src/apps/log.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -MT src/apps/sec_v2xd-log.obj -MD -MP -MF src/apps/$(DEPDIR)/sec_v2xd-log.Tpo -c -o src/apps/sec_v2xd-log.obj `if test -f 'src/apps/log.cpp'; then $(CYGPATH_W) 'src/apps/log.cpp'; else $(CYGPATH_W) '$(srcdir)/src/apps/log.cpp'; fi`
+	$(AM_V_at)$(am__mv) src/apps/$(DEPDIR)/sec_v2xd-log.Tpo src/apps/$(DEPDIR)/sec_v2xd-log.Po
+#	$(AM_V_CXX)source='src/apps/log.cpp' object='src/apps/sec_v2xd-log.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -c -o src/apps/main-log.obj `if test -f 'src/apps/log.cpp'; then $(CYGPATH_W) 'src/apps/log.cpp'; else $(CYGPATH_W) '$(srcdir)/src/apps/log.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -c -o src/apps/sec_v2xd-log.obj `if test -f 'src/apps/log.cpp'; then $(CYGPATH_W) 'src/apps/log.cpp'; else $(CYGPATH_W) '$(srcdir)/src/apps/log.cpp'; fi`
 
-src/api/main-sec_codec.o: src/api/sec_codec.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -MT src/api/main-sec_codec.o -MD -MP -MF src/api/$(DEPDIR)/main-sec_codec.Tpo -c -o src/api/main-sec_codec.o `test -f 'src/api/sec_codec.cpp' || echo '$(srcdir)/'`src/api/sec_codec.cpp
-	$(AM_V_at)$(am__mv) src/api/$(DEPDIR)/main-sec_codec.Tpo src/api/$(DEPDIR)/main-sec_codec.Po
-#	$(AM_V_CXX)source='src/api/sec_codec.cpp' object='src/api/main-sec_codec.o' libtool=no \
+src/api/sec_v2xd-sec_codec.o: src/api/sec_codec.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -MT src/api/sec_v2xd-sec_codec.o -MD -MP -MF src/api/$(DEPDIR)/sec_v2xd-sec_codec.Tpo -c -o src/api/sec_v2xd-sec_codec.o `test -f 'src/api/sec_codec.cpp' || echo '$(srcdir)/'`src/api/sec_codec.cpp
+	$(AM_V_at)$(am__mv) src/api/$(DEPDIR)/sec_v2xd-sec_codec.Tpo src/api/$(DEPDIR)/sec_v2xd-sec_codec.Po
+#	$(AM_V_CXX)source='src/api/sec_codec.cpp' object='src/api/sec_v2xd-sec_codec.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -c -o src/api/main-sec_codec.o `test -f 'src/api/sec_codec.cpp' || echo '$(srcdir)/'`src/api/sec_codec.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -c -o src/api/sec_v2xd-sec_codec.o `test -f 'src/api/sec_codec.cpp' || echo '$(srcdir)/'`src/api/sec_codec.cpp
 
-src/api/main-sec_codec.obj: src/api/sec_codec.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -MT src/api/main-sec_codec.obj -MD -MP -MF src/api/$(DEPDIR)/main-sec_codec.Tpo -c -o src/api/main-sec_codec.obj `if test -f 'src/api/sec_codec.cpp'; then $(CYGPATH_W) 'src/api/sec_codec.cpp'; else $(CYGPATH_W) '$(srcdir)/src/api/sec_codec.cpp'; fi`
-	$(AM_V_at)$(am__mv) src/api/$(DEPDIR)/main-sec_codec.Tpo src/api/$(DEPDIR)/main-sec_codec.Po
-#	$(AM_V_CXX)source='src/api/sec_codec.cpp' object='src/api/main-sec_codec.obj' libtool=no \
+src/api/sec_v2xd-sec_codec.obj: src/api/sec_codec.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -MT src/api/sec_v2xd-sec_codec.obj -MD -MP -MF src/api/$(DEPDIR)/sec_v2xd-sec_codec.Tpo -c -o src/api/sec_v2xd-sec_codec.obj `if test -f 'src/api/sec_codec.cpp'; then $(CYGPATH_W) 'src/api/sec_codec.cpp'; else $(CYGPATH_W) '$(srcdir)/src/api/sec_codec.cpp'; fi`
+	$(AM_V_at)$(am__mv) src/api/$(DEPDIR)/sec_v2xd-sec_codec.Tpo src/api/$(DEPDIR)/sec_v2xd-sec_codec.Po
+#	$(AM_V_CXX)source='src/api/sec_codec.cpp' object='src/api/sec_v2xd-sec_codec.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(main_CXXFLAGS) $(CXXFLAGS) -c -o src/api/main-sec_codec.obj `if test -f 'src/api/sec_codec.cpp'; then $(CYGPATH_W) 'src/api/sec_codec.cpp'; else $(CYGPATH_W) '$(srcdir)/src/api/sec_codec.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -c -o src/api/sec_v2xd-sec_codec.obj `if test -f 'src/api/sec_codec.cpp'; then $(CYGPATH_W) 'src/api/sec_codec.cpp'; else $(CYGPATH_W) '$(srcdir)/src/api/sec_codec.cpp'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
