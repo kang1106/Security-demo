@@ -140,6 +140,6 @@ ASN_MODULE_HEAD+=per_opentype.h
 ASN_MODULE_SRC+=per_opentype.c
 
 
-lib_LTLIBRARIES=libsomething.la
-libsomething_la_CFLAGS = -I.
-libsomething_la_SOURCES=$(ASN_MODULE_SRC) $(ASN_MODULE_HEAD)
+lib_LTLIBRARIES=libasn.la
+libasn_la_CFLAGS = -I.
+libasn_la_SOURCES=$(ASN_MODULE_SRC) $(ASN_MODULE_HEAD)

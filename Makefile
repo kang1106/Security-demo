@@ -113,8 +113,7 @@ am_sec_v2xd_OBJECTS = src/sec_v2xd-main.$(OBJEXT) \
 sec_v2xd_OBJECTS = $(am_sec_v2xd_OBJECTS)
 sec_v2xd_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
-sec_v2xd_DEPENDENCIES = ./asn/.libs/libsomething.a \
-	$(am__DEPENDENCIES_1)
+sec_v2xd_DEPENDENCIES = ./asn/.libs/libasn.a $(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
@@ -377,12 +376,12 @@ SUBDIRS = asn
 ACLOCAL_AMFLAGS = -I m4
 AM_CFLAGS = -I$(ASN_ROOT) -I$(SRC_ROOT) -I$(INCLUDE_ROOT) -I$(ROOT)
 AM_CXXFLAGS = -I$(ASN_ROOT) -I$(SRC_ROOT) -I$(INCLUDE_ROOT) -I$(ROOT) -std=c++11 -Wl,--no-as-needed -ldl
-LDADD = ./asn/.libs/libsomething.a $(GMSSL_LIB) -lpthread
+LDADD = ./asn/.libs/libasn.a $(GMSSL_LIB) -lpthread
 sec_v2xd_CFLAGS = $(AM_CFLAGS)
 sec_v2xd_CXXFLAGS = $(AM_CXXFLAGS)
 sec_v2xd_SOURCES = src/main.cpp \
-               src/apps/log.cpp \
-               src/api/sec_codec.cpp
+                   src/apps/log.cpp \
+                   src/api/sec_codec.cpp
 
 all: all-recursive
 

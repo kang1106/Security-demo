@@ -129,61 +129,48 @@ am__uninstall_files_from_dir = { \
   }
 am__installdirs = "$(DESTDIR)$(libdir)"
 LTLIBRARIES = $(lib_LTLIBRARIES)
-libsomething_la_LIBADD =
-am__objects_1 = libsomething_la-SecuredMessage.lo \
-	libsomething_la-Payload.lo libsomething_la-SignedData.lo \
-	libsomething_la-SignerInfo.lo \
-	libsomething_la-SequenceOfCertificate.lo \
-	libsomething_la-Certificate.lo libsomething_la-IssuerID.lo \
-	libsomething_la-CertificateDigest.lo \
-	libsomething_la-HashAlgorithm.lo libsomething_la-TBSCert.lo \
-	libsomething_la-SubjectInfo.lo libsomething_la-SubjectType.lo \
-	libsomething_la-SubjectAttributes.lo \
-	libsomething_la-PublicVerifyKey.lo libsomething_la-EccCurve.lo \
-	libsomething_la-EccPoint.lo libsomething_la-Signature.lo \
-	libsomething_la-TBSData.lo libsomething_la-HeaderInfo.lo \
-	libsomething_la-ThreeDLocation.lo libsomething_la-Latitude.lo \
-	libsomething_la-NinetyDegreeInt.lo \
-	libsomething_la-KnownLatitude.lo \
-	libsomething_la-UnKnownLatitude.lo \
-	libsomething_la-Longitude.lo \
-	libsomething_la-OneEightyDegreeInt.lo \
-	libsomething_la-KnownLongitude.lo \
-	libsomething_la-UnKnownLongitude.lo \
-	libsomething_la-Elevation.lo libsomething_la-Uint3.lo \
-	libsomething_la-Uint8.lo libsomething_la-Uint16.lo \
-	libsomething_la-Uint32.lo libsomething_la-Uint64.lo \
-	libsomething_la-HashedId3.lo libsomething_la-HashedId8.lo \
-	libsomething_la-Opaque.lo libsomething_la-Time32.lo \
-	libsomething_la-Time64.lo libsomething_la-BOOLEAN.lo \
-	libsomething_la-INTEGER.lo libsomething_la-NULL.lo \
-	libsomething_la-NativeEnumerated.lo \
-	libsomething_la-NativeInteger.lo \
-	libsomething_la-asn_SEQUENCE_OF.lo \
-	libsomething_la-asn_SET_OF.lo libsomething_la-constr_CHOICE.lo \
-	libsomething_la-constr_SEQUENCE.lo \
-	libsomething_la-constr_SEQUENCE_OF.lo \
-	libsomething_la-constr_SET_OF.lo \
-	libsomething_la-OCTET_STRING.lo libsomething_la-BIT_STRING.lo \
-	libsomething_la-asn_codecs_prim.lo \
-	libsomething_la-ber_tlv_length.lo \
-	libsomething_la-ber_tlv_tag.lo libsomething_la-ber_decoder.lo \
-	libsomething_la-der_encoder.lo libsomething_la-constr_TYPE.lo \
-	libsomething_la-constraints.lo libsomething_la-xer_support.lo \
-	libsomething_la-xer_decoder.lo libsomething_la-xer_encoder.lo \
-	libsomething_la-per_support.lo libsomething_la-per_decoder.lo \
-	libsomething_la-per_encoder.lo libsomething_la-per_opentype.lo
+libasn_la_LIBADD =
+am__objects_1 = libasn_la-SecuredMessage.lo libasn_la-Payload.lo \
+	libasn_la-SignedData.lo libasn_la-SignerInfo.lo \
+	libasn_la-SequenceOfCertificate.lo libasn_la-Certificate.lo \
+	libasn_la-IssuerID.lo libasn_la-CertificateDigest.lo \
+	libasn_la-HashAlgorithm.lo libasn_la-TBSCert.lo \
+	libasn_la-SubjectInfo.lo libasn_la-SubjectType.lo \
+	libasn_la-SubjectAttributes.lo libasn_la-PublicVerifyKey.lo \
+	libasn_la-EccCurve.lo libasn_la-EccPoint.lo \
+	libasn_la-Signature.lo libasn_la-TBSData.lo \
+	libasn_la-HeaderInfo.lo libasn_la-ThreeDLocation.lo \
+	libasn_la-Latitude.lo libasn_la-NinetyDegreeInt.lo \
+	libasn_la-KnownLatitude.lo libasn_la-UnKnownLatitude.lo \
+	libasn_la-Longitude.lo libasn_la-OneEightyDegreeInt.lo \
+	libasn_la-KnownLongitude.lo libasn_la-UnKnownLongitude.lo \
+	libasn_la-Elevation.lo libasn_la-Uint3.lo libasn_la-Uint8.lo \
+	libasn_la-Uint16.lo libasn_la-Uint32.lo libasn_la-Uint64.lo \
+	libasn_la-HashedId3.lo libasn_la-HashedId8.lo \
+	libasn_la-Opaque.lo libasn_la-Time32.lo libasn_la-Time64.lo \
+	libasn_la-BOOLEAN.lo libasn_la-INTEGER.lo libasn_la-NULL.lo \
+	libasn_la-NativeEnumerated.lo libasn_la-NativeInteger.lo \
+	libasn_la-asn_SEQUENCE_OF.lo libasn_la-asn_SET_OF.lo \
+	libasn_la-constr_CHOICE.lo libasn_la-constr_SEQUENCE.lo \
+	libasn_la-constr_SEQUENCE_OF.lo libasn_la-constr_SET_OF.lo \
+	libasn_la-OCTET_STRING.lo libasn_la-BIT_STRING.lo \
+	libasn_la-asn_codecs_prim.lo libasn_la-ber_tlv_length.lo \
+	libasn_la-ber_tlv_tag.lo libasn_la-ber_decoder.lo \
+	libasn_la-der_encoder.lo libasn_la-constr_TYPE.lo \
+	libasn_la-constraints.lo libasn_la-xer_support.lo \
+	libasn_la-xer_decoder.lo libasn_la-xer_encoder.lo \
+	libasn_la-per_support.lo libasn_la-per_decoder.lo \
+	libasn_la-per_encoder.lo libasn_la-per_opentype.lo
 am__objects_2 =
-am_libsomething_la_OBJECTS = $(am__objects_1) $(am__objects_2)
-libsomething_la_OBJECTS = $(am_libsomething_la_OBJECTS)
+am_libasn_la_OBJECTS = $(am__objects_1) $(am__objects_2)
+libasn_la_OBJECTS = $(am_libasn_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-libsomething_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
-	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(libsomething_la_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) \
-	-o $@
+libasn_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(libasn_la_CFLAGS) \
+	$(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -218,8 +205,8 @@ AM_V_CCLD = $(am__v_CCLD_$(V))
 am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(libsomething_la_SOURCES)
-DIST_SOURCES = $(libsomething_la_SOURCES)
+SOURCES = $(libasn_la_SOURCES)
+DIST_SOURCES = $(libasn_la_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -402,9 +389,9 @@ ASN_MODULE_HEAD = SecuredMessage.h Payload.h SignedData.h SignerInfo.h \
 	ber_tlv_tag.h ber_decoder.h der_encoder.h constr_TYPE.h \
 	constraints.h xer_support.h xer_decoder.h xer_encoder.h \
 	per_support.h per_decoder.h per_encoder.h per_opentype.h
-lib_LTLIBRARIES = libsomething.la
-libsomething_la_CFLAGS = -I.
-libsomething_la_SOURCES = $(ASN_MODULE_SRC) $(ASN_MODULE_HEAD)
+lib_LTLIBRARIES = libasn.la
+libasn_la_CFLAGS = -I.
+libasn_la_SOURCES = $(ASN_MODULE_SRC) $(ASN_MODULE_HEAD)
 all: all-am
 
 .SUFFIXES:
@@ -474,8 +461,8 @@ clean-libLTLIBRARIES:
 	  rm -f $${locs}; \
 	}
 
-libsomething.la: $(libsomething_la_OBJECTS) $(libsomething_la_DEPENDENCIES) $(EXTRA_libsomething_la_DEPENDENCIES) 
-	$(AM_V_CCLD)$(libsomething_la_LINK) -rpath $(libdir) $(libsomething_la_OBJECTS) $(libsomething_la_LIBADD) $(LIBS)
+libasn.la: $(libasn_la_OBJECTS) $(libasn_la_DEPENDENCIES) $(EXTRA_libasn_la_DEPENDENCIES) 
+	$(AM_V_CCLD)$(libasn_la_LINK) -rpath $(libdir) $(libasn_la_OBJECTS) $(libasn_la_LIBADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -483,72 +470,72 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/libsomething_la-BIT_STRING.Plo
-include ./$(DEPDIR)/libsomething_la-BOOLEAN.Plo
-include ./$(DEPDIR)/libsomething_la-Certificate.Plo
-include ./$(DEPDIR)/libsomething_la-CertificateDigest.Plo
-include ./$(DEPDIR)/libsomething_la-EccCurve.Plo
-include ./$(DEPDIR)/libsomething_la-EccPoint.Plo
-include ./$(DEPDIR)/libsomething_la-Elevation.Plo
-include ./$(DEPDIR)/libsomething_la-HashAlgorithm.Plo
-include ./$(DEPDIR)/libsomething_la-HashedId3.Plo
-include ./$(DEPDIR)/libsomething_la-HashedId8.Plo
-include ./$(DEPDIR)/libsomething_la-HeaderInfo.Plo
-include ./$(DEPDIR)/libsomething_la-INTEGER.Plo
-include ./$(DEPDIR)/libsomething_la-IssuerID.Plo
-include ./$(DEPDIR)/libsomething_la-KnownLatitude.Plo
-include ./$(DEPDIR)/libsomething_la-KnownLongitude.Plo
-include ./$(DEPDIR)/libsomething_la-Latitude.Plo
-include ./$(DEPDIR)/libsomething_la-Longitude.Plo
-include ./$(DEPDIR)/libsomething_la-NULL.Plo
-include ./$(DEPDIR)/libsomething_la-NativeEnumerated.Plo
-include ./$(DEPDIR)/libsomething_la-NativeInteger.Plo
-include ./$(DEPDIR)/libsomething_la-NinetyDegreeInt.Plo
-include ./$(DEPDIR)/libsomething_la-OCTET_STRING.Plo
-include ./$(DEPDIR)/libsomething_la-OneEightyDegreeInt.Plo
-include ./$(DEPDIR)/libsomething_la-Opaque.Plo
-include ./$(DEPDIR)/libsomething_la-Payload.Plo
-include ./$(DEPDIR)/libsomething_la-PublicVerifyKey.Plo
-include ./$(DEPDIR)/libsomething_la-SecuredMessage.Plo
-include ./$(DEPDIR)/libsomething_la-SequenceOfCertificate.Plo
-include ./$(DEPDIR)/libsomething_la-Signature.Plo
-include ./$(DEPDIR)/libsomething_la-SignedData.Plo
-include ./$(DEPDIR)/libsomething_la-SignerInfo.Plo
-include ./$(DEPDIR)/libsomething_la-SubjectAttributes.Plo
-include ./$(DEPDIR)/libsomething_la-SubjectInfo.Plo
-include ./$(DEPDIR)/libsomething_la-SubjectType.Plo
-include ./$(DEPDIR)/libsomething_la-TBSCert.Plo
-include ./$(DEPDIR)/libsomething_la-TBSData.Plo
-include ./$(DEPDIR)/libsomething_la-ThreeDLocation.Plo
-include ./$(DEPDIR)/libsomething_la-Time32.Plo
-include ./$(DEPDIR)/libsomething_la-Time64.Plo
-include ./$(DEPDIR)/libsomething_la-Uint16.Plo
-include ./$(DEPDIR)/libsomething_la-Uint3.Plo
-include ./$(DEPDIR)/libsomething_la-Uint32.Plo
-include ./$(DEPDIR)/libsomething_la-Uint64.Plo
-include ./$(DEPDIR)/libsomething_la-Uint8.Plo
-include ./$(DEPDIR)/libsomething_la-UnKnownLatitude.Plo
-include ./$(DEPDIR)/libsomething_la-UnKnownLongitude.Plo
-include ./$(DEPDIR)/libsomething_la-asn_SEQUENCE_OF.Plo
-include ./$(DEPDIR)/libsomething_la-asn_SET_OF.Plo
-include ./$(DEPDIR)/libsomething_la-asn_codecs_prim.Plo
-include ./$(DEPDIR)/libsomething_la-ber_decoder.Plo
-include ./$(DEPDIR)/libsomething_la-ber_tlv_length.Plo
-include ./$(DEPDIR)/libsomething_la-ber_tlv_tag.Plo
-include ./$(DEPDIR)/libsomething_la-constr_CHOICE.Plo
-include ./$(DEPDIR)/libsomething_la-constr_SEQUENCE.Plo
-include ./$(DEPDIR)/libsomething_la-constr_SEQUENCE_OF.Plo
-include ./$(DEPDIR)/libsomething_la-constr_SET_OF.Plo
-include ./$(DEPDIR)/libsomething_la-constr_TYPE.Plo
-include ./$(DEPDIR)/libsomething_la-constraints.Plo
-include ./$(DEPDIR)/libsomething_la-der_encoder.Plo
-include ./$(DEPDIR)/libsomething_la-per_decoder.Plo
-include ./$(DEPDIR)/libsomething_la-per_encoder.Plo
-include ./$(DEPDIR)/libsomething_la-per_opentype.Plo
-include ./$(DEPDIR)/libsomething_la-per_support.Plo
-include ./$(DEPDIR)/libsomething_la-xer_decoder.Plo
-include ./$(DEPDIR)/libsomething_la-xer_encoder.Plo
-include ./$(DEPDIR)/libsomething_la-xer_support.Plo
+include ./$(DEPDIR)/libasn_la-BIT_STRING.Plo
+include ./$(DEPDIR)/libasn_la-BOOLEAN.Plo
+include ./$(DEPDIR)/libasn_la-Certificate.Plo
+include ./$(DEPDIR)/libasn_la-CertificateDigest.Plo
+include ./$(DEPDIR)/libasn_la-EccCurve.Plo
+include ./$(DEPDIR)/libasn_la-EccPoint.Plo
+include ./$(DEPDIR)/libasn_la-Elevation.Plo
+include ./$(DEPDIR)/libasn_la-HashAlgorithm.Plo
+include ./$(DEPDIR)/libasn_la-HashedId3.Plo
+include ./$(DEPDIR)/libasn_la-HashedId8.Plo
+include ./$(DEPDIR)/libasn_la-HeaderInfo.Plo
+include ./$(DEPDIR)/libasn_la-INTEGER.Plo
+include ./$(DEPDIR)/libasn_la-IssuerID.Plo
+include ./$(DEPDIR)/libasn_la-KnownLatitude.Plo
+include ./$(DEPDIR)/libasn_la-KnownLongitude.Plo
+include ./$(DEPDIR)/libasn_la-Latitude.Plo
+include ./$(DEPDIR)/libasn_la-Longitude.Plo
+include ./$(DEPDIR)/libasn_la-NULL.Plo
+include ./$(DEPDIR)/libasn_la-NativeEnumerated.Plo
+include ./$(DEPDIR)/libasn_la-NativeInteger.Plo
+include ./$(DEPDIR)/libasn_la-NinetyDegreeInt.Plo
+include ./$(DEPDIR)/libasn_la-OCTET_STRING.Plo
+include ./$(DEPDIR)/libasn_la-OneEightyDegreeInt.Plo
+include ./$(DEPDIR)/libasn_la-Opaque.Plo
+include ./$(DEPDIR)/libasn_la-Payload.Plo
+include ./$(DEPDIR)/libasn_la-PublicVerifyKey.Plo
+include ./$(DEPDIR)/libasn_la-SecuredMessage.Plo
+include ./$(DEPDIR)/libasn_la-SequenceOfCertificate.Plo
+include ./$(DEPDIR)/libasn_la-Signature.Plo
+include ./$(DEPDIR)/libasn_la-SignedData.Plo
+include ./$(DEPDIR)/libasn_la-SignerInfo.Plo
+include ./$(DEPDIR)/libasn_la-SubjectAttributes.Plo
+include ./$(DEPDIR)/libasn_la-SubjectInfo.Plo
+include ./$(DEPDIR)/libasn_la-SubjectType.Plo
+include ./$(DEPDIR)/libasn_la-TBSCert.Plo
+include ./$(DEPDIR)/libasn_la-TBSData.Plo
+include ./$(DEPDIR)/libasn_la-ThreeDLocation.Plo
+include ./$(DEPDIR)/libasn_la-Time32.Plo
+include ./$(DEPDIR)/libasn_la-Time64.Plo
+include ./$(DEPDIR)/libasn_la-Uint16.Plo
+include ./$(DEPDIR)/libasn_la-Uint3.Plo
+include ./$(DEPDIR)/libasn_la-Uint32.Plo
+include ./$(DEPDIR)/libasn_la-Uint64.Plo
+include ./$(DEPDIR)/libasn_la-Uint8.Plo
+include ./$(DEPDIR)/libasn_la-UnKnownLatitude.Plo
+include ./$(DEPDIR)/libasn_la-UnKnownLongitude.Plo
+include ./$(DEPDIR)/libasn_la-asn_SEQUENCE_OF.Plo
+include ./$(DEPDIR)/libasn_la-asn_SET_OF.Plo
+include ./$(DEPDIR)/libasn_la-asn_codecs_prim.Plo
+include ./$(DEPDIR)/libasn_la-ber_decoder.Plo
+include ./$(DEPDIR)/libasn_la-ber_tlv_length.Plo
+include ./$(DEPDIR)/libasn_la-ber_tlv_tag.Plo
+include ./$(DEPDIR)/libasn_la-constr_CHOICE.Plo
+include ./$(DEPDIR)/libasn_la-constr_SEQUENCE.Plo
+include ./$(DEPDIR)/libasn_la-constr_SEQUENCE_OF.Plo
+include ./$(DEPDIR)/libasn_la-constr_SET_OF.Plo
+include ./$(DEPDIR)/libasn_la-constr_TYPE.Plo
+include ./$(DEPDIR)/libasn_la-constraints.Plo
+include ./$(DEPDIR)/libasn_la-der_encoder.Plo
+include ./$(DEPDIR)/libasn_la-per_decoder.Plo
+include ./$(DEPDIR)/libasn_la-per_encoder.Plo
+include ./$(DEPDIR)/libasn_la-per_opentype.Plo
+include ./$(DEPDIR)/libasn_la-per_support.Plo
+include ./$(DEPDIR)/libasn_la-xer_decoder.Plo
+include ./$(DEPDIR)/libasn_la-xer_encoder.Plo
+include ./$(DEPDIR)/libasn_la-xer_support.Plo
 
 .c.o:
 	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -574,467 +561,467 @@ include ./$(DEPDIR)/libsomething_la-xer_support.Plo
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
 #	$(AM_V_CC_no)$(LTCOMPILE) -c -o $@ $<
 
-libsomething_la-SecuredMessage.lo: SecuredMessage.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-SecuredMessage.lo -MD -MP -MF $(DEPDIR)/libsomething_la-SecuredMessage.Tpo -c -o libsomething_la-SecuredMessage.lo `test -f 'SecuredMessage.c' || echo '$(srcdir)/'`SecuredMessage.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-SecuredMessage.Tpo $(DEPDIR)/libsomething_la-SecuredMessage.Plo
-#	$(AM_V_CC)source='SecuredMessage.c' object='libsomething_la-SecuredMessage.lo' libtool=yes \
+libasn_la-SecuredMessage.lo: SecuredMessage.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-SecuredMessage.lo -MD -MP -MF $(DEPDIR)/libasn_la-SecuredMessage.Tpo -c -o libasn_la-SecuredMessage.lo `test -f 'SecuredMessage.c' || echo '$(srcdir)/'`SecuredMessage.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-SecuredMessage.Tpo $(DEPDIR)/libasn_la-SecuredMessage.Plo
+#	$(AM_V_CC)source='SecuredMessage.c' object='libasn_la-SecuredMessage.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-SecuredMessage.lo `test -f 'SecuredMessage.c' || echo '$(srcdir)/'`SecuredMessage.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-SecuredMessage.lo `test -f 'SecuredMessage.c' || echo '$(srcdir)/'`SecuredMessage.c
 
-libsomething_la-Payload.lo: Payload.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-Payload.lo -MD -MP -MF $(DEPDIR)/libsomething_la-Payload.Tpo -c -o libsomething_la-Payload.lo `test -f 'Payload.c' || echo '$(srcdir)/'`Payload.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-Payload.Tpo $(DEPDIR)/libsomething_la-Payload.Plo
-#	$(AM_V_CC)source='Payload.c' object='libsomething_la-Payload.lo' libtool=yes \
+libasn_la-Payload.lo: Payload.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-Payload.lo -MD -MP -MF $(DEPDIR)/libasn_la-Payload.Tpo -c -o libasn_la-Payload.lo `test -f 'Payload.c' || echo '$(srcdir)/'`Payload.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-Payload.Tpo $(DEPDIR)/libasn_la-Payload.Plo
+#	$(AM_V_CC)source='Payload.c' object='libasn_la-Payload.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-Payload.lo `test -f 'Payload.c' || echo '$(srcdir)/'`Payload.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-Payload.lo `test -f 'Payload.c' || echo '$(srcdir)/'`Payload.c
 
-libsomething_la-SignedData.lo: SignedData.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-SignedData.lo -MD -MP -MF $(DEPDIR)/libsomething_la-SignedData.Tpo -c -o libsomething_la-SignedData.lo `test -f 'SignedData.c' || echo '$(srcdir)/'`SignedData.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-SignedData.Tpo $(DEPDIR)/libsomething_la-SignedData.Plo
-#	$(AM_V_CC)source='SignedData.c' object='libsomething_la-SignedData.lo' libtool=yes \
+libasn_la-SignedData.lo: SignedData.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-SignedData.lo -MD -MP -MF $(DEPDIR)/libasn_la-SignedData.Tpo -c -o libasn_la-SignedData.lo `test -f 'SignedData.c' || echo '$(srcdir)/'`SignedData.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-SignedData.Tpo $(DEPDIR)/libasn_la-SignedData.Plo
+#	$(AM_V_CC)source='SignedData.c' object='libasn_la-SignedData.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-SignedData.lo `test -f 'SignedData.c' || echo '$(srcdir)/'`SignedData.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-SignedData.lo `test -f 'SignedData.c' || echo '$(srcdir)/'`SignedData.c
 
-libsomething_la-SignerInfo.lo: SignerInfo.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-SignerInfo.lo -MD -MP -MF $(DEPDIR)/libsomething_la-SignerInfo.Tpo -c -o libsomething_la-SignerInfo.lo `test -f 'SignerInfo.c' || echo '$(srcdir)/'`SignerInfo.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-SignerInfo.Tpo $(DEPDIR)/libsomething_la-SignerInfo.Plo
-#	$(AM_V_CC)source='SignerInfo.c' object='libsomething_la-SignerInfo.lo' libtool=yes \
+libasn_la-SignerInfo.lo: SignerInfo.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-SignerInfo.lo -MD -MP -MF $(DEPDIR)/libasn_la-SignerInfo.Tpo -c -o libasn_la-SignerInfo.lo `test -f 'SignerInfo.c' || echo '$(srcdir)/'`SignerInfo.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-SignerInfo.Tpo $(DEPDIR)/libasn_la-SignerInfo.Plo
+#	$(AM_V_CC)source='SignerInfo.c' object='libasn_la-SignerInfo.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-SignerInfo.lo `test -f 'SignerInfo.c' || echo '$(srcdir)/'`SignerInfo.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-SignerInfo.lo `test -f 'SignerInfo.c' || echo '$(srcdir)/'`SignerInfo.c
 
-libsomething_la-SequenceOfCertificate.lo: SequenceOfCertificate.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-SequenceOfCertificate.lo -MD -MP -MF $(DEPDIR)/libsomething_la-SequenceOfCertificate.Tpo -c -o libsomething_la-SequenceOfCertificate.lo `test -f 'SequenceOfCertificate.c' || echo '$(srcdir)/'`SequenceOfCertificate.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-SequenceOfCertificate.Tpo $(DEPDIR)/libsomething_la-SequenceOfCertificate.Plo
-#	$(AM_V_CC)source='SequenceOfCertificate.c' object='libsomething_la-SequenceOfCertificate.lo' libtool=yes \
+libasn_la-SequenceOfCertificate.lo: SequenceOfCertificate.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-SequenceOfCertificate.lo -MD -MP -MF $(DEPDIR)/libasn_la-SequenceOfCertificate.Tpo -c -o libasn_la-SequenceOfCertificate.lo `test -f 'SequenceOfCertificate.c' || echo '$(srcdir)/'`SequenceOfCertificate.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-SequenceOfCertificate.Tpo $(DEPDIR)/libasn_la-SequenceOfCertificate.Plo
+#	$(AM_V_CC)source='SequenceOfCertificate.c' object='libasn_la-SequenceOfCertificate.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-SequenceOfCertificate.lo `test -f 'SequenceOfCertificate.c' || echo '$(srcdir)/'`SequenceOfCertificate.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-SequenceOfCertificate.lo `test -f 'SequenceOfCertificate.c' || echo '$(srcdir)/'`SequenceOfCertificate.c
 
-libsomething_la-Certificate.lo: Certificate.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-Certificate.lo -MD -MP -MF $(DEPDIR)/libsomething_la-Certificate.Tpo -c -o libsomething_la-Certificate.lo `test -f 'Certificate.c' || echo '$(srcdir)/'`Certificate.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-Certificate.Tpo $(DEPDIR)/libsomething_la-Certificate.Plo
-#	$(AM_V_CC)source='Certificate.c' object='libsomething_la-Certificate.lo' libtool=yes \
+libasn_la-Certificate.lo: Certificate.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-Certificate.lo -MD -MP -MF $(DEPDIR)/libasn_la-Certificate.Tpo -c -o libasn_la-Certificate.lo `test -f 'Certificate.c' || echo '$(srcdir)/'`Certificate.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-Certificate.Tpo $(DEPDIR)/libasn_la-Certificate.Plo
+#	$(AM_V_CC)source='Certificate.c' object='libasn_la-Certificate.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-Certificate.lo `test -f 'Certificate.c' || echo '$(srcdir)/'`Certificate.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-Certificate.lo `test -f 'Certificate.c' || echo '$(srcdir)/'`Certificate.c
 
-libsomething_la-IssuerID.lo: IssuerID.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-IssuerID.lo -MD -MP -MF $(DEPDIR)/libsomething_la-IssuerID.Tpo -c -o libsomething_la-IssuerID.lo `test -f 'IssuerID.c' || echo '$(srcdir)/'`IssuerID.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-IssuerID.Tpo $(DEPDIR)/libsomething_la-IssuerID.Plo
-#	$(AM_V_CC)source='IssuerID.c' object='libsomething_la-IssuerID.lo' libtool=yes \
+libasn_la-IssuerID.lo: IssuerID.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-IssuerID.lo -MD -MP -MF $(DEPDIR)/libasn_la-IssuerID.Tpo -c -o libasn_la-IssuerID.lo `test -f 'IssuerID.c' || echo '$(srcdir)/'`IssuerID.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-IssuerID.Tpo $(DEPDIR)/libasn_la-IssuerID.Plo
+#	$(AM_V_CC)source='IssuerID.c' object='libasn_la-IssuerID.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-IssuerID.lo `test -f 'IssuerID.c' || echo '$(srcdir)/'`IssuerID.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-IssuerID.lo `test -f 'IssuerID.c' || echo '$(srcdir)/'`IssuerID.c
 
-libsomething_la-CertificateDigest.lo: CertificateDigest.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-CertificateDigest.lo -MD -MP -MF $(DEPDIR)/libsomething_la-CertificateDigest.Tpo -c -o libsomething_la-CertificateDigest.lo `test -f 'CertificateDigest.c' || echo '$(srcdir)/'`CertificateDigest.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-CertificateDigest.Tpo $(DEPDIR)/libsomething_la-CertificateDigest.Plo
-#	$(AM_V_CC)source='CertificateDigest.c' object='libsomething_la-CertificateDigest.lo' libtool=yes \
+libasn_la-CertificateDigest.lo: CertificateDigest.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-CertificateDigest.lo -MD -MP -MF $(DEPDIR)/libasn_la-CertificateDigest.Tpo -c -o libasn_la-CertificateDigest.lo `test -f 'CertificateDigest.c' || echo '$(srcdir)/'`CertificateDigest.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-CertificateDigest.Tpo $(DEPDIR)/libasn_la-CertificateDigest.Plo
+#	$(AM_V_CC)source='CertificateDigest.c' object='libasn_la-CertificateDigest.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-CertificateDigest.lo `test -f 'CertificateDigest.c' || echo '$(srcdir)/'`CertificateDigest.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-CertificateDigest.lo `test -f 'CertificateDigest.c' || echo '$(srcdir)/'`CertificateDigest.c
 
-libsomething_la-HashAlgorithm.lo: HashAlgorithm.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-HashAlgorithm.lo -MD -MP -MF $(DEPDIR)/libsomething_la-HashAlgorithm.Tpo -c -o libsomething_la-HashAlgorithm.lo `test -f 'HashAlgorithm.c' || echo '$(srcdir)/'`HashAlgorithm.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-HashAlgorithm.Tpo $(DEPDIR)/libsomething_la-HashAlgorithm.Plo
-#	$(AM_V_CC)source='HashAlgorithm.c' object='libsomething_la-HashAlgorithm.lo' libtool=yes \
+libasn_la-HashAlgorithm.lo: HashAlgorithm.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-HashAlgorithm.lo -MD -MP -MF $(DEPDIR)/libasn_la-HashAlgorithm.Tpo -c -o libasn_la-HashAlgorithm.lo `test -f 'HashAlgorithm.c' || echo '$(srcdir)/'`HashAlgorithm.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-HashAlgorithm.Tpo $(DEPDIR)/libasn_la-HashAlgorithm.Plo
+#	$(AM_V_CC)source='HashAlgorithm.c' object='libasn_la-HashAlgorithm.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-HashAlgorithm.lo `test -f 'HashAlgorithm.c' || echo '$(srcdir)/'`HashAlgorithm.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-HashAlgorithm.lo `test -f 'HashAlgorithm.c' || echo '$(srcdir)/'`HashAlgorithm.c
 
-libsomething_la-TBSCert.lo: TBSCert.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-TBSCert.lo -MD -MP -MF $(DEPDIR)/libsomething_la-TBSCert.Tpo -c -o libsomething_la-TBSCert.lo `test -f 'TBSCert.c' || echo '$(srcdir)/'`TBSCert.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-TBSCert.Tpo $(DEPDIR)/libsomething_la-TBSCert.Plo
-#	$(AM_V_CC)source='TBSCert.c' object='libsomething_la-TBSCert.lo' libtool=yes \
+libasn_la-TBSCert.lo: TBSCert.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-TBSCert.lo -MD -MP -MF $(DEPDIR)/libasn_la-TBSCert.Tpo -c -o libasn_la-TBSCert.lo `test -f 'TBSCert.c' || echo '$(srcdir)/'`TBSCert.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-TBSCert.Tpo $(DEPDIR)/libasn_la-TBSCert.Plo
+#	$(AM_V_CC)source='TBSCert.c' object='libasn_la-TBSCert.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-TBSCert.lo `test -f 'TBSCert.c' || echo '$(srcdir)/'`TBSCert.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-TBSCert.lo `test -f 'TBSCert.c' || echo '$(srcdir)/'`TBSCert.c
 
-libsomething_la-SubjectInfo.lo: SubjectInfo.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-SubjectInfo.lo -MD -MP -MF $(DEPDIR)/libsomething_la-SubjectInfo.Tpo -c -o libsomething_la-SubjectInfo.lo `test -f 'SubjectInfo.c' || echo '$(srcdir)/'`SubjectInfo.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-SubjectInfo.Tpo $(DEPDIR)/libsomething_la-SubjectInfo.Plo
-#	$(AM_V_CC)source='SubjectInfo.c' object='libsomething_la-SubjectInfo.lo' libtool=yes \
+libasn_la-SubjectInfo.lo: SubjectInfo.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-SubjectInfo.lo -MD -MP -MF $(DEPDIR)/libasn_la-SubjectInfo.Tpo -c -o libasn_la-SubjectInfo.lo `test -f 'SubjectInfo.c' || echo '$(srcdir)/'`SubjectInfo.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-SubjectInfo.Tpo $(DEPDIR)/libasn_la-SubjectInfo.Plo
+#	$(AM_V_CC)source='SubjectInfo.c' object='libasn_la-SubjectInfo.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-SubjectInfo.lo `test -f 'SubjectInfo.c' || echo '$(srcdir)/'`SubjectInfo.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-SubjectInfo.lo `test -f 'SubjectInfo.c' || echo '$(srcdir)/'`SubjectInfo.c
 
-libsomething_la-SubjectType.lo: SubjectType.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-SubjectType.lo -MD -MP -MF $(DEPDIR)/libsomething_la-SubjectType.Tpo -c -o libsomething_la-SubjectType.lo `test -f 'SubjectType.c' || echo '$(srcdir)/'`SubjectType.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-SubjectType.Tpo $(DEPDIR)/libsomething_la-SubjectType.Plo
-#	$(AM_V_CC)source='SubjectType.c' object='libsomething_la-SubjectType.lo' libtool=yes \
+libasn_la-SubjectType.lo: SubjectType.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-SubjectType.lo -MD -MP -MF $(DEPDIR)/libasn_la-SubjectType.Tpo -c -o libasn_la-SubjectType.lo `test -f 'SubjectType.c' || echo '$(srcdir)/'`SubjectType.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-SubjectType.Tpo $(DEPDIR)/libasn_la-SubjectType.Plo
+#	$(AM_V_CC)source='SubjectType.c' object='libasn_la-SubjectType.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-SubjectType.lo `test -f 'SubjectType.c' || echo '$(srcdir)/'`SubjectType.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-SubjectType.lo `test -f 'SubjectType.c' || echo '$(srcdir)/'`SubjectType.c
 
-libsomething_la-SubjectAttributes.lo: SubjectAttributes.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-SubjectAttributes.lo -MD -MP -MF $(DEPDIR)/libsomething_la-SubjectAttributes.Tpo -c -o libsomething_la-SubjectAttributes.lo `test -f 'SubjectAttributes.c' || echo '$(srcdir)/'`SubjectAttributes.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-SubjectAttributes.Tpo $(DEPDIR)/libsomething_la-SubjectAttributes.Plo
-#	$(AM_V_CC)source='SubjectAttributes.c' object='libsomething_la-SubjectAttributes.lo' libtool=yes \
+libasn_la-SubjectAttributes.lo: SubjectAttributes.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-SubjectAttributes.lo -MD -MP -MF $(DEPDIR)/libasn_la-SubjectAttributes.Tpo -c -o libasn_la-SubjectAttributes.lo `test -f 'SubjectAttributes.c' || echo '$(srcdir)/'`SubjectAttributes.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-SubjectAttributes.Tpo $(DEPDIR)/libasn_la-SubjectAttributes.Plo
+#	$(AM_V_CC)source='SubjectAttributes.c' object='libasn_la-SubjectAttributes.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-SubjectAttributes.lo `test -f 'SubjectAttributes.c' || echo '$(srcdir)/'`SubjectAttributes.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-SubjectAttributes.lo `test -f 'SubjectAttributes.c' || echo '$(srcdir)/'`SubjectAttributes.c
 
-libsomething_la-PublicVerifyKey.lo: PublicVerifyKey.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-PublicVerifyKey.lo -MD -MP -MF $(DEPDIR)/libsomething_la-PublicVerifyKey.Tpo -c -o libsomething_la-PublicVerifyKey.lo `test -f 'PublicVerifyKey.c' || echo '$(srcdir)/'`PublicVerifyKey.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-PublicVerifyKey.Tpo $(DEPDIR)/libsomething_la-PublicVerifyKey.Plo
-#	$(AM_V_CC)source='PublicVerifyKey.c' object='libsomething_la-PublicVerifyKey.lo' libtool=yes \
+libasn_la-PublicVerifyKey.lo: PublicVerifyKey.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-PublicVerifyKey.lo -MD -MP -MF $(DEPDIR)/libasn_la-PublicVerifyKey.Tpo -c -o libasn_la-PublicVerifyKey.lo `test -f 'PublicVerifyKey.c' || echo '$(srcdir)/'`PublicVerifyKey.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-PublicVerifyKey.Tpo $(DEPDIR)/libasn_la-PublicVerifyKey.Plo
+#	$(AM_V_CC)source='PublicVerifyKey.c' object='libasn_la-PublicVerifyKey.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-PublicVerifyKey.lo `test -f 'PublicVerifyKey.c' || echo '$(srcdir)/'`PublicVerifyKey.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-PublicVerifyKey.lo `test -f 'PublicVerifyKey.c' || echo '$(srcdir)/'`PublicVerifyKey.c
 
-libsomething_la-EccCurve.lo: EccCurve.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-EccCurve.lo -MD -MP -MF $(DEPDIR)/libsomething_la-EccCurve.Tpo -c -o libsomething_la-EccCurve.lo `test -f 'EccCurve.c' || echo '$(srcdir)/'`EccCurve.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-EccCurve.Tpo $(DEPDIR)/libsomething_la-EccCurve.Plo
-#	$(AM_V_CC)source='EccCurve.c' object='libsomething_la-EccCurve.lo' libtool=yes \
+libasn_la-EccCurve.lo: EccCurve.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-EccCurve.lo -MD -MP -MF $(DEPDIR)/libasn_la-EccCurve.Tpo -c -o libasn_la-EccCurve.lo `test -f 'EccCurve.c' || echo '$(srcdir)/'`EccCurve.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-EccCurve.Tpo $(DEPDIR)/libasn_la-EccCurve.Plo
+#	$(AM_V_CC)source='EccCurve.c' object='libasn_la-EccCurve.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-EccCurve.lo `test -f 'EccCurve.c' || echo '$(srcdir)/'`EccCurve.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-EccCurve.lo `test -f 'EccCurve.c' || echo '$(srcdir)/'`EccCurve.c
 
-libsomething_la-EccPoint.lo: EccPoint.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-EccPoint.lo -MD -MP -MF $(DEPDIR)/libsomething_la-EccPoint.Tpo -c -o libsomething_la-EccPoint.lo `test -f 'EccPoint.c' || echo '$(srcdir)/'`EccPoint.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-EccPoint.Tpo $(DEPDIR)/libsomething_la-EccPoint.Plo
-#	$(AM_V_CC)source='EccPoint.c' object='libsomething_la-EccPoint.lo' libtool=yes \
+libasn_la-EccPoint.lo: EccPoint.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-EccPoint.lo -MD -MP -MF $(DEPDIR)/libasn_la-EccPoint.Tpo -c -o libasn_la-EccPoint.lo `test -f 'EccPoint.c' || echo '$(srcdir)/'`EccPoint.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-EccPoint.Tpo $(DEPDIR)/libasn_la-EccPoint.Plo
+#	$(AM_V_CC)source='EccPoint.c' object='libasn_la-EccPoint.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-EccPoint.lo `test -f 'EccPoint.c' || echo '$(srcdir)/'`EccPoint.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-EccPoint.lo `test -f 'EccPoint.c' || echo '$(srcdir)/'`EccPoint.c
 
-libsomething_la-Signature.lo: Signature.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-Signature.lo -MD -MP -MF $(DEPDIR)/libsomething_la-Signature.Tpo -c -o libsomething_la-Signature.lo `test -f 'Signature.c' || echo '$(srcdir)/'`Signature.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-Signature.Tpo $(DEPDIR)/libsomething_la-Signature.Plo
-#	$(AM_V_CC)source='Signature.c' object='libsomething_la-Signature.lo' libtool=yes \
+libasn_la-Signature.lo: Signature.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-Signature.lo -MD -MP -MF $(DEPDIR)/libasn_la-Signature.Tpo -c -o libasn_la-Signature.lo `test -f 'Signature.c' || echo '$(srcdir)/'`Signature.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-Signature.Tpo $(DEPDIR)/libasn_la-Signature.Plo
+#	$(AM_V_CC)source='Signature.c' object='libasn_la-Signature.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-Signature.lo `test -f 'Signature.c' || echo '$(srcdir)/'`Signature.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-Signature.lo `test -f 'Signature.c' || echo '$(srcdir)/'`Signature.c
 
-libsomething_la-TBSData.lo: TBSData.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-TBSData.lo -MD -MP -MF $(DEPDIR)/libsomething_la-TBSData.Tpo -c -o libsomething_la-TBSData.lo `test -f 'TBSData.c' || echo '$(srcdir)/'`TBSData.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-TBSData.Tpo $(DEPDIR)/libsomething_la-TBSData.Plo
-#	$(AM_V_CC)source='TBSData.c' object='libsomething_la-TBSData.lo' libtool=yes \
+libasn_la-TBSData.lo: TBSData.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-TBSData.lo -MD -MP -MF $(DEPDIR)/libasn_la-TBSData.Tpo -c -o libasn_la-TBSData.lo `test -f 'TBSData.c' || echo '$(srcdir)/'`TBSData.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-TBSData.Tpo $(DEPDIR)/libasn_la-TBSData.Plo
+#	$(AM_V_CC)source='TBSData.c' object='libasn_la-TBSData.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-TBSData.lo `test -f 'TBSData.c' || echo '$(srcdir)/'`TBSData.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-TBSData.lo `test -f 'TBSData.c' || echo '$(srcdir)/'`TBSData.c
 
-libsomething_la-HeaderInfo.lo: HeaderInfo.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-HeaderInfo.lo -MD -MP -MF $(DEPDIR)/libsomething_la-HeaderInfo.Tpo -c -o libsomething_la-HeaderInfo.lo `test -f 'HeaderInfo.c' || echo '$(srcdir)/'`HeaderInfo.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-HeaderInfo.Tpo $(DEPDIR)/libsomething_la-HeaderInfo.Plo
-#	$(AM_V_CC)source='HeaderInfo.c' object='libsomething_la-HeaderInfo.lo' libtool=yes \
+libasn_la-HeaderInfo.lo: HeaderInfo.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-HeaderInfo.lo -MD -MP -MF $(DEPDIR)/libasn_la-HeaderInfo.Tpo -c -o libasn_la-HeaderInfo.lo `test -f 'HeaderInfo.c' || echo '$(srcdir)/'`HeaderInfo.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-HeaderInfo.Tpo $(DEPDIR)/libasn_la-HeaderInfo.Plo
+#	$(AM_V_CC)source='HeaderInfo.c' object='libasn_la-HeaderInfo.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-HeaderInfo.lo `test -f 'HeaderInfo.c' || echo '$(srcdir)/'`HeaderInfo.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-HeaderInfo.lo `test -f 'HeaderInfo.c' || echo '$(srcdir)/'`HeaderInfo.c
 
-libsomething_la-ThreeDLocation.lo: ThreeDLocation.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-ThreeDLocation.lo -MD -MP -MF $(DEPDIR)/libsomething_la-ThreeDLocation.Tpo -c -o libsomething_la-ThreeDLocation.lo `test -f 'ThreeDLocation.c' || echo '$(srcdir)/'`ThreeDLocation.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-ThreeDLocation.Tpo $(DEPDIR)/libsomething_la-ThreeDLocation.Plo
-#	$(AM_V_CC)source='ThreeDLocation.c' object='libsomething_la-ThreeDLocation.lo' libtool=yes \
+libasn_la-ThreeDLocation.lo: ThreeDLocation.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-ThreeDLocation.lo -MD -MP -MF $(DEPDIR)/libasn_la-ThreeDLocation.Tpo -c -o libasn_la-ThreeDLocation.lo `test -f 'ThreeDLocation.c' || echo '$(srcdir)/'`ThreeDLocation.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-ThreeDLocation.Tpo $(DEPDIR)/libasn_la-ThreeDLocation.Plo
+#	$(AM_V_CC)source='ThreeDLocation.c' object='libasn_la-ThreeDLocation.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-ThreeDLocation.lo `test -f 'ThreeDLocation.c' || echo '$(srcdir)/'`ThreeDLocation.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-ThreeDLocation.lo `test -f 'ThreeDLocation.c' || echo '$(srcdir)/'`ThreeDLocation.c
 
-libsomething_la-Latitude.lo: Latitude.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-Latitude.lo -MD -MP -MF $(DEPDIR)/libsomething_la-Latitude.Tpo -c -o libsomething_la-Latitude.lo `test -f 'Latitude.c' || echo '$(srcdir)/'`Latitude.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-Latitude.Tpo $(DEPDIR)/libsomething_la-Latitude.Plo
-#	$(AM_V_CC)source='Latitude.c' object='libsomething_la-Latitude.lo' libtool=yes \
+libasn_la-Latitude.lo: Latitude.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-Latitude.lo -MD -MP -MF $(DEPDIR)/libasn_la-Latitude.Tpo -c -o libasn_la-Latitude.lo `test -f 'Latitude.c' || echo '$(srcdir)/'`Latitude.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-Latitude.Tpo $(DEPDIR)/libasn_la-Latitude.Plo
+#	$(AM_V_CC)source='Latitude.c' object='libasn_la-Latitude.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-Latitude.lo `test -f 'Latitude.c' || echo '$(srcdir)/'`Latitude.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-Latitude.lo `test -f 'Latitude.c' || echo '$(srcdir)/'`Latitude.c
 
-libsomething_la-NinetyDegreeInt.lo: NinetyDegreeInt.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-NinetyDegreeInt.lo -MD -MP -MF $(DEPDIR)/libsomething_la-NinetyDegreeInt.Tpo -c -o libsomething_la-NinetyDegreeInt.lo `test -f 'NinetyDegreeInt.c' || echo '$(srcdir)/'`NinetyDegreeInt.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-NinetyDegreeInt.Tpo $(DEPDIR)/libsomething_la-NinetyDegreeInt.Plo
-#	$(AM_V_CC)source='NinetyDegreeInt.c' object='libsomething_la-NinetyDegreeInt.lo' libtool=yes \
+libasn_la-NinetyDegreeInt.lo: NinetyDegreeInt.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-NinetyDegreeInt.lo -MD -MP -MF $(DEPDIR)/libasn_la-NinetyDegreeInt.Tpo -c -o libasn_la-NinetyDegreeInt.lo `test -f 'NinetyDegreeInt.c' || echo '$(srcdir)/'`NinetyDegreeInt.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-NinetyDegreeInt.Tpo $(DEPDIR)/libasn_la-NinetyDegreeInt.Plo
+#	$(AM_V_CC)source='NinetyDegreeInt.c' object='libasn_la-NinetyDegreeInt.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-NinetyDegreeInt.lo `test -f 'NinetyDegreeInt.c' || echo '$(srcdir)/'`NinetyDegreeInt.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-NinetyDegreeInt.lo `test -f 'NinetyDegreeInt.c' || echo '$(srcdir)/'`NinetyDegreeInt.c
 
-libsomething_la-KnownLatitude.lo: KnownLatitude.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-KnownLatitude.lo -MD -MP -MF $(DEPDIR)/libsomething_la-KnownLatitude.Tpo -c -o libsomething_la-KnownLatitude.lo `test -f 'KnownLatitude.c' || echo '$(srcdir)/'`KnownLatitude.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-KnownLatitude.Tpo $(DEPDIR)/libsomething_la-KnownLatitude.Plo
-#	$(AM_V_CC)source='KnownLatitude.c' object='libsomething_la-KnownLatitude.lo' libtool=yes \
+libasn_la-KnownLatitude.lo: KnownLatitude.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-KnownLatitude.lo -MD -MP -MF $(DEPDIR)/libasn_la-KnownLatitude.Tpo -c -o libasn_la-KnownLatitude.lo `test -f 'KnownLatitude.c' || echo '$(srcdir)/'`KnownLatitude.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-KnownLatitude.Tpo $(DEPDIR)/libasn_la-KnownLatitude.Plo
+#	$(AM_V_CC)source='KnownLatitude.c' object='libasn_la-KnownLatitude.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-KnownLatitude.lo `test -f 'KnownLatitude.c' || echo '$(srcdir)/'`KnownLatitude.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-KnownLatitude.lo `test -f 'KnownLatitude.c' || echo '$(srcdir)/'`KnownLatitude.c
 
-libsomething_la-UnKnownLatitude.lo: UnKnownLatitude.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-UnKnownLatitude.lo -MD -MP -MF $(DEPDIR)/libsomething_la-UnKnownLatitude.Tpo -c -o libsomething_la-UnKnownLatitude.lo `test -f 'UnKnownLatitude.c' || echo '$(srcdir)/'`UnKnownLatitude.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-UnKnownLatitude.Tpo $(DEPDIR)/libsomething_la-UnKnownLatitude.Plo
-#	$(AM_V_CC)source='UnKnownLatitude.c' object='libsomething_la-UnKnownLatitude.lo' libtool=yes \
+libasn_la-UnKnownLatitude.lo: UnKnownLatitude.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-UnKnownLatitude.lo -MD -MP -MF $(DEPDIR)/libasn_la-UnKnownLatitude.Tpo -c -o libasn_la-UnKnownLatitude.lo `test -f 'UnKnownLatitude.c' || echo '$(srcdir)/'`UnKnownLatitude.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-UnKnownLatitude.Tpo $(DEPDIR)/libasn_la-UnKnownLatitude.Plo
+#	$(AM_V_CC)source='UnKnownLatitude.c' object='libasn_la-UnKnownLatitude.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-UnKnownLatitude.lo `test -f 'UnKnownLatitude.c' || echo '$(srcdir)/'`UnKnownLatitude.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-UnKnownLatitude.lo `test -f 'UnKnownLatitude.c' || echo '$(srcdir)/'`UnKnownLatitude.c
 
-libsomething_la-Longitude.lo: Longitude.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-Longitude.lo -MD -MP -MF $(DEPDIR)/libsomething_la-Longitude.Tpo -c -o libsomething_la-Longitude.lo `test -f 'Longitude.c' || echo '$(srcdir)/'`Longitude.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-Longitude.Tpo $(DEPDIR)/libsomething_la-Longitude.Plo
-#	$(AM_V_CC)source='Longitude.c' object='libsomething_la-Longitude.lo' libtool=yes \
+libasn_la-Longitude.lo: Longitude.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-Longitude.lo -MD -MP -MF $(DEPDIR)/libasn_la-Longitude.Tpo -c -o libasn_la-Longitude.lo `test -f 'Longitude.c' || echo '$(srcdir)/'`Longitude.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-Longitude.Tpo $(DEPDIR)/libasn_la-Longitude.Plo
+#	$(AM_V_CC)source='Longitude.c' object='libasn_la-Longitude.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-Longitude.lo `test -f 'Longitude.c' || echo '$(srcdir)/'`Longitude.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-Longitude.lo `test -f 'Longitude.c' || echo '$(srcdir)/'`Longitude.c
 
-libsomething_la-OneEightyDegreeInt.lo: OneEightyDegreeInt.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-OneEightyDegreeInt.lo -MD -MP -MF $(DEPDIR)/libsomething_la-OneEightyDegreeInt.Tpo -c -o libsomething_la-OneEightyDegreeInt.lo `test -f 'OneEightyDegreeInt.c' || echo '$(srcdir)/'`OneEightyDegreeInt.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-OneEightyDegreeInt.Tpo $(DEPDIR)/libsomething_la-OneEightyDegreeInt.Plo
-#	$(AM_V_CC)source='OneEightyDegreeInt.c' object='libsomething_la-OneEightyDegreeInt.lo' libtool=yes \
+libasn_la-OneEightyDegreeInt.lo: OneEightyDegreeInt.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-OneEightyDegreeInt.lo -MD -MP -MF $(DEPDIR)/libasn_la-OneEightyDegreeInt.Tpo -c -o libasn_la-OneEightyDegreeInt.lo `test -f 'OneEightyDegreeInt.c' || echo '$(srcdir)/'`OneEightyDegreeInt.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-OneEightyDegreeInt.Tpo $(DEPDIR)/libasn_la-OneEightyDegreeInt.Plo
+#	$(AM_V_CC)source='OneEightyDegreeInt.c' object='libasn_la-OneEightyDegreeInt.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-OneEightyDegreeInt.lo `test -f 'OneEightyDegreeInt.c' || echo '$(srcdir)/'`OneEightyDegreeInt.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-OneEightyDegreeInt.lo `test -f 'OneEightyDegreeInt.c' || echo '$(srcdir)/'`OneEightyDegreeInt.c
 
-libsomething_la-KnownLongitude.lo: KnownLongitude.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-KnownLongitude.lo -MD -MP -MF $(DEPDIR)/libsomething_la-KnownLongitude.Tpo -c -o libsomething_la-KnownLongitude.lo `test -f 'KnownLongitude.c' || echo '$(srcdir)/'`KnownLongitude.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-KnownLongitude.Tpo $(DEPDIR)/libsomething_la-KnownLongitude.Plo
-#	$(AM_V_CC)source='KnownLongitude.c' object='libsomething_la-KnownLongitude.lo' libtool=yes \
+libasn_la-KnownLongitude.lo: KnownLongitude.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-KnownLongitude.lo -MD -MP -MF $(DEPDIR)/libasn_la-KnownLongitude.Tpo -c -o libasn_la-KnownLongitude.lo `test -f 'KnownLongitude.c' || echo '$(srcdir)/'`KnownLongitude.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-KnownLongitude.Tpo $(DEPDIR)/libasn_la-KnownLongitude.Plo
+#	$(AM_V_CC)source='KnownLongitude.c' object='libasn_la-KnownLongitude.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-KnownLongitude.lo `test -f 'KnownLongitude.c' || echo '$(srcdir)/'`KnownLongitude.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-KnownLongitude.lo `test -f 'KnownLongitude.c' || echo '$(srcdir)/'`KnownLongitude.c
 
-libsomething_la-UnKnownLongitude.lo: UnKnownLongitude.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-UnKnownLongitude.lo -MD -MP -MF $(DEPDIR)/libsomething_la-UnKnownLongitude.Tpo -c -o libsomething_la-UnKnownLongitude.lo `test -f 'UnKnownLongitude.c' || echo '$(srcdir)/'`UnKnownLongitude.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-UnKnownLongitude.Tpo $(DEPDIR)/libsomething_la-UnKnownLongitude.Plo
-#	$(AM_V_CC)source='UnKnownLongitude.c' object='libsomething_la-UnKnownLongitude.lo' libtool=yes \
+libasn_la-UnKnownLongitude.lo: UnKnownLongitude.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-UnKnownLongitude.lo -MD -MP -MF $(DEPDIR)/libasn_la-UnKnownLongitude.Tpo -c -o libasn_la-UnKnownLongitude.lo `test -f 'UnKnownLongitude.c' || echo '$(srcdir)/'`UnKnownLongitude.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-UnKnownLongitude.Tpo $(DEPDIR)/libasn_la-UnKnownLongitude.Plo
+#	$(AM_V_CC)source='UnKnownLongitude.c' object='libasn_la-UnKnownLongitude.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-UnKnownLongitude.lo `test -f 'UnKnownLongitude.c' || echo '$(srcdir)/'`UnKnownLongitude.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-UnKnownLongitude.lo `test -f 'UnKnownLongitude.c' || echo '$(srcdir)/'`UnKnownLongitude.c
 
-libsomething_la-Elevation.lo: Elevation.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-Elevation.lo -MD -MP -MF $(DEPDIR)/libsomething_la-Elevation.Tpo -c -o libsomething_la-Elevation.lo `test -f 'Elevation.c' || echo '$(srcdir)/'`Elevation.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-Elevation.Tpo $(DEPDIR)/libsomething_la-Elevation.Plo
-#	$(AM_V_CC)source='Elevation.c' object='libsomething_la-Elevation.lo' libtool=yes \
+libasn_la-Elevation.lo: Elevation.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-Elevation.lo -MD -MP -MF $(DEPDIR)/libasn_la-Elevation.Tpo -c -o libasn_la-Elevation.lo `test -f 'Elevation.c' || echo '$(srcdir)/'`Elevation.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-Elevation.Tpo $(DEPDIR)/libasn_la-Elevation.Plo
+#	$(AM_V_CC)source='Elevation.c' object='libasn_la-Elevation.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-Elevation.lo `test -f 'Elevation.c' || echo '$(srcdir)/'`Elevation.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-Elevation.lo `test -f 'Elevation.c' || echo '$(srcdir)/'`Elevation.c
 
-libsomething_la-Uint3.lo: Uint3.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-Uint3.lo -MD -MP -MF $(DEPDIR)/libsomething_la-Uint3.Tpo -c -o libsomething_la-Uint3.lo `test -f 'Uint3.c' || echo '$(srcdir)/'`Uint3.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-Uint3.Tpo $(DEPDIR)/libsomething_la-Uint3.Plo
-#	$(AM_V_CC)source='Uint3.c' object='libsomething_la-Uint3.lo' libtool=yes \
+libasn_la-Uint3.lo: Uint3.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-Uint3.lo -MD -MP -MF $(DEPDIR)/libasn_la-Uint3.Tpo -c -o libasn_la-Uint3.lo `test -f 'Uint3.c' || echo '$(srcdir)/'`Uint3.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-Uint3.Tpo $(DEPDIR)/libasn_la-Uint3.Plo
+#	$(AM_V_CC)source='Uint3.c' object='libasn_la-Uint3.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-Uint3.lo `test -f 'Uint3.c' || echo '$(srcdir)/'`Uint3.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-Uint3.lo `test -f 'Uint3.c' || echo '$(srcdir)/'`Uint3.c
 
-libsomething_la-Uint8.lo: Uint8.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-Uint8.lo -MD -MP -MF $(DEPDIR)/libsomething_la-Uint8.Tpo -c -o libsomething_la-Uint8.lo `test -f 'Uint8.c' || echo '$(srcdir)/'`Uint8.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-Uint8.Tpo $(DEPDIR)/libsomething_la-Uint8.Plo
-#	$(AM_V_CC)source='Uint8.c' object='libsomething_la-Uint8.lo' libtool=yes \
+libasn_la-Uint8.lo: Uint8.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-Uint8.lo -MD -MP -MF $(DEPDIR)/libasn_la-Uint8.Tpo -c -o libasn_la-Uint8.lo `test -f 'Uint8.c' || echo '$(srcdir)/'`Uint8.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-Uint8.Tpo $(DEPDIR)/libasn_la-Uint8.Plo
+#	$(AM_V_CC)source='Uint8.c' object='libasn_la-Uint8.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-Uint8.lo `test -f 'Uint8.c' || echo '$(srcdir)/'`Uint8.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-Uint8.lo `test -f 'Uint8.c' || echo '$(srcdir)/'`Uint8.c
 
-libsomething_la-Uint16.lo: Uint16.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-Uint16.lo -MD -MP -MF $(DEPDIR)/libsomething_la-Uint16.Tpo -c -o libsomething_la-Uint16.lo `test -f 'Uint16.c' || echo '$(srcdir)/'`Uint16.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-Uint16.Tpo $(DEPDIR)/libsomething_la-Uint16.Plo
-#	$(AM_V_CC)source='Uint16.c' object='libsomething_la-Uint16.lo' libtool=yes \
+libasn_la-Uint16.lo: Uint16.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-Uint16.lo -MD -MP -MF $(DEPDIR)/libasn_la-Uint16.Tpo -c -o libasn_la-Uint16.lo `test -f 'Uint16.c' || echo '$(srcdir)/'`Uint16.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-Uint16.Tpo $(DEPDIR)/libasn_la-Uint16.Plo
+#	$(AM_V_CC)source='Uint16.c' object='libasn_la-Uint16.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-Uint16.lo `test -f 'Uint16.c' || echo '$(srcdir)/'`Uint16.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-Uint16.lo `test -f 'Uint16.c' || echo '$(srcdir)/'`Uint16.c
 
-libsomething_la-Uint32.lo: Uint32.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-Uint32.lo -MD -MP -MF $(DEPDIR)/libsomething_la-Uint32.Tpo -c -o libsomething_la-Uint32.lo `test -f 'Uint32.c' || echo '$(srcdir)/'`Uint32.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-Uint32.Tpo $(DEPDIR)/libsomething_la-Uint32.Plo
-#	$(AM_V_CC)source='Uint32.c' object='libsomething_la-Uint32.lo' libtool=yes \
+libasn_la-Uint32.lo: Uint32.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-Uint32.lo -MD -MP -MF $(DEPDIR)/libasn_la-Uint32.Tpo -c -o libasn_la-Uint32.lo `test -f 'Uint32.c' || echo '$(srcdir)/'`Uint32.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-Uint32.Tpo $(DEPDIR)/libasn_la-Uint32.Plo
+#	$(AM_V_CC)source='Uint32.c' object='libasn_la-Uint32.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-Uint32.lo `test -f 'Uint32.c' || echo '$(srcdir)/'`Uint32.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-Uint32.lo `test -f 'Uint32.c' || echo '$(srcdir)/'`Uint32.c
 
-libsomething_la-Uint64.lo: Uint64.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-Uint64.lo -MD -MP -MF $(DEPDIR)/libsomething_la-Uint64.Tpo -c -o libsomething_la-Uint64.lo `test -f 'Uint64.c' || echo '$(srcdir)/'`Uint64.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-Uint64.Tpo $(DEPDIR)/libsomething_la-Uint64.Plo
-#	$(AM_V_CC)source='Uint64.c' object='libsomething_la-Uint64.lo' libtool=yes \
+libasn_la-Uint64.lo: Uint64.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-Uint64.lo -MD -MP -MF $(DEPDIR)/libasn_la-Uint64.Tpo -c -o libasn_la-Uint64.lo `test -f 'Uint64.c' || echo '$(srcdir)/'`Uint64.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-Uint64.Tpo $(DEPDIR)/libasn_la-Uint64.Plo
+#	$(AM_V_CC)source='Uint64.c' object='libasn_la-Uint64.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-Uint64.lo `test -f 'Uint64.c' || echo '$(srcdir)/'`Uint64.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-Uint64.lo `test -f 'Uint64.c' || echo '$(srcdir)/'`Uint64.c
 
-libsomething_la-HashedId3.lo: HashedId3.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-HashedId3.lo -MD -MP -MF $(DEPDIR)/libsomething_la-HashedId3.Tpo -c -o libsomething_la-HashedId3.lo `test -f 'HashedId3.c' || echo '$(srcdir)/'`HashedId3.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-HashedId3.Tpo $(DEPDIR)/libsomething_la-HashedId3.Plo
-#	$(AM_V_CC)source='HashedId3.c' object='libsomething_la-HashedId3.lo' libtool=yes \
+libasn_la-HashedId3.lo: HashedId3.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-HashedId3.lo -MD -MP -MF $(DEPDIR)/libasn_la-HashedId3.Tpo -c -o libasn_la-HashedId3.lo `test -f 'HashedId3.c' || echo '$(srcdir)/'`HashedId3.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-HashedId3.Tpo $(DEPDIR)/libasn_la-HashedId3.Plo
+#	$(AM_V_CC)source='HashedId3.c' object='libasn_la-HashedId3.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-HashedId3.lo `test -f 'HashedId3.c' || echo '$(srcdir)/'`HashedId3.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-HashedId3.lo `test -f 'HashedId3.c' || echo '$(srcdir)/'`HashedId3.c
 
-libsomething_la-HashedId8.lo: HashedId8.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-HashedId8.lo -MD -MP -MF $(DEPDIR)/libsomething_la-HashedId8.Tpo -c -o libsomething_la-HashedId8.lo `test -f 'HashedId8.c' || echo '$(srcdir)/'`HashedId8.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-HashedId8.Tpo $(DEPDIR)/libsomething_la-HashedId8.Plo
-#	$(AM_V_CC)source='HashedId8.c' object='libsomething_la-HashedId8.lo' libtool=yes \
+libasn_la-HashedId8.lo: HashedId8.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-HashedId8.lo -MD -MP -MF $(DEPDIR)/libasn_la-HashedId8.Tpo -c -o libasn_la-HashedId8.lo `test -f 'HashedId8.c' || echo '$(srcdir)/'`HashedId8.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-HashedId8.Tpo $(DEPDIR)/libasn_la-HashedId8.Plo
+#	$(AM_V_CC)source='HashedId8.c' object='libasn_la-HashedId8.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-HashedId8.lo `test -f 'HashedId8.c' || echo '$(srcdir)/'`HashedId8.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-HashedId8.lo `test -f 'HashedId8.c' || echo '$(srcdir)/'`HashedId8.c
 
-libsomething_la-Opaque.lo: Opaque.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-Opaque.lo -MD -MP -MF $(DEPDIR)/libsomething_la-Opaque.Tpo -c -o libsomething_la-Opaque.lo `test -f 'Opaque.c' || echo '$(srcdir)/'`Opaque.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-Opaque.Tpo $(DEPDIR)/libsomething_la-Opaque.Plo
-#	$(AM_V_CC)source='Opaque.c' object='libsomething_la-Opaque.lo' libtool=yes \
+libasn_la-Opaque.lo: Opaque.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-Opaque.lo -MD -MP -MF $(DEPDIR)/libasn_la-Opaque.Tpo -c -o libasn_la-Opaque.lo `test -f 'Opaque.c' || echo '$(srcdir)/'`Opaque.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-Opaque.Tpo $(DEPDIR)/libasn_la-Opaque.Plo
+#	$(AM_V_CC)source='Opaque.c' object='libasn_la-Opaque.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-Opaque.lo `test -f 'Opaque.c' || echo '$(srcdir)/'`Opaque.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-Opaque.lo `test -f 'Opaque.c' || echo '$(srcdir)/'`Opaque.c
 
-libsomething_la-Time32.lo: Time32.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-Time32.lo -MD -MP -MF $(DEPDIR)/libsomething_la-Time32.Tpo -c -o libsomething_la-Time32.lo `test -f 'Time32.c' || echo '$(srcdir)/'`Time32.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-Time32.Tpo $(DEPDIR)/libsomething_la-Time32.Plo
-#	$(AM_V_CC)source='Time32.c' object='libsomething_la-Time32.lo' libtool=yes \
+libasn_la-Time32.lo: Time32.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-Time32.lo -MD -MP -MF $(DEPDIR)/libasn_la-Time32.Tpo -c -o libasn_la-Time32.lo `test -f 'Time32.c' || echo '$(srcdir)/'`Time32.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-Time32.Tpo $(DEPDIR)/libasn_la-Time32.Plo
+#	$(AM_V_CC)source='Time32.c' object='libasn_la-Time32.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-Time32.lo `test -f 'Time32.c' || echo '$(srcdir)/'`Time32.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-Time32.lo `test -f 'Time32.c' || echo '$(srcdir)/'`Time32.c
 
-libsomething_la-Time64.lo: Time64.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-Time64.lo -MD -MP -MF $(DEPDIR)/libsomething_la-Time64.Tpo -c -o libsomething_la-Time64.lo `test -f 'Time64.c' || echo '$(srcdir)/'`Time64.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-Time64.Tpo $(DEPDIR)/libsomething_la-Time64.Plo
-#	$(AM_V_CC)source='Time64.c' object='libsomething_la-Time64.lo' libtool=yes \
+libasn_la-Time64.lo: Time64.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-Time64.lo -MD -MP -MF $(DEPDIR)/libasn_la-Time64.Tpo -c -o libasn_la-Time64.lo `test -f 'Time64.c' || echo '$(srcdir)/'`Time64.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-Time64.Tpo $(DEPDIR)/libasn_la-Time64.Plo
+#	$(AM_V_CC)source='Time64.c' object='libasn_la-Time64.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-Time64.lo `test -f 'Time64.c' || echo '$(srcdir)/'`Time64.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-Time64.lo `test -f 'Time64.c' || echo '$(srcdir)/'`Time64.c
 
-libsomething_la-BOOLEAN.lo: BOOLEAN.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-BOOLEAN.lo -MD -MP -MF $(DEPDIR)/libsomething_la-BOOLEAN.Tpo -c -o libsomething_la-BOOLEAN.lo `test -f 'BOOLEAN.c' || echo '$(srcdir)/'`BOOLEAN.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-BOOLEAN.Tpo $(DEPDIR)/libsomething_la-BOOLEAN.Plo
-#	$(AM_V_CC)source='BOOLEAN.c' object='libsomething_la-BOOLEAN.lo' libtool=yes \
+libasn_la-BOOLEAN.lo: BOOLEAN.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-BOOLEAN.lo -MD -MP -MF $(DEPDIR)/libasn_la-BOOLEAN.Tpo -c -o libasn_la-BOOLEAN.lo `test -f 'BOOLEAN.c' || echo '$(srcdir)/'`BOOLEAN.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-BOOLEAN.Tpo $(DEPDIR)/libasn_la-BOOLEAN.Plo
+#	$(AM_V_CC)source='BOOLEAN.c' object='libasn_la-BOOLEAN.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-BOOLEAN.lo `test -f 'BOOLEAN.c' || echo '$(srcdir)/'`BOOLEAN.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-BOOLEAN.lo `test -f 'BOOLEAN.c' || echo '$(srcdir)/'`BOOLEAN.c
 
-libsomething_la-INTEGER.lo: INTEGER.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-INTEGER.lo -MD -MP -MF $(DEPDIR)/libsomething_la-INTEGER.Tpo -c -o libsomething_la-INTEGER.lo `test -f 'INTEGER.c' || echo '$(srcdir)/'`INTEGER.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-INTEGER.Tpo $(DEPDIR)/libsomething_la-INTEGER.Plo
-#	$(AM_V_CC)source='INTEGER.c' object='libsomething_la-INTEGER.lo' libtool=yes \
+libasn_la-INTEGER.lo: INTEGER.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-INTEGER.lo -MD -MP -MF $(DEPDIR)/libasn_la-INTEGER.Tpo -c -o libasn_la-INTEGER.lo `test -f 'INTEGER.c' || echo '$(srcdir)/'`INTEGER.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-INTEGER.Tpo $(DEPDIR)/libasn_la-INTEGER.Plo
+#	$(AM_V_CC)source='INTEGER.c' object='libasn_la-INTEGER.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-INTEGER.lo `test -f 'INTEGER.c' || echo '$(srcdir)/'`INTEGER.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-INTEGER.lo `test -f 'INTEGER.c' || echo '$(srcdir)/'`INTEGER.c
 
-libsomething_la-NULL.lo: NULL.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-NULL.lo -MD -MP -MF $(DEPDIR)/libsomething_la-NULL.Tpo -c -o libsomething_la-NULL.lo `test -f 'NULL.c' || echo '$(srcdir)/'`NULL.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-NULL.Tpo $(DEPDIR)/libsomething_la-NULL.Plo
-#	$(AM_V_CC)source='NULL.c' object='libsomething_la-NULL.lo' libtool=yes \
+libasn_la-NULL.lo: NULL.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-NULL.lo -MD -MP -MF $(DEPDIR)/libasn_la-NULL.Tpo -c -o libasn_la-NULL.lo `test -f 'NULL.c' || echo '$(srcdir)/'`NULL.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-NULL.Tpo $(DEPDIR)/libasn_la-NULL.Plo
+#	$(AM_V_CC)source='NULL.c' object='libasn_la-NULL.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-NULL.lo `test -f 'NULL.c' || echo '$(srcdir)/'`NULL.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-NULL.lo `test -f 'NULL.c' || echo '$(srcdir)/'`NULL.c
 
-libsomething_la-NativeEnumerated.lo: NativeEnumerated.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-NativeEnumerated.lo -MD -MP -MF $(DEPDIR)/libsomething_la-NativeEnumerated.Tpo -c -o libsomething_la-NativeEnumerated.lo `test -f 'NativeEnumerated.c' || echo '$(srcdir)/'`NativeEnumerated.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-NativeEnumerated.Tpo $(DEPDIR)/libsomething_la-NativeEnumerated.Plo
-#	$(AM_V_CC)source='NativeEnumerated.c' object='libsomething_la-NativeEnumerated.lo' libtool=yes \
+libasn_la-NativeEnumerated.lo: NativeEnumerated.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-NativeEnumerated.lo -MD -MP -MF $(DEPDIR)/libasn_la-NativeEnumerated.Tpo -c -o libasn_la-NativeEnumerated.lo `test -f 'NativeEnumerated.c' || echo '$(srcdir)/'`NativeEnumerated.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-NativeEnumerated.Tpo $(DEPDIR)/libasn_la-NativeEnumerated.Plo
+#	$(AM_V_CC)source='NativeEnumerated.c' object='libasn_la-NativeEnumerated.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-NativeEnumerated.lo `test -f 'NativeEnumerated.c' || echo '$(srcdir)/'`NativeEnumerated.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-NativeEnumerated.lo `test -f 'NativeEnumerated.c' || echo '$(srcdir)/'`NativeEnumerated.c
 
-libsomething_la-NativeInteger.lo: NativeInteger.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-NativeInteger.lo -MD -MP -MF $(DEPDIR)/libsomething_la-NativeInteger.Tpo -c -o libsomething_la-NativeInteger.lo `test -f 'NativeInteger.c' || echo '$(srcdir)/'`NativeInteger.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-NativeInteger.Tpo $(DEPDIR)/libsomething_la-NativeInteger.Plo
-#	$(AM_V_CC)source='NativeInteger.c' object='libsomething_la-NativeInteger.lo' libtool=yes \
+libasn_la-NativeInteger.lo: NativeInteger.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-NativeInteger.lo -MD -MP -MF $(DEPDIR)/libasn_la-NativeInteger.Tpo -c -o libasn_la-NativeInteger.lo `test -f 'NativeInteger.c' || echo '$(srcdir)/'`NativeInteger.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-NativeInteger.Tpo $(DEPDIR)/libasn_la-NativeInteger.Plo
+#	$(AM_V_CC)source='NativeInteger.c' object='libasn_la-NativeInteger.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-NativeInteger.lo `test -f 'NativeInteger.c' || echo '$(srcdir)/'`NativeInteger.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-NativeInteger.lo `test -f 'NativeInteger.c' || echo '$(srcdir)/'`NativeInteger.c
 
-libsomething_la-asn_SEQUENCE_OF.lo: asn_SEQUENCE_OF.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-asn_SEQUENCE_OF.lo -MD -MP -MF $(DEPDIR)/libsomething_la-asn_SEQUENCE_OF.Tpo -c -o libsomething_la-asn_SEQUENCE_OF.lo `test -f 'asn_SEQUENCE_OF.c' || echo '$(srcdir)/'`asn_SEQUENCE_OF.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-asn_SEQUENCE_OF.Tpo $(DEPDIR)/libsomething_la-asn_SEQUENCE_OF.Plo
-#	$(AM_V_CC)source='asn_SEQUENCE_OF.c' object='libsomething_la-asn_SEQUENCE_OF.lo' libtool=yes \
+libasn_la-asn_SEQUENCE_OF.lo: asn_SEQUENCE_OF.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-asn_SEQUENCE_OF.lo -MD -MP -MF $(DEPDIR)/libasn_la-asn_SEQUENCE_OF.Tpo -c -o libasn_la-asn_SEQUENCE_OF.lo `test -f 'asn_SEQUENCE_OF.c' || echo '$(srcdir)/'`asn_SEQUENCE_OF.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-asn_SEQUENCE_OF.Tpo $(DEPDIR)/libasn_la-asn_SEQUENCE_OF.Plo
+#	$(AM_V_CC)source='asn_SEQUENCE_OF.c' object='libasn_la-asn_SEQUENCE_OF.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-asn_SEQUENCE_OF.lo `test -f 'asn_SEQUENCE_OF.c' || echo '$(srcdir)/'`asn_SEQUENCE_OF.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-asn_SEQUENCE_OF.lo `test -f 'asn_SEQUENCE_OF.c' || echo '$(srcdir)/'`asn_SEQUENCE_OF.c
 
-libsomething_la-asn_SET_OF.lo: asn_SET_OF.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-asn_SET_OF.lo -MD -MP -MF $(DEPDIR)/libsomething_la-asn_SET_OF.Tpo -c -o libsomething_la-asn_SET_OF.lo `test -f 'asn_SET_OF.c' || echo '$(srcdir)/'`asn_SET_OF.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-asn_SET_OF.Tpo $(DEPDIR)/libsomething_la-asn_SET_OF.Plo
-#	$(AM_V_CC)source='asn_SET_OF.c' object='libsomething_la-asn_SET_OF.lo' libtool=yes \
+libasn_la-asn_SET_OF.lo: asn_SET_OF.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-asn_SET_OF.lo -MD -MP -MF $(DEPDIR)/libasn_la-asn_SET_OF.Tpo -c -o libasn_la-asn_SET_OF.lo `test -f 'asn_SET_OF.c' || echo '$(srcdir)/'`asn_SET_OF.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-asn_SET_OF.Tpo $(DEPDIR)/libasn_la-asn_SET_OF.Plo
+#	$(AM_V_CC)source='asn_SET_OF.c' object='libasn_la-asn_SET_OF.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-asn_SET_OF.lo `test -f 'asn_SET_OF.c' || echo '$(srcdir)/'`asn_SET_OF.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-asn_SET_OF.lo `test -f 'asn_SET_OF.c' || echo '$(srcdir)/'`asn_SET_OF.c
 
-libsomething_la-constr_CHOICE.lo: constr_CHOICE.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-constr_CHOICE.lo -MD -MP -MF $(DEPDIR)/libsomething_la-constr_CHOICE.Tpo -c -o libsomething_la-constr_CHOICE.lo `test -f 'constr_CHOICE.c' || echo '$(srcdir)/'`constr_CHOICE.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-constr_CHOICE.Tpo $(DEPDIR)/libsomething_la-constr_CHOICE.Plo
-#	$(AM_V_CC)source='constr_CHOICE.c' object='libsomething_la-constr_CHOICE.lo' libtool=yes \
+libasn_la-constr_CHOICE.lo: constr_CHOICE.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-constr_CHOICE.lo -MD -MP -MF $(DEPDIR)/libasn_la-constr_CHOICE.Tpo -c -o libasn_la-constr_CHOICE.lo `test -f 'constr_CHOICE.c' || echo '$(srcdir)/'`constr_CHOICE.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-constr_CHOICE.Tpo $(DEPDIR)/libasn_la-constr_CHOICE.Plo
+#	$(AM_V_CC)source='constr_CHOICE.c' object='libasn_la-constr_CHOICE.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-constr_CHOICE.lo `test -f 'constr_CHOICE.c' || echo '$(srcdir)/'`constr_CHOICE.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-constr_CHOICE.lo `test -f 'constr_CHOICE.c' || echo '$(srcdir)/'`constr_CHOICE.c
 
-libsomething_la-constr_SEQUENCE.lo: constr_SEQUENCE.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-constr_SEQUENCE.lo -MD -MP -MF $(DEPDIR)/libsomething_la-constr_SEQUENCE.Tpo -c -o libsomething_la-constr_SEQUENCE.lo `test -f 'constr_SEQUENCE.c' || echo '$(srcdir)/'`constr_SEQUENCE.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-constr_SEQUENCE.Tpo $(DEPDIR)/libsomething_la-constr_SEQUENCE.Plo
-#	$(AM_V_CC)source='constr_SEQUENCE.c' object='libsomething_la-constr_SEQUENCE.lo' libtool=yes \
+libasn_la-constr_SEQUENCE.lo: constr_SEQUENCE.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-constr_SEQUENCE.lo -MD -MP -MF $(DEPDIR)/libasn_la-constr_SEQUENCE.Tpo -c -o libasn_la-constr_SEQUENCE.lo `test -f 'constr_SEQUENCE.c' || echo '$(srcdir)/'`constr_SEQUENCE.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-constr_SEQUENCE.Tpo $(DEPDIR)/libasn_la-constr_SEQUENCE.Plo
+#	$(AM_V_CC)source='constr_SEQUENCE.c' object='libasn_la-constr_SEQUENCE.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-constr_SEQUENCE.lo `test -f 'constr_SEQUENCE.c' || echo '$(srcdir)/'`constr_SEQUENCE.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-constr_SEQUENCE.lo `test -f 'constr_SEQUENCE.c' || echo '$(srcdir)/'`constr_SEQUENCE.c
 
-libsomething_la-constr_SEQUENCE_OF.lo: constr_SEQUENCE_OF.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-constr_SEQUENCE_OF.lo -MD -MP -MF $(DEPDIR)/libsomething_la-constr_SEQUENCE_OF.Tpo -c -o libsomething_la-constr_SEQUENCE_OF.lo `test -f 'constr_SEQUENCE_OF.c' || echo '$(srcdir)/'`constr_SEQUENCE_OF.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-constr_SEQUENCE_OF.Tpo $(DEPDIR)/libsomething_la-constr_SEQUENCE_OF.Plo
-#	$(AM_V_CC)source='constr_SEQUENCE_OF.c' object='libsomething_la-constr_SEQUENCE_OF.lo' libtool=yes \
+libasn_la-constr_SEQUENCE_OF.lo: constr_SEQUENCE_OF.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-constr_SEQUENCE_OF.lo -MD -MP -MF $(DEPDIR)/libasn_la-constr_SEQUENCE_OF.Tpo -c -o libasn_la-constr_SEQUENCE_OF.lo `test -f 'constr_SEQUENCE_OF.c' || echo '$(srcdir)/'`constr_SEQUENCE_OF.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-constr_SEQUENCE_OF.Tpo $(DEPDIR)/libasn_la-constr_SEQUENCE_OF.Plo
+#	$(AM_V_CC)source='constr_SEQUENCE_OF.c' object='libasn_la-constr_SEQUENCE_OF.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-constr_SEQUENCE_OF.lo `test -f 'constr_SEQUENCE_OF.c' || echo '$(srcdir)/'`constr_SEQUENCE_OF.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-constr_SEQUENCE_OF.lo `test -f 'constr_SEQUENCE_OF.c' || echo '$(srcdir)/'`constr_SEQUENCE_OF.c
 
-libsomething_la-constr_SET_OF.lo: constr_SET_OF.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-constr_SET_OF.lo -MD -MP -MF $(DEPDIR)/libsomething_la-constr_SET_OF.Tpo -c -o libsomething_la-constr_SET_OF.lo `test -f 'constr_SET_OF.c' || echo '$(srcdir)/'`constr_SET_OF.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-constr_SET_OF.Tpo $(DEPDIR)/libsomething_la-constr_SET_OF.Plo
-#	$(AM_V_CC)source='constr_SET_OF.c' object='libsomething_la-constr_SET_OF.lo' libtool=yes \
+libasn_la-constr_SET_OF.lo: constr_SET_OF.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-constr_SET_OF.lo -MD -MP -MF $(DEPDIR)/libasn_la-constr_SET_OF.Tpo -c -o libasn_la-constr_SET_OF.lo `test -f 'constr_SET_OF.c' || echo '$(srcdir)/'`constr_SET_OF.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-constr_SET_OF.Tpo $(DEPDIR)/libasn_la-constr_SET_OF.Plo
+#	$(AM_V_CC)source='constr_SET_OF.c' object='libasn_la-constr_SET_OF.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-constr_SET_OF.lo `test -f 'constr_SET_OF.c' || echo '$(srcdir)/'`constr_SET_OF.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-constr_SET_OF.lo `test -f 'constr_SET_OF.c' || echo '$(srcdir)/'`constr_SET_OF.c
 
-libsomething_la-OCTET_STRING.lo: OCTET_STRING.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-OCTET_STRING.lo -MD -MP -MF $(DEPDIR)/libsomething_la-OCTET_STRING.Tpo -c -o libsomething_la-OCTET_STRING.lo `test -f 'OCTET_STRING.c' || echo '$(srcdir)/'`OCTET_STRING.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-OCTET_STRING.Tpo $(DEPDIR)/libsomething_la-OCTET_STRING.Plo
-#	$(AM_V_CC)source='OCTET_STRING.c' object='libsomething_la-OCTET_STRING.lo' libtool=yes \
+libasn_la-OCTET_STRING.lo: OCTET_STRING.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-OCTET_STRING.lo -MD -MP -MF $(DEPDIR)/libasn_la-OCTET_STRING.Tpo -c -o libasn_la-OCTET_STRING.lo `test -f 'OCTET_STRING.c' || echo '$(srcdir)/'`OCTET_STRING.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-OCTET_STRING.Tpo $(DEPDIR)/libasn_la-OCTET_STRING.Plo
+#	$(AM_V_CC)source='OCTET_STRING.c' object='libasn_la-OCTET_STRING.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-OCTET_STRING.lo `test -f 'OCTET_STRING.c' || echo '$(srcdir)/'`OCTET_STRING.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-OCTET_STRING.lo `test -f 'OCTET_STRING.c' || echo '$(srcdir)/'`OCTET_STRING.c
 
-libsomething_la-BIT_STRING.lo: BIT_STRING.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-BIT_STRING.lo -MD -MP -MF $(DEPDIR)/libsomething_la-BIT_STRING.Tpo -c -o libsomething_la-BIT_STRING.lo `test -f 'BIT_STRING.c' || echo '$(srcdir)/'`BIT_STRING.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-BIT_STRING.Tpo $(DEPDIR)/libsomething_la-BIT_STRING.Plo
-#	$(AM_V_CC)source='BIT_STRING.c' object='libsomething_la-BIT_STRING.lo' libtool=yes \
+libasn_la-BIT_STRING.lo: BIT_STRING.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-BIT_STRING.lo -MD -MP -MF $(DEPDIR)/libasn_la-BIT_STRING.Tpo -c -o libasn_la-BIT_STRING.lo `test -f 'BIT_STRING.c' || echo '$(srcdir)/'`BIT_STRING.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-BIT_STRING.Tpo $(DEPDIR)/libasn_la-BIT_STRING.Plo
+#	$(AM_V_CC)source='BIT_STRING.c' object='libasn_la-BIT_STRING.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-BIT_STRING.lo `test -f 'BIT_STRING.c' || echo '$(srcdir)/'`BIT_STRING.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-BIT_STRING.lo `test -f 'BIT_STRING.c' || echo '$(srcdir)/'`BIT_STRING.c
 
-libsomething_la-asn_codecs_prim.lo: asn_codecs_prim.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-asn_codecs_prim.lo -MD -MP -MF $(DEPDIR)/libsomething_la-asn_codecs_prim.Tpo -c -o libsomething_la-asn_codecs_prim.lo `test -f 'asn_codecs_prim.c' || echo '$(srcdir)/'`asn_codecs_prim.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-asn_codecs_prim.Tpo $(DEPDIR)/libsomething_la-asn_codecs_prim.Plo
-#	$(AM_V_CC)source='asn_codecs_prim.c' object='libsomething_la-asn_codecs_prim.lo' libtool=yes \
+libasn_la-asn_codecs_prim.lo: asn_codecs_prim.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-asn_codecs_prim.lo -MD -MP -MF $(DEPDIR)/libasn_la-asn_codecs_prim.Tpo -c -o libasn_la-asn_codecs_prim.lo `test -f 'asn_codecs_prim.c' || echo '$(srcdir)/'`asn_codecs_prim.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-asn_codecs_prim.Tpo $(DEPDIR)/libasn_la-asn_codecs_prim.Plo
+#	$(AM_V_CC)source='asn_codecs_prim.c' object='libasn_la-asn_codecs_prim.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-asn_codecs_prim.lo `test -f 'asn_codecs_prim.c' || echo '$(srcdir)/'`asn_codecs_prim.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-asn_codecs_prim.lo `test -f 'asn_codecs_prim.c' || echo '$(srcdir)/'`asn_codecs_prim.c
 
-libsomething_la-ber_tlv_length.lo: ber_tlv_length.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-ber_tlv_length.lo -MD -MP -MF $(DEPDIR)/libsomething_la-ber_tlv_length.Tpo -c -o libsomething_la-ber_tlv_length.lo `test -f 'ber_tlv_length.c' || echo '$(srcdir)/'`ber_tlv_length.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-ber_tlv_length.Tpo $(DEPDIR)/libsomething_la-ber_tlv_length.Plo
-#	$(AM_V_CC)source='ber_tlv_length.c' object='libsomething_la-ber_tlv_length.lo' libtool=yes \
+libasn_la-ber_tlv_length.lo: ber_tlv_length.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-ber_tlv_length.lo -MD -MP -MF $(DEPDIR)/libasn_la-ber_tlv_length.Tpo -c -o libasn_la-ber_tlv_length.lo `test -f 'ber_tlv_length.c' || echo '$(srcdir)/'`ber_tlv_length.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-ber_tlv_length.Tpo $(DEPDIR)/libasn_la-ber_tlv_length.Plo
+#	$(AM_V_CC)source='ber_tlv_length.c' object='libasn_la-ber_tlv_length.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-ber_tlv_length.lo `test -f 'ber_tlv_length.c' || echo '$(srcdir)/'`ber_tlv_length.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-ber_tlv_length.lo `test -f 'ber_tlv_length.c' || echo '$(srcdir)/'`ber_tlv_length.c
 
-libsomething_la-ber_tlv_tag.lo: ber_tlv_tag.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-ber_tlv_tag.lo -MD -MP -MF $(DEPDIR)/libsomething_la-ber_tlv_tag.Tpo -c -o libsomething_la-ber_tlv_tag.lo `test -f 'ber_tlv_tag.c' || echo '$(srcdir)/'`ber_tlv_tag.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-ber_tlv_tag.Tpo $(DEPDIR)/libsomething_la-ber_tlv_tag.Plo
-#	$(AM_V_CC)source='ber_tlv_tag.c' object='libsomething_la-ber_tlv_tag.lo' libtool=yes \
+libasn_la-ber_tlv_tag.lo: ber_tlv_tag.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-ber_tlv_tag.lo -MD -MP -MF $(DEPDIR)/libasn_la-ber_tlv_tag.Tpo -c -o libasn_la-ber_tlv_tag.lo `test -f 'ber_tlv_tag.c' || echo '$(srcdir)/'`ber_tlv_tag.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-ber_tlv_tag.Tpo $(DEPDIR)/libasn_la-ber_tlv_tag.Plo
+#	$(AM_V_CC)source='ber_tlv_tag.c' object='libasn_la-ber_tlv_tag.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-ber_tlv_tag.lo `test -f 'ber_tlv_tag.c' || echo '$(srcdir)/'`ber_tlv_tag.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-ber_tlv_tag.lo `test -f 'ber_tlv_tag.c' || echo '$(srcdir)/'`ber_tlv_tag.c
 
-libsomething_la-ber_decoder.lo: ber_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-ber_decoder.lo -MD -MP -MF $(DEPDIR)/libsomething_la-ber_decoder.Tpo -c -o libsomething_la-ber_decoder.lo `test -f 'ber_decoder.c' || echo '$(srcdir)/'`ber_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-ber_decoder.Tpo $(DEPDIR)/libsomething_la-ber_decoder.Plo
-#	$(AM_V_CC)source='ber_decoder.c' object='libsomething_la-ber_decoder.lo' libtool=yes \
+libasn_la-ber_decoder.lo: ber_decoder.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-ber_decoder.lo -MD -MP -MF $(DEPDIR)/libasn_la-ber_decoder.Tpo -c -o libasn_la-ber_decoder.lo `test -f 'ber_decoder.c' || echo '$(srcdir)/'`ber_decoder.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-ber_decoder.Tpo $(DEPDIR)/libasn_la-ber_decoder.Plo
+#	$(AM_V_CC)source='ber_decoder.c' object='libasn_la-ber_decoder.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-ber_decoder.lo `test -f 'ber_decoder.c' || echo '$(srcdir)/'`ber_decoder.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-ber_decoder.lo `test -f 'ber_decoder.c' || echo '$(srcdir)/'`ber_decoder.c
 
-libsomething_la-der_encoder.lo: der_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-der_encoder.lo -MD -MP -MF $(DEPDIR)/libsomething_la-der_encoder.Tpo -c -o libsomething_la-der_encoder.lo `test -f 'der_encoder.c' || echo '$(srcdir)/'`der_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-der_encoder.Tpo $(DEPDIR)/libsomething_la-der_encoder.Plo
-#	$(AM_V_CC)source='der_encoder.c' object='libsomething_la-der_encoder.lo' libtool=yes \
+libasn_la-der_encoder.lo: der_encoder.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-der_encoder.lo -MD -MP -MF $(DEPDIR)/libasn_la-der_encoder.Tpo -c -o libasn_la-der_encoder.lo `test -f 'der_encoder.c' || echo '$(srcdir)/'`der_encoder.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-der_encoder.Tpo $(DEPDIR)/libasn_la-der_encoder.Plo
+#	$(AM_V_CC)source='der_encoder.c' object='libasn_la-der_encoder.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-der_encoder.lo `test -f 'der_encoder.c' || echo '$(srcdir)/'`der_encoder.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-der_encoder.lo `test -f 'der_encoder.c' || echo '$(srcdir)/'`der_encoder.c
 
-libsomething_la-constr_TYPE.lo: constr_TYPE.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-constr_TYPE.lo -MD -MP -MF $(DEPDIR)/libsomething_la-constr_TYPE.Tpo -c -o libsomething_la-constr_TYPE.lo `test -f 'constr_TYPE.c' || echo '$(srcdir)/'`constr_TYPE.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-constr_TYPE.Tpo $(DEPDIR)/libsomething_la-constr_TYPE.Plo
-#	$(AM_V_CC)source='constr_TYPE.c' object='libsomething_la-constr_TYPE.lo' libtool=yes \
+libasn_la-constr_TYPE.lo: constr_TYPE.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-constr_TYPE.lo -MD -MP -MF $(DEPDIR)/libasn_la-constr_TYPE.Tpo -c -o libasn_la-constr_TYPE.lo `test -f 'constr_TYPE.c' || echo '$(srcdir)/'`constr_TYPE.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-constr_TYPE.Tpo $(DEPDIR)/libasn_la-constr_TYPE.Plo
+#	$(AM_V_CC)source='constr_TYPE.c' object='libasn_la-constr_TYPE.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-constr_TYPE.lo `test -f 'constr_TYPE.c' || echo '$(srcdir)/'`constr_TYPE.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-constr_TYPE.lo `test -f 'constr_TYPE.c' || echo '$(srcdir)/'`constr_TYPE.c
 
-libsomething_la-constraints.lo: constraints.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-constraints.lo -MD -MP -MF $(DEPDIR)/libsomething_la-constraints.Tpo -c -o libsomething_la-constraints.lo `test -f 'constraints.c' || echo '$(srcdir)/'`constraints.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-constraints.Tpo $(DEPDIR)/libsomething_la-constraints.Plo
-#	$(AM_V_CC)source='constraints.c' object='libsomething_la-constraints.lo' libtool=yes \
+libasn_la-constraints.lo: constraints.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-constraints.lo -MD -MP -MF $(DEPDIR)/libasn_la-constraints.Tpo -c -o libasn_la-constraints.lo `test -f 'constraints.c' || echo '$(srcdir)/'`constraints.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-constraints.Tpo $(DEPDIR)/libasn_la-constraints.Plo
+#	$(AM_V_CC)source='constraints.c' object='libasn_la-constraints.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-constraints.lo `test -f 'constraints.c' || echo '$(srcdir)/'`constraints.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-constraints.lo `test -f 'constraints.c' || echo '$(srcdir)/'`constraints.c
 
-libsomething_la-xer_support.lo: xer_support.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-xer_support.lo -MD -MP -MF $(DEPDIR)/libsomething_la-xer_support.Tpo -c -o libsomething_la-xer_support.lo `test -f 'xer_support.c' || echo '$(srcdir)/'`xer_support.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-xer_support.Tpo $(DEPDIR)/libsomething_la-xer_support.Plo
-#	$(AM_V_CC)source='xer_support.c' object='libsomething_la-xer_support.lo' libtool=yes \
+libasn_la-xer_support.lo: xer_support.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-xer_support.lo -MD -MP -MF $(DEPDIR)/libasn_la-xer_support.Tpo -c -o libasn_la-xer_support.lo `test -f 'xer_support.c' || echo '$(srcdir)/'`xer_support.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-xer_support.Tpo $(DEPDIR)/libasn_la-xer_support.Plo
+#	$(AM_V_CC)source='xer_support.c' object='libasn_la-xer_support.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-xer_support.lo `test -f 'xer_support.c' || echo '$(srcdir)/'`xer_support.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-xer_support.lo `test -f 'xer_support.c' || echo '$(srcdir)/'`xer_support.c
 
-libsomething_la-xer_decoder.lo: xer_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-xer_decoder.lo -MD -MP -MF $(DEPDIR)/libsomething_la-xer_decoder.Tpo -c -o libsomething_la-xer_decoder.lo `test -f 'xer_decoder.c' || echo '$(srcdir)/'`xer_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-xer_decoder.Tpo $(DEPDIR)/libsomething_la-xer_decoder.Plo
-#	$(AM_V_CC)source='xer_decoder.c' object='libsomething_la-xer_decoder.lo' libtool=yes \
+libasn_la-xer_decoder.lo: xer_decoder.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-xer_decoder.lo -MD -MP -MF $(DEPDIR)/libasn_la-xer_decoder.Tpo -c -o libasn_la-xer_decoder.lo `test -f 'xer_decoder.c' || echo '$(srcdir)/'`xer_decoder.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-xer_decoder.Tpo $(DEPDIR)/libasn_la-xer_decoder.Plo
+#	$(AM_V_CC)source='xer_decoder.c' object='libasn_la-xer_decoder.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-xer_decoder.lo `test -f 'xer_decoder.c' || echo '$(srcdir)/'`xer_decoder.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-xer_decoder.lo `test -f 'xer_decoder.c' || echo '$(srcdir)/'`xer_decoder.c
 
-libsomething_la-xer_encoder.lo: xer_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-xer_encoder.lo -MD -MP -MF $(DEPDIR)/libsomething_la-xer_encoder.Tpo -c -o libsomething_la-xer_encoder.lo `test -f 'xer_encoder.c' || echo '$(srcdir)/'`xer_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-xer_encoder.Tpo $(DEPDIR)/libsomething_la-xer_encoder.Plo
-#	$(AM_V_CC)source='xer_encoder.c' object='libsomething_la-xer_encoder.lo' libtool=yes \
+libasn_la-xer_encoder.lo: xer_encoder.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-xer_encoder.lo -MD -MP -MF $(DEPDIR)/libasn_la-xer_encoder.Tpo -c -o libasn_la-xer_encoder.lo `test -f 'xer_encoder.c' || echo '$(srcdir)/'`xer_encoder.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-xer_encoder.Tpo $(DEPDIR)/libasn_la-xer_encoder.Plo
+#	$(AM_V_CC)source='xer_encoder.c' object='libasn_la-xer_encoder.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-xer_encoder.lo `test -f 'xer_encoder.c' || echo '$(srcdir)/'`xer_encoder.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-xer_encoder.lo `test -f 'xer_encoder.c' || echo '$(srcdir)/'`xer_encoder.c
 
-libsomething_la-per_support.lo: per_support.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-per_support.lo -MD -MP -MF $(DEPDIR)/libsomething_la-per_support.Tpo -c -o libsomething_la-per_support.lo `test -f 'per_support.c' || echo '$(srcdir)/'`per_support.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-per_support.Tpo $(DEPDIR)/libsomething_la-per_support.Plo
-#	$(AM_V_CC)source='per_support.c' object='libsomething_la-per_support.lo' libtool=yes \
+libasn_la-per_support.lo: per_support.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-per_support.lo -MD -MP -MF $(DEPDIR)/libasn_la-per_support.Tpo -c -o libasn_la-per_support.lo `test -f 'per_support.c' || echo '$(srcdir)/'`per_support.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-per_support.Tpo $(DEPDIR)/libasn_la-per_support.Plo
+#	$(AM_V_CC)source='per_support.c' object='libasn_la-per_support.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-per_support.lo `test -f 'per_support.c' || echo '$(srcdir)/'`per_support.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-per_support.lo `test -f 'per_support.c' || echo '$(srcdir)/'`per_support.c
 
-libsomething_la-per_decoder.lo: per_decoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-per_decoder.lo -MD -MP -MF $(DEPDIR)/libsomething_la-per_decoder.Tpo -c -o libsomething_la-per_decoder.lo `test -f 'per_decoder.c' || echo '$(srcdir)/'`per_decoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-per_decoder.Tpo $(DEPDIR)/libsomething_la-per_decoder.Plo
-#	$(AM_V_CC)source='per_decoder.c' object='libsomething_la-per_decoder.lo' libtool=yes \
+libasn_la-per_decoder.lo: per_decoder.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-per_decoder.lo -MD -MP -MF $(DEPDIR)/libasn_la-per_decoder.Tpo -c -o libasn_la-per_decoder.lo `test -f 'per_decoder.c' || echo '$(srcdir)/'`per_decoder.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-per_decoder.Tpo $(DEPDIR)/libasn_la-per_decoder.Plo
+#	$(AM_V_CC)source='per_decoder.c' object='libasn_la-per_decoder.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-per_decoder.lo `test -f 'per_decoder.c' || echo '$(srcdir)/'`per_decoder.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-per_decoder.lo `test -f 'per_decoder.c' || echo '$(srcdir)/'`per_decoder.c
 
-libsomething_la-per_encoder.lo: per_encoder.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-per_encoder.lo -MD -MP -MF $(DEPDIR)/libsomething_la-per_encoder.Tpo -c -o libsomething_la-per_encoder.lo `test -f 'per_encoder.c' || echo '$(srcdir)/'`per_encoder.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-per_encoder.Tpo $(DEPDIR)/libsomething_la-per_encoder.Plo
-#	$(AM_V_CC)source='per_encoder.c' object='libsomething_la-per_encoder.lo' libtool=yes \
+libasn_la-per_encoder.lo: per_encoder.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-per_encoder.lo -MD -MP -MF $(DEPDIR)/libasn_la-per_encoder.Tpo -c -o libasn_la-per_encoder.lo `test -f 'per_encoder.c' || echo '$(srcdir)/'`per_encoder.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-per_encoder.Tpo $(DEPDIR)/libasn_la-per_encoder.Plo
+#	$(AM_V_CC)source='per_encoder.c' object='libasn_la-per_encoder.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-per_encoder.lo `test -f 'per_encoder.c' || echo '$(srcdir)/'`per_encoder.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-per_encoder.lo `test -f 'per_encoder.c' || echo '$(srcdir)/'`per_encoder.c
 
-libsomething_la-per_opentype.lo: per_opentype.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -MT libsomething_la-per_opentype.lo -MD -MP -MF $(DEPDIR)/libsomething_la-per_opentype.Tpo -c -o libsomething_la-per_opentype.lo `test -f 'per_opentype.c' || echo '$(srcdir)/'`per_opentype.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libsomething_la-per_opentype.Tpo $(DEPDIR)/libsomething_la-per_opentype.Plo
-#	$(AM_V_CC)source='per_opentype.c' object='libsomething_la-per_opentype.lo' libtool=yes \
+libasn_la-per_opentype.lo: per_opentype.c
+	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -MT libasn_la-per_opentype.lo -MD -MP -MF $(DEPDIR)/libasn_la-per_opentype.Tpo -c -o libasn_la-per_opentype.lo `test -f 'per_opentype.c' || echo '$(srcdir)/'`per_opentype.c
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libasn_la-per_opentype.Tpo $(DEPDIR)/libasn_la-per_opentype.Plo
+#	$(AM_V_CC)source='per_opentype.c' object='libasn_la-per_opentype.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libsomething_la_CFLAGS) $(CFLAGS) -c -o libsomething_la-per_opentype.lo `test -f 'per_opentype.c' || echo '$(srcdir)/'`per_opentype.c
+#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libasn_la_CFLAGS) $(CFLAGS) -c -o libasn_la-per_opentype.lo `test -f 'per_opentype.c' || echo '$(srcdir)/'`per_opentype.c
 
 mostlyclean-libtool:
 	-rm -f *.lo
