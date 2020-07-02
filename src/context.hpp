@@ -3,6 +3,7 @@
 
 #include <memory>
 #include "apps/log.hpp"
+#include "api/cert_param.hpp"
 
 class seclog;
 

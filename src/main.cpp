@@ -4,12 +4,13 @@
 #include "context.hpp"
 #include "api/sec_codec.hpp"
 #include "api/gmssl.hpp"
+#include "api/parse_x509.hpp"
 
 int main() {
     auto ctx_ = std::make_shared<context>();
     ctx_->log_->info("text log and context class ...");
 
-    char str[] ="hello world, I'm yu kang";
+    char str[] ="hello world, I'm yu kang, come on, keep going, do not give up";
 
     char* msg = sec_encode(str);
     if(nullptr == msg) {
@@ -30,6 +31,10 @@ int main() {
     crypto.shutdown();
 
     ctx_->log_->info("******** Test GmSSL lib end ***********");
+
+    GmSSL::certificate certificate(ctx_);
+
+    certificate.parse_x509("./trustStore/certs/usercert.pem");
 
     size_t re_length = sizeof(SecuredMessage_t);
     spud_t* spdu = static_cast<spud_t*>((calloc(1,sizeof(spud_t))));

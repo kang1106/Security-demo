@@ -1,4 +1,5 @@
-src/sec_v2xd-main.o: src/main.cpp /usr/include/stdc-predef.h \
+src/api/sec_v2xd-parse_x509.o: src/api/parse_x509.cpp \
+ /usr/include/stdc-predef.h src/api/parse_x509.hpp src/context.hpp \
  /usr/include/c++/5/memory /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/5/bits/os_defines.h \
@@ -103,62 +104,33 @@ src/sec_v2xd-main.o: src/main.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/5/ext/aligned_buffer.h \
  /usr/include/c++/5/bits/shared_ptr_atomic.h \
  /usr/include/c++/5/bits/atomic_base.h \
- /usr/include/c++/5/backward/auto_ptr.h /usr/include/c++/5/cstring \
- /usr/include/string.h /usr/include/x86_64-linux-gnu/bits/string3.h \
- asn/SecuredMessage.h asn/asn_application.h asn/asn_system.h \
+ /usr/include/c++/5/backward/auto_ptr.h src/apps/log.hpp \
+ src/api/cert_param.hpp include/openssl/evp.h \
+ include/openssl/opensslconf.h include/openssl/ossl_typ.h \
  /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /usr/include/x86_64-linux-gnu/bits/xopen_lim.h /usr/include/inttypes.h \
- /usr/include/netinet/in.h /usr/include/x86_64-linux-gnu/sys/socket.h \
- /usr/include/x86_64-linux-gnu/sys/uio.h \
- /usr/include/x86_64-linux-gnu/bits/uio.h \
- /usr/include/x86_64-linux-gnu/bits/socket.h \
- /usr/include/x86_64-linux-gnu/bits/socket_type.h \
- /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
- /usr/include/x86_64-linux-gnu/asm/socket.h \
- /usr/include/asm-generic/socket.h \
- /usr/include/x86_64-linux-gnu/asm/sockios.h \
- /usr/include/asm-generic/sockios.h \
- /usr/include/x86_64-linux-gnu/bits/socket2.h \
- /usr/include/x86_64-linux-gnu/bits/in.h asn/asn_codecs.h \
- asn/constr_TYPE.h asn/ber_tlv_length.h asn/ber_tlv_tag.h \
- asn/ber_decoder.h asn/der_encoder.h asn/xer_decoder.h asn/xer_encoder.h \
- asn/per_decoder.h asn/per_support.h asn/asn_system.h asn/per_encoder.h \
- asn/constraints.h asn/Uint8.h asn/NativeInteger.h asn/INTEGER.h \
- asn/asn_codecs_prim.h asn/asn_internal.h asn/asn_application.h \
- /usr/include/assert.h asn/Payload.h asn/Opaque.h asn/OCTET_STRING.h \
- asn/SignedData.h asn/SignerInfo.h asn/NULL.h asn/SequenceOfCertificate.h \
- asn/asn_SEQUENCE_OF.h asn/asn_SET_OF.h asn/constr_SEQUENCE_OF.h \
- asn/constr_SET_OF.h asn/Certificate.h asn/IssuerID.h \
- asn/CertificateDigest.h asn/HashAlgorithm.h asn/NativeEnumerated.h \
- asn/HashedId8.h asn/constr_SEQUENCE.h asn/constr_CHOICE.h asn/TBSCert.h \
- asn/SubjectInfo.h asn/SubjectType.h asn/SubjectAttributes.h \
- asn/PublicVerifyKey.h asn/EccCurve.h asn/EccPoint.h asn/Signature.h \
- asn/TBSData.h asn/HeaderInfo.h asn/Time64.h asn/Uint64.h asn/HashedId3.h \
- asn/ThreeDLocation.h asn/Latitude.h asn/NinetyDegreeInt.h \
- asn/Longitude.h asn/OneEightyDegreeInt.h asn/Elevation.h asn/Uint16.h \
- src/context.hpp src/apps/log.hpp src/api/cert_param.hpp \
- include/openssl/evp.h include/openssl/opensslconf.h \
- include/openssl/ossl_typ.h include/openssl/e_os2.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h include/openssl/e_os2.h \
  include/openssl/symhacks.h include/openssl/bio.h \
  include/openssl/crypto.h include/openssl/stack.h \
  include/openssl/safestack.h include/openssl/opensslv.h \
  include/openssl/objects.h include/openssl/obj_mac.h \
- include/openssl/asn1.h include/openssl/bn.h src/context.hpp \
- src/api/sec_codec.hpp src/api/sec_type.hpp src/api/gmssl.hpp \
- include/openssl/conf.h include/openssl/lhash.h include/openssl/err.h \
- include/openssl/ec.h include/openssl/dsa.h include/openssl/dh.h \
- include/openssl/rsa.h src/api/parse_x509.hpp include/openssl/pem.h \
- include/openssl/x509.h include/openssl/buffer.h \
- include/openssl/paillier.h include/openssl/sm9.h include/openssl/sha.h \
- include/openssl/x509_vfy.h include/openssl/pkcs7.h \
- include/openssl/pem2.h src/api/cert_param.hpp
+ include/openssl/asn1.h include/openssl/bn.h /usr/include/c++/5/cstring \
+ /usr/include/string.h /usr/include/x86_64-linux-gnu/bits/string3.h \
+ include/openssl/pem.h include/openssl/x509.h include/openssl/buffer.h \
+ include/openssl/ec.h include/openssl/paillier.h include/openssl/sm9.h \
+ include/openssl/rsa.h include/openssl/dsa.h include/openssl/dh.h \
+ include/openssl/sha.h include/openssl/x509_vfy.h include/openssl/lhash.h \
+ include/openssl/pkcs7.h include/openssl/pem2.h src/api/cert_param.hpp
 
 /usr/include/stdc-predef.h:
+
+src/api/parse_x509.hpp:
+
+src/context.hpp:
 
 /usr/include/c++/5/memory:
 
@@ -434,17 +406,15 @@ src/sec_v2xd-main.o: src/main.cpp /usr/include/stdc-predef.h \
 
 /usr/include/c++/5/backward/auto_ptr.h:
 
-/usr/include/c++/5/cstring:
+src/apps/log.hpp:
 
-/usr/include/string.h:
+src/api/cert_param.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/string3.h:
+include/openssl/evp.h:
 
-asn/SecuredMessage.h:
+include/openssl/opensslconf.h:
 
-asn/asn_application.h:
-
-asn/asn_system.h:
+include/openssl/ossl_typ.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/limits.h:
 
@@ -461,164 +431,6 @@ asn/asn_system.h:
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
-
-/usr/include/inttypes.h:
-
-/usr/include/netinet/in.h:
-
-/usr/include/x86_64-linux-gnu/sys/socket.h:
-
-/usr/include/x86_64-linux-gnu/sys/uio.h:
-
-/usr/include/x86_64-linux-gnu/bits/uio.h:
-
-/usr/include/x86_64-linux-gnu/bits/socket.h:
-
-/usr/include/x86_64-linux-gnu/bits/socket_type.h:
-
-/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
-
-/usr/include/x86_64-linux-gnu/asm/socket.h:
-
-/usr/include/asm-generic/socket.h:
-
-/usr/include/x86_64-linux-gnu/asm/sockios.h:
-
-/usr/include/asm-generic/sockios.h:
-
-/usr/include/x86_64-linux-gnu/bits/socket2.h:
-
-/usr/include/x86_64-linux-gnu/bits/in.h:
-
-asn/asn_codecs.h:
-
-asn/constr_TYPE.h:
-
-asn/ber_tlv_length.h:
-
-asn/ber_tlv_tag.h:
-
-asn/ber_decoder.h:
-
-asn/der_encoder.h:
-
-asn/xer_decoder.h:
-
-asn/xer_encoder.h:
-
-asn/per_decoder.h:
-
-asn/per_support.h:
-
-asn/asn_system.h:
-
-asn/per_encoder.h:
-
-asn/constraints.h:
-
-asn/Uint8.h:
-
-asn/NativeInteger.h:
-
-asn/INTEGER.h:
-
-asn/asn_codecs_prim.h:
-
-asn/asn_internal.h:
-
-asn/asn_application.h:
-
-/usr/include/assert.h:
-
-asn/Payload.h:
-
-asn/Opaque.h:
-
-asn/OCTET_STRING.h:
-
-asn/SignedData.h:
-
-asn/SignerInfo.h:
-
-asn/NULL.h:
-
-asn/SequenceOfCertificate.h:
-
-asn/asn_SEQUENCE_OF.h:
-
-asn/asn_SET_OF.h:
-
-asn/constr_SEQUENCE_OF.h:
-
-asn/constr_SET_OF.h:
-
-asn/Certificate.h:
-
-asn/IssuerID.h:
-
-asn/CertificateDigest.h:
-
-asn/HashAlgorithm.h:
-
-asn/NativeEnumerated.h:
-
-asn/HashedId8.h:
-
-asn/constr_SEQUENCE.h:
-
-asn/constr_CHOICE.h:
-
-asn/TBSCert.h:
-
-asn/SubjectInfo.h:
-
-asn/SubjectType.h:
-
-asn/SubjectAttributes.h:
-
-asn/PublicVerifyKey.h:
-
-asn/EccCurve.h:
-
-asn/EccPoint.h:
-
-asn/Signature.h:
-
-asn/TBSData.h:
-
-asn/HeaderInfo.h:
-
-asn/Time64.h:
-
-asn/Uint64.h:
-
-asn/HashedId3.h:
-
-asn/ThreeDLocation.h:
-
-asn/Latitude.h:
-
-asn/NinetyDegreeInt.h:
-
-asn/Longitude.h:
-
-asn/OneEightyDegreeInt.h:
-
-asn/Elevation.h:
-
-asn/Uint16.h:
-
-src/context.hpp:
-
-src/apps/log.hpp:
-
-src/api/cert_param.hpp:
-
-include/openssl/evp.h:
-
-include/openssl/opensslconf.h:
-
-include/openssl/ossl_typ.h:
 
 include/openssl/e_os2.h:
 
@@ -642,29 +454,11 @@ include/openssl/asn1.h:
 
 include/openssl/bn.h:
 
-src/context.hpp:
+/usr/include/c++/5/cstring:
 
-src/api/sec_codec.hpp:
+/usr/include/string.h:
 
-src/api/sec_type.hpp:
-
-src/api/gmssl.hpp:
-
-include/openssl/conf.h:
-
-include/openssl/lhash.h:
-
-include/openssl/err.h:
-
-include/openssl/ec.h:
-
-include/openssl/dsa.h:
-
-include/openssl/dh.h:
-
-include/openssl/rsa.h:
-
-src/api/parse_x509.hpp:
+/usr/include/x86_64-linux-gnu/bits/string3.h:
 
 include/openssl/pem.h:
 
@@ -672,13 +466,23 @@ include/openssl/x509.h:
 
 include/openssl/buffer.h:
 
+include/openssl/ec.h:
+
 include/openssl/paillier.h:
 
 include/openssl/sm9.h:
 
+include/openssl/rsa.h:
+
+include/openssl/dsa.h:
+
+include/openssl/dh.h:
+
 include/openssl/sha.h:
 
 include/openssl/x509_vfy.h:
+
+include/openssl/lhash.h:
 
 include/openssl/pkcs7.h:
 

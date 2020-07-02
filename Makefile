@@ -110,7 +110,9 @@ am__dirstamp = $(am__leading_dot)dirstamp
 am_sec_v2xd_OBJECTS = src/sec_v2xd-main.$(OBJEXT) \
 	src/apps/sec_v2xd-log.$(OBJEXT) \
 	src/api/sec_v2xd-sec_codec.$(OBJEXT) \
-	src/api/sec_v2xd-gmssl.$(OBJEXT)
+	src/api/sec_v2xd-gmssl.$(OBJEXT) \
+	src/api/sec_v2xd-parse_x509.$(OBJEXT) \
+	src/api/sec_v2xd-cert_param.$(OBJEXT)
 sec_v2xd_OBJECTS = $(am_sec_v2xd_OBJECTS)
 sec_v2xd_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
@@ -383,7 +385,9 @@ sec_v2xd_CXXFLAGS = $(AM_CXXFLAGS)
 sec_v2xd_SOURCES = src/main.cpp \
                    src/apps/log.cpp \
                    src/api/sec_codec.cpp \
-                   src/api/gmssl.cpp
+                   src/api/gmssl.cpp \
+                   src/api/parse_x509.cpp \
+                   src/api/cert_param.cpp
 
 all: all-recursive
 
@@ -497,6 +501,10 @@ src/api/sec_v2xd-sec_codec.$(OBJEXT): src/api/$(am__dirstamp) \
 	src/api/$(DEPDIR)/$(am__dirstamp)
 src/api/sec_v2xd-gmssl.$(OBJEXT): src/api/$(am__dirstamp) \
 	src/api/$(DEPDIR)/$(am__dirstamp)
+src/api/sec_v2xd-parse_x509.$(OBJEXT): src/api/$(am__dirstamp) \
+	src/api/$(DEPDIR)/$(am__dirstamp)
+src/api/sec_v2xd-cert_param.$(OBJEXT): src/api/$(am__dirstamp) \
+	src/api/$(DEPDIR)/$(am__dirstamp)
 
 sec_v2xd$(EXEEXT): $(sec_v2xd_OBJECTS) $(sec_v2xd_DEPENDENCIES) $(EXTRA_sec_v2xd_DEPENDENCIES) 
 	@rm -f sec_v2xd$(EXEEXT)
@@ -512,7 +520,9 @@ distclean-compile:
 	-rm -f *.tab.c
 
 include src/$(DEPDIR)/sec_v2xd-main.Po
+include src/api/$(DEPDIR)/sec_v2xd-cert_param.Po
 include src/api/$(DEPDIR)/sec_v2xd-gmssl.Po
+include src/api/$(DEPDIR)/sec_v2xd-parse_x509.Po
 include src/api/$(DEPDIR)/sec_v2xd-sec_codec.Po
 include src/apps/$(DEPDIR)/sec_v2xd-log.Po
 
@@ -595,6 +605,34 @@ src/api/sec_v2xd-gmssl.obj: src/api/gmssl.cpp
 #	$(AM_V_CXX)source='src/api/gmssl.cpp' object='src/api/sec_v2xd-gmssl.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -c -o src/api/sec_v2xd-gmssl.obj `if test -f 'src/api/gmssl.cpp'; then $(CYGPATH_W) 'src/api/gmssl.cpp'; else $(CYGPATH_W) '$(srcdir)/src/api/gmssl.cpp'; fi`
+
+src/api/sec_v2xd-parse_x509.o: src/api/parse_x509.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -MT src/api/sec_v2xd-parse_x509.o -MD -MP -MF src/api/$(DEPDIR)/sec_v2xd-parse_x509.Tpo -c -o src/api/sec_v2xd-parse_x509.o `test -f 'src/api/parse_x509.cpp' || echo '$(srcdir)/'`src/api/parse_x509.cpp
+	$(AM_V_at)$(am__mv) src/api/$(DEPDIR)/sec_v2xd-parse_x509.Tpo src/api/$(DEPDIR)/sec_v2xd-parse_x509.Po
+#	$(AM_V_CXX)source='src/api/parse_x509.cpp' object='src/api/sec_v2xd-parse_x509.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -c -o src/api/sec_v2xd-parse_x509.o `test -f 'src/api/parse_x509.cpp' || echo '$(srcdir)/'`src/api/parse_x509.cpp
+
+src/api/sec_v2xd-parse_x509.obj: src/api/parse_x509.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -MT src/api/sec_v2xd-parse_x509.obj -MD -MP -MF src/api/$(DEPDIR)/sec_v2xd-parse_x509.Tpo -c -o src/api/sec_v2xd-parse_x509.obj `if test -f 'src/api/parse_x509.cpp'; then $(CYGPATH_W) 'src/api/parse_x509.cpp'; else $(CYGPATH_W) '$(srcdir)/src/api/parse_x509.cpp'; fi`
+	$(AM_V_at)$(am__mv) src/api/$(DEPDIR)/sec_v2xd-parse_x509.Tpo src/api/$(DEPDIR)/sec_v2xd-parse_x509.Po
+#	$(AM_V_CXX)source='src/api/parse_x509.cpp' object='src/api/sec_v2xd-parse_x509.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -c -o src/api/sec_v2xd-parse_x509.obj `if test -f 'src/api/parse_x509.cpp'; then $(CYGPATH_W) 'src/api/parse_x509.cpp'; else $(CYGPATH_W) '$(srcdir)/src/api/parse_x509.cpp'; fi`
+
+src/api/sec_v2xd-cert_param.o: src/api/cert_param.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -MT src/api/sec_v2xd-cert_param.o -MD -MP -MF src/api/$(DEPDIR)/sec_v2xd-cert_param.Tpo -c -o src/api/sec_v2xd-cert_param.o `test -f 'src/api/cert_param.cpp' || echo '$(srcdir)/'`src/api/cert_param.cpp
+	$(AM_V_at)$(am__mv) src/api/$(DEPDIR)/sec_v2xd-cert_param.Tpo src/api/$(DEPDIR)/sec_v2xd-cert_param.Po
+#	$(AM_V_CXX)source='src/api/cert_param.cpp' object='src/api/sec_v2xd-cert_param.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -c -o src/api/sec_v2xd-cert_param.o `test -f 'src/api/cert_param.cpp' || echo '$(srcdir)/'`src/api/cert_param.cpp
+
+src/api/sec_v2xd-cert_param.obj: src/api/cert_param.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -MT src/api/sec_v2xd-cert_param.obj -MD -MP -MF src/api/$(DEPDIR)/sec_v2xd-cert_param.Tpo -c -o src/api/sec_v2xd-cert_param.obj `if test -f 'src/api/cert_param.cpp'; then $(CYGPATH_W) 'src/api/cert_param.cpp'; else $(CYGPATH_W) '$(srcdir)/src/api/cert_param.cpp'; fi`
+	$(AM_V_at)$(am__mv) src/api/$(DEPDIR)/sec_v2xd-cert_param.Tpo src/api/$(DEPDIR)/sec_v2xd-cert_param.Po
+#	$(AM_V_CXX)source='src/api/cert_param.cpp' object='src/api/sec_v2xd-cert_param.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sec_v2xd_CXXFLAGS) $(CXXFLAGS) -c -o src/api/sec_v2xd-cert_param.obj `if test -f 'src/api/cert_param.cpp'; then $(CYGPATH_W) 'src/api/cert_param.cpp'; else $(CYGPATH_W) '$(srcdir)/src/api/cert_param.cpp'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo

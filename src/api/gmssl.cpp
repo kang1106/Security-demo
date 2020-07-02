@@ -147,8 +147,7 @@ unsigned char* gmssl::sign_message(char* msg) {
         ctx_->log_->debug("generate signature failed ...");
         return nullptr;
     }
-    printf("signature is: %s\n", signature);
-    printf("size is: %d\n", sizeof(signature));
+    ctx_->log_->signprint("The signature is:", signature, int(*signLen));
     ctx_->log_->info("generate signature successfully");
 
     // OPENSSL_free(*signature);
