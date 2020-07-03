@@ -37,7 +37,6 @@ PATH: /sbin
 PATH: /bin
 PATH: /usr/games
 PATH: /usr/local/games
-PATH: /snap/bin
 PATH: /usr/bin/fastboot
 PATH: /usr/bin/fastboot
 

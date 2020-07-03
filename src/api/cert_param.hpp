@@ -4,27 +4,28 @@
 #include "openssl/evp.h"
 #include "context.hpp"
 #include <cstring>
+#include <iostream>
 
 class context;
 
 template <class type>  // char and unsigned char
-class char_st {
-  public:
-    type* str_;
-    size_t len_;
+// class char_st {
+//   public:
+//     type* str_;
+//     size_t len_;
 
-    explicit char_st() :
-        str_(nullptr),
-        len_(0) {}
-    void set_string(type* str, size_t len) {
-        str_ = new type[len];
-        strcpy(str_, str);
-    }
-    ~char_st() {
-        delete [] str_;
-        str_ = nullptr;
-    }
-};
+//     explicit char_st() :
+//         str_(nullptr),
+//         len_(0) {}
+//     void set_string(type* str, size_t len) {
+//         str_ = new type[len];
+//         strcpy(str_, str);
+//     }
+//     ~char_st() {
+//         delete [] str_;
+//         str_ = nullptr;
+//     }
+// };
 
 struct certObject
 {
@@ -42,44 +43,77 @@ struct certObject
 
 class certParam {
   private:
-    long version;
+    long version_;
 
   public:
-    char_st<char> serialNumber;
+    // char_st<char> serialNumber;
     explicit certParam() :
-        version(0),
-        serialNumber() {}
+        version_(0) {}
         // pubKey_() {}
 
-    void set_version(long ver);
-    long get_version();
+    void set_version(long version) {
+        version_ = version;
+    }
+    long get_version() {
+        return version_;
+    }
 
     // void set_serial_number(const char* sn, size_t len);
     // std::string get_serial_number();
 
-    // class pubKey {
-    //   private:
-    //     int type;
-    //     char key_x[32];
-    //     char key_y[32];
-    //     char key_z[1];
-    //     int eccCurve;
-    //   public:
-    //     explicit pubKey() :
-    //       type(0),
-    //       key_x(),
-    //       key_y(),
-    //       key_z(),
-    //       eccCurve(0) {}
+    class pubKey {
+      private:
+        int type_;
+        // char key_x[32];
+        // char key_y[32];
+        // char key_z[1];
+        unsigned char* key_;
+        size_t keyLen_;
+        int eccCurve_;
+        enum pointType {
+          point_compress   = 2,
+          point_uncompress = 4,
+          point_hybrid     = 6,
+          unknow           = 8,
+        };
+        pointType pointType_;
 
-    //     void set_pubKey_type(int type);
-    //     int get_pubKey_type();
-    //     void set_pubKey_key(char* key);
-    //     char* get_pubKey_key();
-    //     void set_pubKey_curve(int curve);
-    //     int get_pubKey_curve();
-    // };
-    // pubKey pubKey_;
+      public:
+        explicit pubKey() :
+          type_(0),
+          key_(nullptr),
+          keyLen_(0),
+          eccCurve_(0) {}
+        
+        ~pubKey();
+
+        // void set_pubKey_type(int type);
+        int get_type() {
+            return type_;
+        }
+        void set_type(int type) {
+          type_ = type;
+        }
+        void set_key(const unsigned char* key, size_t keyLen);
+        size_t get_length() {
+            return keyLen_;
+        }
+        void get_key(unsigned char* key);
+        unsigned char* get_key() {
+          return key_;
+        }
+        void set_curve(int curve) {
+            eccCurve_ = curve;
+        }
+        int get_curve() {
+            return eccCurve_;
+        }
+        void set_pointType(int type);
+        int get_pointType() {
+            return int(pointType_);
+        }
+    };
+    pubKey pubKey_;
 };
 
 #endif // CERT_PARAM_HPP_

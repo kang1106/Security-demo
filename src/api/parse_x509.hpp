@@ -31,12 +31,14 @@ class certificate {
 
     void get_certificate_sn();
 
+    void get_certificate_pubKey();
+
   private:
     std::shared_ptr<context> ctx_;
 
     X509* cert;
 
-    struct certObject certObject;
+    // struct certObject certObject;
 
     certParam certParam_;
 

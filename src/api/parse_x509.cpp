@@ -13,6 +13,7 @@ void GmSSL::certificate::parse_x509(const char* filename) {
 
     get_certificate_version();
     // get_certificate_sn();
+    get_certificate_pubKey();
 
     // // signature algorithm through getting public key type
     // auto pKey = X509_get_pubkey(cert);
@@ -125,20 +126,65 @@ void GmSSL::certificate::get_certificate_version() {
     ctx_->log_->info("certParam version is: ", certParam_.get_version());
 }
 
-void GmSSL::certificate::get_certificate_sn() {
-    // ceritificate serial number
-    auto sn = X509_get_serialNumber(cert);
-    auto bn = ASN1_INTEGER_to_BN(sn, nullptr);
-    auto serialNumber = BN_bn2hex(bn);
-    auto serialNumberLen = strlen(serialNumber);
-    // auto len = BN_num_bytes(bn);
-    // BN_bn2bin();
-    // certParam_.set_serial_number(BN_bn2hex(bn));
-    certParam_.serialNumber.set_string(serialNumber, serialNumberLen);
+// void GmSSL::certificate::get_certificate_sn() {
+//     // ceritificate serial number
+//     auto sn = X509_get_serialNumber(cert);
+//     auto bn = ASN1_INTEGER_to_BN(sn, nullptr);
+//     auto serialNumber = BN_bn2hex(bn);
+//     auto serialNumberLen = strlen(serialNumber);
+//     // auto len = BN_num_bytes(bn);
+//     // BN_bn2bin();
+//     // certParam_.set_serial_number(BN_bn2hex(bn));
+//     certParam_.serialNumber.set_string(serialNumber, serialNumberLen);
 
-    OPENSSL_free(serialNumber);
-    serialNumber = nullptr;
-    ASN1_INTEGER_free(sn);
-    BN_free(bn);
-    ctx_->log_->info("ceritificate serial number is: ", certParam_.serialNumber.str_);
+//     OPENSSL_free(serialNumber);
+//     serialNumber = nullptr;
+//     ASN1_INTEGER_free(sn);
+//     BN_free(bn);
+//     ctx_->log_->info("ceritificate serial number is: ", certParam_.serialNumber.str_);
+// }
+
+void GmSSL::certificate::get_certificate_pubKey() {
+    // get public key type
+    auto pKey = X509_get_pubkey(cert);
+    auto pKeyType = EVP_PKEY_id(pKey);
+    certParam_.pubKey_.set_type(pKeyType);
+    switch (certParam_.pubKey_.get_type()) {
+        case EVP_PKEY_EC:
+            ctx_->log_->info("public key type is: EVP_PKEY_EC");
+            break;
+        default:
+            ctx_->log_->info("other public key type");
+            break;
+    }
+
+    // get public key
+    auto ec_key = EVP_PKEY_get0_EC_KEY(pKey);
+    auto ec_pkey = EC_KEY_get0_public_key(ec_key);
+    auto ec_group = EC_KEY_get0_group(ec_key); 
+    auto ec_form = EC_KEY_get_conv_form(ec_key); // the point is encoded as z||x||y, where z is the octet 0x04
+
+    auto len = EC_POINT_point2oct(ec_group, ec_pkey, ec_form, nullptr, 0, NULL);
+    unsigned char* buf = new unsigned char[len];
+    EC_POINT_point2oct(ec_group, ec_pkey, ec_form, buf, len, NULL);
+
+    certParam_.pubKey_.set_key(buf, len);
+    ctx_->log_->signprint("The public key is: ", certParam_.pubKey_.get_key(),
+        certParam_.pubKey_.get_length());
+    ctx_->log_->info("The public key length is: ", certParam_.pubKey_.get_length());
+    delete [] buf;
+    buf = nullptr;
+
+    // get ECC point type
+    certParam_.pubKey_.set_pointType(int(ec_form));
+    ctx_->log_->info("The ecc point type is: ", certParam_.pubKey_.get_pointType());
+
+    // get ECC curve
+    auto curve = EC_GROUP_get_curve_name(ec_group);
+    certParam_.pubKey_.set_curve(curve);
+    if (sm2p256v1 == certParam_.pubKey_.get_curve()) {
+        ctx_->log_->info("The curve is: sm2p256v1");
+    }
+
+    EC_KEY_free(ec_key);
 }
