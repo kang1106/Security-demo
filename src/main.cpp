@@ -10,7 +10,7 @@ int main() {
     auto ctx_ = std::make_shared<context>();
     ctx_->log_->info("text log and context class ...");
 
-    char str[] ="hello world, I'm yu kang, come on, keep going, do not give up";
+    char str[] ="hello world, come on, keep going, do not give up";
 
     char* msg = sec_encode(str);
     if(nullptr == msg) {
