@@ -5,6 +5,7 @@
 #include "api/sec_codec.hpp"
 #include "api/gmssl.hpp"
 #include "api/parse_x509.hpp"
+#include "glog/logging.h"
 
 int main() {
     auto ctx_ = std::make_shared<context>();
@@ -15,8 +16,10 @@ int main() {
     char* msg = sec_encode(str);
     if(nullptr == msg) {
         ctx_->log_->debug("error encode");
+        LOG(WARNING) << "error encode";
     } else {
         ctx_->log_->debug("success encode");
+        LOG(WARNING) << "success encode";
     }
     ctx_->log_->info("encode data's size is: ", std::strlen(msg));
 
@@ -44,5 +47,8 @@ int main() {
     ctx_->log_->info("spdu version is: ", spdu->version);
     ctx_->log_->info("spdu payload[0] is: ", spdu->payload[0]);
     ctx_->log_->info("spdu payload[1] is: ", spdu->payload[1]);
+
+    LOG(INFO) << "*****glog test******";
+    LOG(INFO) << "********************";
     return 0;
 }

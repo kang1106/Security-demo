@@ -149,14 +149,41 @@ src/sec_v2xd-main.o: src/main.cpp /usr/include/stdc-predef.h \
  include/openssl/safestack.h include/openssl/opensslv.h \
  include/openssl/objects.h include/openssl/obj_mac.h \
  include/openssl/asn1.h include/openssl/bn.h src/context.hpp \
- src/api/sec_codec.hpp src/api/sec_type.hpp src/api/gmssl.hpp \
- include/openssl/conf.h include/openssl/lhash.h include/openssl/err.h \
- include/openssl/ec.h include/openssl/dsa.h include/openssl/dh.h \
- include/openssl/rsa.h src/api/parse_x509.hpp include/openssl/pem.h \
- include/openssl/x509.h include/openssl/buffer.h \
- include/openssl/paillier.h include/openssl/sm9.h include/openssl/sha.h \
- include/openssl/x509_vfy.h include/openssl/pkcs7.h \
- include/openssl/pem2.h src/api/cert_param.hpp
+ /usr/include/c++/5/iostream /usr/include/c++/5/ostream \
+ /usr/include/c++/5/ios /usr/include/c++/5/bits/ios_base.h \
+ /usr/include/c++/5/bits/locale_classes.h \
+ /usr/include/c++/5/bits/locale_classes.tcc \
+ /usr/include/c++/5/system_error \
+ /usr/include/x86_64-linux-gnu/c++/5/bits/error_constants.h \
+ /usr/include/c++/5/streambuf /usr/include/c++/5/bits/streambuf.tcc \
+ /usr/include/c++/5/bits/basic_ios.h \
+ /usr/include/c++/5/bits/locale_facets.h /usr/include/c++/5/cwctype \
+ /usr/include/wctype.h \
+ /usr/include/x86_64-linux-gnu/c++/5/bits/ctype_base.h \
+ /usr/include/c++/5/bits/streambuf_iterator.h \
+ /usr/include/x86_64-linux-gnu/c++/5/bits/ctype_inline.h \
+ /usr/include/c++/5/bits/locale_facets.tcc \
+ /usr/include/c++/5/bits/basic_ios.tcc \
+ /usr/include/c++/5/bits/ostream.tcc /usr/include/c++/5/istream \
+ /usr/include/c++/5/bits/istream.tcc src/api/sec_codec.hpp \
+ src/api/sec_type.hpp src/api/gmssl.hpp include/openssl/conf.h \
+ include/openssl/lhash.h include/openssl/err.h include/openssl/ec.h \
+ include/openssl/dsa.h include/openssl/dh.h include/openssl/rsa.h \
+ src/api/parse_x509.hpp include/openssl/pem.h include/openssl/x509.h \
+ include/openssl/buffer.h include/openssl/paillier.h \
+ include/openssl/sm9.h include/openssl/sha.h include/openssl/x509_vfy.h \
+ include/openssl/pkcs7.h include/openssl/pem2.h src/api/cert_param.hpp \
+ include/glog/logging.h /usr/include/c++/5/cstddef \
+ /usr/include/c++/5/ctime /usr/include/c++/5/sstream \
+ /usr/include/c++/5/bits/sstream.tcc /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h /usr/include/c++/5/vector \
+ /usr/include/c++/5/bits/stl_vector.h \
+ /usr/include/c++/5/bits/stl_bvector.h /usr/include/c++/5/bits/vector.tcc \
+ include/glog/platform.h include/glog/export.h \
+ include/glog/log_severity.h include/glog/vlog_is_on.h
 
 /usr/include/stdc-predef.h:
 
@@ -644,6 +671,50 @@ include/openssl/bn.h:
 
 src/context.hpp:
 
+/usr/include/c++/5/iostream:
+
+/usr/include/c++/5/ostream:
+
+/usr/include/c++/5/ios:
+
+/usr/include/c++/5/bits/ios_base.h:
+
+/usr/include/c++/5/bits/locale_classes.h:
+
+/usr/include/c++/5/bits/locale_classes.tcc:
+
+/usr/include/c++/5/system_error:
+
+/usr/include/x86_64-linux-gnu/c++/5/bits/error_constants.h:
+
+/usr/include/c++/5/streambuf:
+
+/usr/include/c++/5/bits/streambuf.tcc:
+
+/usr/include/c++/5/bits/basic_ios.h:
+
+/usr/include/c++/5/bits/locale_facets.h:
+
+/usr/include/c++/5/cwctype:
+
+/usr/include/wctype.h:
+
+/usr/include/x86_64-linux-gnu/c++/5/bits/ctype_base.h:
+
+/usr/include/c++/5/bits/streambuf_iterator.h:
+
+/usr/include/x86_64-linux-gnu/c++/5/bits/ctype_inline.h:
+
+/usr/include/c++/5/bits/locale_facets.tcc:
+
+/usr/include/c++/5/bits/basic_ios.tcc:
+
+/usr/include/c++/5/bits/ostream.tcc:
+
+/usr/include/c++/5/istream:
+
+/usr/include/c++/5/bits/istream.tcc:
+
 src/api/sec_codec.hpp:
 
 src/api/sec_type.hpp:
@@ -685,3 +756,41 @@ include/openssl/pkcs7.h:
 include/openssl/pem2.h:
 
 src/api/cert_param.hpp:
+
+include/glog/logging.h:
+
+/usr/include/c++/5/cstddef:
+
+/usr/include/c++/5/ctime:
+
+/usr/include/c++/5/sstream:
+
+/usr/include/c++/5/bits/sstream.tcc:
+
+/usr/include/unistd.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/include/getopt.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd.h:
+
+/usr/include/c++/5/vector:
+
+/usr/include/c++/5/bits/stl_vector.h:
+
+/usr/include/c++/5/bits/stl_bvector.h:
+
+/usr/include/c++/5/bits/vector.tcc:
+
+include/glog/platform.h:
+
+include/glog/export.h:
+
+include/glog/log_severity.h:
+
+include/glog/vlog_is_on.h:

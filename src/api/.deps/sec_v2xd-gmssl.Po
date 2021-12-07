@@ -120,7 +120,24 @@ src/api/sec_v2xd-gmssl.o: src/api/gmssl.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/5/bits/shared_ptr_atomic.h \
  /usr/include/c++/5/bits/atomic_base.h \
  /usr/include/c++/5/backward/auto_ptr.h src/apps/log.hpp \
- src/api/cert_param.hpp /usr/include/c++/5/cstring
+ src/api/cert_param.hpp /usr/include/c++/5/cstring \
+ /usr/include/c++/5/iostream /usr/include/c++/5/ostream \
+ /usr/include/c++/5/ios /usr/include/c++/5/bits/ios_base.h \
+ /usr/include/c++/5/bits/locale_classes.h \
+ /usr/include/c++/5/bits/locale_classes.tcc \
+ /usr/include/c++/5/system_error \
+ /usr/include/x86_64-linux-gnu/c++/5/bits/error_constants.h \
+ /usr/include/c++/5/streambuf /usr/include/c++/5/bits/streambuf.tcc \
+ /usr/include/c++/5/bits/basic_ios.h \
+ /usr/include/c++/5/bits/locale_facets.h /usr/include/c++/5/cwctype \
+ /usr/include/wctype.h \
+ /usr/include/x86_64-linux-gnu/c++/5/bits/ctype_base.h \
+ /usr/include/c++/5/bits/streambuf_iterator.h \
+ /usr/include/x86_64-linux-gnu/c++/5/bits/ctype_inline.h \
+ /usr/include/c++/5/bits/locale_facets.tcc \
+ /usr/include/c++/5/bits/basic_ios.tcc \
+ /usr/include/c++/5/bits/ostream.tcc /usr/include/c++/5/istream \
+ /usr/include/c++/5/bits/istream.tcc
 
 /usr/include/stdc-predef.h:
 
@@ -469,3 +486,47 @@ src/apps/log.hpp:
 src/api/cert_param.hpp:
 
 /usr/include/c++/5/cstring:
+
+/usr/include/c++/5/iostream:
+
+/usr/include/c++/5/ostream:
+
+/usr/include/c++/5/ios:
+
+/usr/include/c++/5/bits/ios_base.h:
+
+/usr/include/c++/5/bits/locale_classes.h:
+
+/usr/include/c++/5/bits/locale_classes.tcc:
+
+/usr/include/c++/5/system_error:
+
+/usr/include/x86_64-linux-gnu/c++/5/bits/error_constants.h:
+
+/usr/include/c++/5/streambuf:
+
+/usr/include/c++/5/bits/streambuf.tcc:
+
+/usr/include/c++/5/bits/basic_ios.h:
+
+/usr/include/c++/5/bits/locale_facets.h:
+
+/usr/include/c++/5/cwctype:
+
+/usr/include/wctype.h:
+
+/usr/include/x86_64-linux-gnu/c++/5/bits/ctype_base.h:
+
+/usr/include/c++/5/bits/streambuf_iterator.h:
+
+/usr/include/x86_64-linux-gnu/c++/5/bits/ctype_inline.h:
+
+/usr/include/c++/5/bits/locale_facets.tcc:
+
+/usr/include/c++/5/bits/basic_ios.tcc:
+
+/usr/include/c++/5/bits/ostream.tcc:
+
+/usr/include/c++/5/istream:
+
+/usr/include/c++/5/bits/istream.tcc:
