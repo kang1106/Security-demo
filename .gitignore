@@ -1,2 +1,5 @@
 *.o
 *.lo
+*.dirstamp
+*.Po
+*.depend
