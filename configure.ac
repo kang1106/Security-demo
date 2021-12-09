@@ -52,6 +52,5 @@ AC_CHECK_TYPES([ptrdiff_t])
 AC_FUNC_STRTOD
 AC_CHECK_FUNCS([memchr memmove memset strerror])
 
-AC_CONFIG_FILES([Makefile
-                 asn/Makefile])
+AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
