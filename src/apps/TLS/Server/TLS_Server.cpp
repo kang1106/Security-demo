@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 
     serv_socket = socket(PF_INET, SOCK_STREAM, 0);
     if(serv_socket == -1) {
-        LOG(ERROR) << "Creat socket error";
+        LOG(ERROR) << "Unable to creat server socket";
     }
 
     memset(&serv_addr, 0, sizeof(serv_addr));
@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
     serv_addr.sin_port = htons(atoi(argv[1]));  //atoi (表示ascii to integer)是把字符串转换成整型数的一个函数
 
     if(bind(serv_socket, (struct sockaddr*)&serv_addr, sizeof(serv_addr)) == -1) {
-        LOG(ERROR) << "Socket bind error";
+        LOG(ERROR) << "Unable to bind";
     }
     if(listen(serv_socket, 5) == -1) {
         LOG(ERROR) << "Socket listen error";
