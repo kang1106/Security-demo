@@ -33,9 +33,9 @@ struct ssl_cipher_st {
 };
 
 #define BUFF_SIZE 1024
-const char psk_key[] = "1a2b3c4d5e";
 const unsigned char tls13_aes128gcmsha256_id[] = { 0x13, 0x01 };
 const char psk_identity[] = "psk_ecua";
+const char psk_key[] = "1a2b3c4d5e";
 
 SSL_CTX *create_context()
 {
@@ -92,7 +92,7 @@ static int psk_use_session_cb(SSL *s, const EVP_MD *md,
 
     cipher = SSL_SESSION_get0_cipher(usesess);
     if (cipher == NULL)
-        printf("Error creating ssl session\n");
+        LOG(ERROR) << "Error creating ssl session";
 
     if (md != NULL && SSL_CIPHER_get_handshake_digest(cipher) != md) {
         /* PSK not usable, ignore it */
@@ -113,8 +113,11 @@ static int psk_use_session_cb(SSL *s, const EVP_MD *md,
 
 void configure_context(SSL_CTX *ctx)
 {
-    printf("configure psk session callback\n");
+    LOG(INFO) << "Configure psk session callback";
     SSL_CTX_set_psk_use_session_callback(ctx, psk_use_session_cb);
+
+    LOG(INFO) << "Set TLS cipher";
+    SSL_CTX_set_ciphersuites(ctx, "TLS_AES_128_GCM_SHA256");
 }
 
 int main(int argc, char *argv[]) {

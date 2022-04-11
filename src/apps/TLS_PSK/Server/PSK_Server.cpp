@@ -33,10 +33,9 @@ struct ssl_cipher_st {
 
 #define BUFF_SIZE 1024
 
-const char psk_key[] = "1a2b3c4d5e";
 const unsigned char tls13_aes128gcmsha256_id[] = { 0x13, 0x01 };
-static char psk_identity[] = "psk_ecua";
-char psk_identity_hint[] = "psk_ecua";
+const char psk_ecua_key[] = "1a2b3c4d5e";   /* psk identity: psk_ecua */
+const char psk_ecub_key[] = "1a2b3c4d5f";   /* psk identity: psk_ecub */
 
 int create_socket(int port)
 {
@@ -110,17 +109,21 @@ static unsigned int psk_server_cb(SSL *ssl, const char *identity,
     LOG(INFO) << "identity= " << identity;
 
     /* here we could lookup the given identity e.g. from a database */
-    if (strcmp(identity, psk_identity) != 0) {
-        LOG(ERROR) << "PSK warning: client identity not what we expected";
-        LOG(ERROR) << "Got " << identity << ", expected " << psk_identity;
+    if (0 == strcmp(identity, "psk_ecua")) {
+        LOG(INFO) << "PSK client identity found: " << identity;
+        /* convert the PSK key to binary */
+        key = OPENSSL_hexstr2buf(psk_ecua_key, &key_len);
+    } else if (0 == strcmp(identity, "psk_ecub")) {
+        LOG(INFO) << "PSK client identity found: " << identity;
+        /* convert the PSK key to binary */
+        key = OPENSSL_hexstr2buf(psk_ecub_key, &key_len);
     } else {
-        LOG(INFO) << "PSK client identity found";
+        LOG(ERROR) << "PSK client identity not found";
+        return 0;
     }
 
-    /* convert the PSK key to binary */
-    key = OPENSSL_hexstr2buf(psk_key, &key_len);
     if (key == NULL) {
-        LOG(ERROR) << "Could not convert PSK key " << psk_key << " to buffer";
+        LOG(ERROR) << "Could not convert PSK key to buffer";
         return 0;
     }
     if (key_len > (int)max_psk_len) {
@@ -144,19 +147,20 @@ static int psk_find_session_cb(SSL *ssl, const unsigned char *identity,
     long key_len;
     const SSL_CIPHER *cipher = NULL;
 
-    // if (strlen(psk_identity) != identity_len
-    //         || memcmp(psk_identity, identity, identity_len) != 0) {
-    //     *sess = NULL;
-    //     LOG(INFO) << "identity is " << psk_identity;
-    //     LOG(INFO) << "Identify length: " << strlen(psk_identity);
-    //     LOG(INFO) << "Identify length: " << identity_len;
-    //     LOG(ERROR) << "Identify error";
-    //     return 1;
-    // }
+    if (strlen("psk_ecua") == identity_len && 0 == memcmp("psk_ecua", identity, identity_len)) {
+        LOG(INFO) << "PSK client identity found: " << identity;
+        key = OPENSSL_hexstr2buf(psk_ecua_key, &key_len);
+    } else if (strlen("psk_ecub") == identity_len && 0 == memcmp("psk_ecub", identity, identity_len)) {
+        LOG(INFO) << "PSK client identity found: " << identity;
+        key = OPENSSL_hexstr2buf(psk_ecub_key, &key_len);
+    } else {
+        *sess = NULL;
+        LOG(ERROR) << "PSK client identity not found";
+        return 0;
+    }
 
-    key = OPENSSL_hexstr2buf(psk_key, &key_len);
     if (key == NULL) {
-        LOG(ERROR) << "Could not convert PSK key " << psk_key << " to buffer";
+        LOG(ERROR) << "Could not convert PSK key to buffer";
         return 0;
     }
 
@@ -187,19 +191,12 @@ static int psk_find_session_cb(SSL *ssl, const unsigned char *identity,
 
 void configure_context(SSL_CTX *ctx)
 {
-    if (psk_key != NULL) {
-        LOG(ERROR) << "PSK key given, setting server callback";
-        SSL_CTX_set_psk_server_callback(ctx, psk_server_cb);
-    }
-
-    if (!SSL_CTX_use_psk_identity_hint(ctx, psk_identity_hint)) {
-        LOG(ERROR) << "error setting PSK identity hint to context";
-    }
-
-    SSL_CTX_set_cipher_list(ctx, "PSK-AES128-GCM-SHA256");
-
+    LOG(INFO) << "Configure psk session callback";
+    SSL_CTX_set_psk_server_callback(ctx, psk_server_cb);
     SSL_CTX_set_psk_find_session_callback(ctx, psk_find_session_cb);
 
+    LOG(INFO) << "Set TLS cipher";
+    SSL_CTX_set_cipher_list(ctx, "PSK-AES128-GCM-SHA256");
     SSL_CTX_set_ciphersuites(ctx, "TLS_AES_128_GCM_SHA256");
 }
 
@@ -222,7 +219,7 @@ int main(int argc, char **argv)
         SSL *ssl;
         char message[BUFF_SIZE];
         int str_len;
-        const char reply[] = "Received message from client\n";
+        const char reply[] = "Message received ACK\n";
 
         int client = accept(sock, (struct sockaddr*)&addr, &len);
         if (client < 0) {
@@ -237,7 +234,7 @@ int main(int argc, char **argv)
         if (SSL_accept(ssl) == -1) {
             LOG(ERROR) << "SSL connection failed";
         } else {
-            printf("SSL connection using %s\n", SSL_get_cipher(ssl));
+            LOG(INFO) << "SSL connection using: " << SSL_get_cipher(ssl);
             while(1) {
                 str_len = SSL_read(ssl, message, BUFF_SIZE - 1);
                 message[str_len] = '\0';

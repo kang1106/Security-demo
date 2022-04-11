@@ -4,4 +4,4 @@ openssl s_server -port 4433  -nocert -psk 1a2b3c4d5e -debug -ciphersuites TLS_AE
 openssl s_client -connect 127.0.0.1:4433 -psk 1a2b3c4d5e -psk_identity psk_ecub -debug
 
 Change to Server folder, run ./Server
-Change to Client folder, run ./Client 172.0.0.1 4433
+Change to Client folder, run ./Client 127.0.0.1 4433
