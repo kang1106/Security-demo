@@ -7,6 +7,7 @@
 #include <thread>
 #include <condition_variable>
 #include <mutex>
+#include "Security/someip_security.hpp"
 
 #if defined ANDROID || defined __ANDROID__
 #include "android/log.h"
@@ -109,17 +110,28 @@ public:
         // Create a response based upon the request
         std::shared_ptr<vsomeip::message> resp = rtm_->create_response(_request);
 
+        uint8_t payload[128];
+        uint32_t payload_length;
+        someip_get_decrypt_payload(_request, payload, payload_length);
+
         // Construct string to send back
         std::string str("Hello ");
-        str.append(
-                reinterpret_cast<const char*>(_request->get_payload()->get_data()),
-                0, _request->get_payload()->get_length());
+
+        str.append(reinterpret_cast<const char*> (payload));
+
+        // str.append(
+        //         reinterpret_cast<const char*>(_request->get_payload()->get_data()),
+        //         0, _request->get_payload()->get_length());
 
         // Create a payload which will be sent back to the client
         std::shared_ptr<vsomeip::payload> resp_pl = rtm_->create_payload();
-        std::vector<vsomeip::byte_t> pl_data(str.begin(), str.end());
-        resp_pl->set_data(pl_data);
-        resp->set_payload(resp_pl);
+
+        const uint8_t* payload_send = reinterpret_cast<const uint8_t*> (str.c_str());
+        sompeip_set_encrypt_payload(resp, resp_pl, payload_send, 11);
+
+        // std::vector<vsomeip::byte_t> pl_data(str.begin(), str.end());
+        // resp_pl->set_data(pl_data);
+        // resp->set_payload(resp_pl);
 
         // Send the response back
         app_->send(resp);

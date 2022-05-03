@@ -3,6 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #include <vsomeip/vsomeip.hpp>
+#include "Security/someip_security.hpp"
 
 #if defined ANDROID || defined __ANDROID__
 #include "android/log.h"
@@ -92,14 +93,13 @@ public:
 
             // Create a payload which will be sent to the service
             std::shared_ptr<vsomeip::payload> pl = rtm_->create_payload();
-            std::string str("World");
-            std::vector<vsomeip::byte_t> pl_data(std::begin(str), std::end(str));
 
-            pl->set_data(pl_data);
-            rq->set_payload(pl);
+            const uint8_t* payload = reinterpret_cast<const uint8_t*> ("World");
+            sompeip_set_encrypt_payload(rq, pl, payload, 5);
+
             // Send the request to the service. Response will be delivered to the
             // registered message handler
-            LOG_INF("Sending: %s", str.c_str());
+            // LOG_INF("Sending: %s", str.c_str());
             app_->send(rq);
         }
     }
@@ -113,11 +113,16 @@ public:
                 && vsomeip::return_code_e::E_OK == _response->get_return_code())
         {
             // Get the payload and print it
-            std::shared_ptr<vsomeip::payload> pl = _response->get_payload();
-            std::string resp = std::string(
-                    reinterpret_cast<const char*>(pl->get_data()), 0,
-                    pl->get_length());
-            LOG_INF("Received: %s", resp.c_str());
+            // std::shared_ptr<vsomeip::payload> pl = _response->get_payload();
+            // std::string resp = std::string(
+            //         reinterpret_cast<const char*>(pl->get_data()), 0,
+            //         pl->get_length());
+            // LOG_INF("Received: %s", resp.c_str());
+
+            uint8_t payload[128];
+            uint32_t payload_length;
+            someip_get_decrypt_payload(_response, payload, payload_length);
+
             stop();
         }
     }

@@ -22,7 +22,7 @@ LIBS = \
 
 # the sources (note: using :=, not = )    
 #CPPS := $(wildcard $(BASE)/CycurV2XClient/Client/*.cpp)
-CPPS := security_app_main.cpp
+CPPS := Evp-gcm-encrypt.c
 
 OBJS := $(patsubst %.cpp,%.o,$(notdir $(CPPS)))
 

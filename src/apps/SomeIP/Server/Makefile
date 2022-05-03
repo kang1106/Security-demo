@@ -6,7 +6,7 @@ CXX = g++
 CC = gcc
 
 #INCLUDES = $(addprefix -I, $(ROOT)/include/openssl)
-INCLUDES = -I$(ROOT)/include/vsomeip -I$(ROOT)/include
+INCLUDES = -I$(ROOT)/include/vsomeip -I$(ROOT)/include/openssl -I../ -I$(ROOT)/include/
 
 DEPFILE = Make.depend
 DEPDIR = .depend
